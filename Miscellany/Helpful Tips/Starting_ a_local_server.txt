@@ -1,0 +1,4 @@
+1.) From the directory where you project is open command prompt and use the following python command
+	python3 -m http.server <port number> // defaults to port 8000 if no port number is specified
+2.) Next, open a browser and type in
+	localhost:<port number> // specifying whichever port number you chose

@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -g #-DNDEBUG$/;"	m
+TARGET	Makefile	/^TARGET = ex23$/;"	m
+__dbg_h__	dbg.h	2;"	d
+check	dbg.h	26;"	d
+check_debug	dbg.h	32;"	d
+check_mem	dbg.h	30;"	d
+clean_errno	dbg.h	15;"	d
+debug	dbg.h	11;"	d
+debug	dbg.h	9;"	d
+duffs_device	ex23.c	/^int duffs_device(char* from, char* to, int count)$/;"	f
+log_err	dbg.h	17;"	d
+log_info	dbg.h	23;"	d
+log_warn	dbg.h	20;"	d
+main	ex23.c	/^int main(int argc, char* argv[])$/;"	f
+normal_copy	ex23.c	/^int normal_copy(char* from, char* to, int count)$/;"	f
+sentinel	dbg.h	28;"	d
+valid_copy	ex23.c	/^int valid_copy(char* data, int count, char expects)$/;"	f
+zeds_device	ex23.c	/^int zeds_device(char* from, char* to, int count)$/;"	f

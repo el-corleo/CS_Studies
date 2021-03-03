@@ -1,0 +1,41 @@
+// get status of current repo [including commits and whether or not it's up to date]
+git status
+
+// stages these to the list to commit
+git add <filename> || . || --all || *
+
+// commit files with the message
+git commit -m "Message"
+
+// push to branch
+git push origin <branch>
+
+// pull from branch
+git pull origin <branch>
+
+// branch repo from master
+// for creating new branch
+git checkout -b "branch"
+
+// for pre-existing branch
+git checkout <branch>
+
+// merge checked out branch to currently checked out branch
+git merge <branch>
+
+// 
+git remote set-url origin https://Chaos_is_Harmony@bitbucket.org/Chaos_is_Harmony/<reponame>.git
+
+// see list of commits
+git log
+
+// download current repo
+git clone <URL>
+
+// shows the changes made to file after different commits
+git diff (<commit hash> (<commit hash>)) <filename>
+
+// alter .gitignore file to tell git what to ignore e.g., *.o
+
+//can delete directories passed as params from git repo without removing from local machine
+git rm -r --cached "Dir - 1" "Dir - 2"

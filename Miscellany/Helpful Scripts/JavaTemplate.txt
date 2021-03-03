@@ -1,0 +1,19 @@
+/*
+	URL:
+
+	DESCRIPTION:
+
+	INPUT:
+
+	OUTPUT:
+
+	SAMPLES:
+
+	OBSERVATIONS:
+*/
+
+public CLASS_NAME
+{
+	public static void main(String[] args)
+	{}
+}

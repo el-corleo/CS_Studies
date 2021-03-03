@@ -1,0 +1,12 @@
+#---------------------------------------------------------------------------------
+# SSHFS securely mounts a remote drive, allowing its files to be accessed locally
+#---------------------------------------------------------------------------------
+
+# make a directory for mounting the remote drive [needs to happen only once]
+$ sudo mkdir ~/mnt/Media
+
+# establish a connection to the remote machine and mount it to the local directory
+$ sshfs pi@192.xxx.x.xxx:"/mnt/Transcend/Music/GREATEST SONGS" ~/mnt/Media
+
+# unmount dir
+$ sudo umount ~/mnt/Media

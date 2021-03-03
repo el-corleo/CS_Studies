@@ -1,0 +1,23 @@
+$ ssh username@IP (-p 22)
+[ex. $ ssh pi@172.xx.xx.xx (-p 22)]
+[(-p 22) selects a port and is optional; can get IP by using by typing command 'hostname -I' or 'ifconfig']
+
+# SFTP
+$ sftp username@IP // logs in, will prompt for password
+[ex. $ ssh pi@192.xxx.x.xxx]
+$ get remoteFile // downloads file from remote server to local machine
+[ex. $ get 'The Donkey Lovers.pdf']
+$ get -r remoteDir // downloads the contents of an entire directory
+[ex. $ get -r Fiction]
+$ put localFile //uploads file from local machine to remote server
+[ex. $ put 'The Donkey Lovers Part Deux.pdf']
+$ put -r localDir
+[ex. $ put -r 'Random Directory/This One']
+$ df -h // checks capacity
+
+$ ls & $ lls // $ ls -la [will give details] 
+$ pwd & $ lpwd
+$ cd & $ lcd // lcd is change local directory
+$ mkdir & $ lmkdir
+
+

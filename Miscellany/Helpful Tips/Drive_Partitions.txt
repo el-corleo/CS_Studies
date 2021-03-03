@@ -1,0 +1,12 @@
+Partition
+
+C:\Windows\system32>diskpart
+
+[opens diskpart]
+
+DISKPART> list disk
+DISKPART> select disk X
+DISKPART> list partition
+DISKPART> select partition X
+DISKPART> delete partition
+DISKPART> exit

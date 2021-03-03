@@ -1,0 +1,67 @@
+Useful Command Line Commands
+
+$ ping www.google.com 		// check internet connection
+$ ip route | grep default	// find ip address for router
+
+$ systeminfo	// gets computer info
+
+$ cd ~				// change to home directory
+$ cd ..				// change to parent directory
+$ cd ../..			// change to grandparent directory
+$ mkdir dirName 	// makes a directory
+$ rmdir dirName 	// deletes a directory (must be empty before removing)
+$ rm -r dirName 	// deletes a directory and all sub directories (even if not empty)
+$ rm filename       	// deletes a file
+$ rm *.extension    	// deletes all files of type extension
+$ cp file dir 		// copies file from current directory into destination directory
+$ cp * dir 		// copies all files from current dir into destination dir
+$ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
+$ mv file dir 		// moves file into dir
+
+$ pushd	dir			// save path to current dir and then go to specified dir
+$ pushd				// w/ no args allows you to switch between two directories
+$ popd				// go to previously pushed dir
+
+$ df 				// shows how much free disk space there is
+$ du 				// shows how much used disk space there is
+$ lshw				// shows hardware specs
+$ du -sh dirName 	// see disk usage of given directory (how much space it takes up on disk)
+$ ls | wc -l		// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
+$ mount -t drvfs D: /mnt/d 	// mounts drive from D: on linux subsystem on Windows 10
+
+$ nano file		// opens text editor and creates file
+$ touch file 		// creates new file
+
+$ tree 					// shows all subdirectories
+$ grep "keywords" file1 file2 file3	// searches for keywords in file (case sensitive)
+$ grep -i "keywords" file 		// searches for keywords in file (case insensitive)
+$ grep -R "keywords" dir 		// searches for keywords in all files of dir (case insensitive)
+$ grep -c "keywords" file 		// searches and displays # of times keywords in file
+
+$ diff file1 file2		// shows difference between two files
+$ diff -q file1 file2		// shows that two files differ, but not the differences
+$ diff -s file1 file2		// shows that two files at the same
+$ diff -i file1 file2		// shows that two files at the differ, but ignores case
+$ diff -w file1 file2		// shows that two files at the differ, but ignores whitespace
+$ diff -B file1 file2		// shows that two files at the differ, but ignores blank lines
+$ diff -qr dir1 dir2		// shows that two directories differ, but not the differences
+
+$ prog < file		// prog will take file as input
+$ prog > file		// prog will save output to file [overwrites file contents if file already exists]
+$ prog >> file		// prog will append output to file
+$ prog1 | prog2		// prog2 will take prog1's output as input
+$ prog &			// prog will run in background
+$ prog1 & prog2 &	// both run in the background
+$ prog1 && prog2	// prog1 runs first and prog2 runs only if prog1 finishes successfully
+$ prog1 || prog2	// prog2 executes only if prog1 fails
+$ rm -r !(*.java)	// delete all files in a folder that are not
+
+$ sudo chmod 744 file 	// gives file permission to run
+			// Explanation of 744
+			// Three columns are for user, group, and other, respectively
+			// 	user = owner of file
+			// 	group = a set of users
+			//	other = does not beling to group and is not owner of file
+			// 4 -> read; 2 -> write; 1 -> execute | combinations of these delineate permissions
+			// 1 is execute only, 2 is write only, 4 is read only
+			// 3 is execute+write, 5 is execute+read, ... , 7 is execute+write+read

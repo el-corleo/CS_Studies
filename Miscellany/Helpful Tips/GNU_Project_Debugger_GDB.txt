@@ -1,0 +1,26 @@
+// compile
+g++ Main.cpp -o Main -g
+
+// run using GDB
+gdb Main
+
+// insert a breakpoint after execution of given line
+break Main.cpp:5
+// or insert break at a given function
+break main
+
+// run the program
+run
+// take a single step
+step
+// to step out of a function
+finish
+// to step without stepping into a function call
+next
+// to inspect current variables
+info locals
+// enter repeats the last command
+// to go to next breakpoint
+continue
+// to exit to CLI
+quit

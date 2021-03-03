@@ -1,0 +1,26 @@
+Study Plan Program
+
+Input:
+- Subjects of Study
+	- Category	[e.g., Music]
+	- Class		[e.g., Violin]
+	- Type		[e.g., Textbook]
+	- Time unit	[e.g., 1-hour]
+	- Frequency	[e.g., 3x / wk.]
+	- Priority	[e.g., 5]
+		- 1-5, higher #s have higher priority
+		- used to break ties in case of impossible schedules
+
+- Fixed events
+	- Category	[e.g., Tutoring]
+	- Time unit	[e.g., 1-hour]
+	- Day		[e.g., Wednesday]
+
+
+Output:
+- Weekly plan for effective study
+
+
+Features:
+- Hour-tracker
+- XP tracker (linked to Type? Or independent?)

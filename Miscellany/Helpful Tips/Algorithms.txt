@@ -1,0 +1,24 @@
+Sort
+	- Insertion
+		- Linear w/ presorted data
+	- Merge
+		- Requires extra space for aux arrays
+	- Quick (3-way partition)
+		- Bad w/ presorted data	
+	- Radix
+
+Search
+	- Linear
+	- Binary
+	- Hashing
+
+Graph
+	- DFS
+	- BFS
+
+String
+	-
+
+Compression
+	- Huffman
+	- LZW

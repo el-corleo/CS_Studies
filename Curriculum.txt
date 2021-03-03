@@ -1,0 +1,138 @@
+_________________________________________________________
+CERTIFICATE COURSES
+--DATA SCIENCE--
+	Yandex Practicum
+		1.) |35%|	Practicum - Data Science Course	[https://practicum.yandex.com/profile/data-scientist/]
+
+
+
+NON-CERTIFICATE COURSES
+--BASICS--
+	Stanford
+		1.) |COMPLETE|	CS106A - Programming Methodology [https://see.stanford.edu/Course/CS106A/194]
+		2.) |COMPLETE|	CS106B - Programming Abstractions [https://see.stanford.edu/Course/CS106B]
+		3.) |COMPLETE|	CS107 - Programming Paradigms [https://see.stanford.edu/Course/CS107]
+	Princeton
+		4.) |COMPLETE|	CS: Programming with a Purpose [https://www.coursera.org/learn/cs-programming-java]
+		5.) |COMPLETE|	CS: Algorithms, Theory, and Machines [https://www.coursera.org/learn/cs-algorithms-theory-machines]
+
+--ALGORITHMS--
+	Princeton
+		1.) |COMPLETE|	Algorithms, Part I [https://www.coursera.org/learn/algorithms-part1]
+		2.) |COMPLETE|	Algorithms, Part II [https://www.coursera.org/learn/algorithms-part2]
+	MIT	[mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
+		3.) |COMPLETE|	6.006 - Intro to Algorithms	[<mit>/6-006-introduction-to-algorithms-fall-2011/]
+
+--AI/ML--
+	Kaggle
+		1.) |COMPLETE|	Intro to Machine Learning	[https://www.kaggle.com/learn/intro-to-machine-learning]
+		2.) |36%|	Intermediate Machine Learning	[https://www.kaggle.com/learn/intermediate-machine-learning]
+	MIT
+		3.) |COMPLETE|	6.S191 - MIT Intro to DL 2020	[https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI]
+	Fast.ai
+		4.) |COMPLETE|	Practical Deep Learning for Coders	[https://course.fast.ai/]
+
+--GAMES--
+	Games
+		1.) |COMPLETE|	Godot - HeartBeast 2D ARPG tutorial
+		2.) |60%|	Godot - HeartBeast 2D Platformer tutorial
+
+--MATH--
+	-Calculus-
+		Khan Academy
+			1.) |98%|	AP Calculus BC
+	-Discrete Math-
+		MIT
+			2.) |COMPLETE|	6.042J - Mathematics for Computer Science [<mit>/6-042j-mathematics-for-computer-science-fall-2010/]
+		Kimberly Brehm
+			3.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLl-gb0E4MII28GykmtuBXNUNoej-vY5Rz]
+		Dr. Trefor Bazett
+			4.) |COMPLETE|	Discrete Math [https://www.youtube.com/playlist?list=PLHXZ9OQGMqxersk8fUxiUMSIx0DBqsKZS]
+	-Statistics-
+		Khan Academy
+			5.) |56%|	AP Statistics
+
+--MISC--
+	Khan Academy
+		1.) |38%|   AP Physics 1
+		2.) |0%|    AP Physics 2
+		3.) |0%|    AP Chemistry
+		4.) |0%|    AP Biology
+_________________________________________________________
+
+_________________________________________________________
+BOOKS
+--CS BASICS--
+	1.) |COMPLETE|	{Java} Sedgewick - Computer Science: An Interdisciplinary Approach
+					Chap. 1-2 Assignments (total: 76)
+	2.) |COMPLETE|	{C++} Roberts - Programming Abstractions
+					Chap. 1-3 Assignments (total: 21)
+
+--ALGORITHMS--
+	1.) |COMPLETE|	{Java}Sedgewick - Algorithms
+					Chap. 1 Assignments (total: 0)
+	2.) |65%|	Heineman - Algorithms in a Nutshell (240)
+
+--OS--
+	1.) |60%|	{C} Silberschatz - Operating System Concepts
+	2.) |COMPLETE|	{C} Downey - Think OS
+
+--LANG/FRAMEWORK--
+	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
+				Chap. 1-3 Assignments (total: 10)
+	2.) |COMPLETE|	{Python} Shaw - Learn Python the Hard Way
+					Assignments (total: 45)
+	3.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
+	4.) |50%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (219)
+	5.) |25%|	{C#} Troelsen - Pro C# 7 (321)
+	6.) |50%|	{Java} Walls - Spring in Action (263)
+	7.) |45%|	{C} Shaw - Learn C the Hard Way (178)
+				Assignments (total: 17)
+
+--AI/ML--
+	1.) |00%|	Abu-Mostafa - Learning From Data
+	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
+	3.) |75%|	{Python} Kinsely - Neural Networks from Scratch (512)
+	4.) |05%|	{Python} Gugger - Deep Learning for Coders
+				Chap. 1 Assignments (total: 30)
+	5.) |55%|	{Python} Grus - Data Science from Scratch First Principles (206)
+
+--GAMES--
+	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
+
+--MATH--
+	1.) |10%|	Rosen - Discrete Mathematics and Its Applications (164)
+				Chap. 1 Assignments (total: 41)
+	2.) |15%|	Downey - Think Stats (34)
+				Chap. 1 Assigments (total: 1)
+	3.) |COMPLETE|	Byers - How Mathematicians Think
+
+--PROGRAMMING CHALLENGES--
+	1.) {C++} CodeForces Ladders
+		Lv. 600-1300 (total: 74)
+	2.) {Java/C++} Hackerrank
+		Easy-Medium (total: 32)
+	3.) {Python/C++} Project Euler
+		Diff = 5% (total: 12)
+
+--MISC--
+	1.) |50%|	Chacon - Pro Git
+	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
+	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
+	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
+	5.) |COMPLETE|	Martin - Clean Code
+	6.) |25%|	Gamma, et al. - Design Patterns (117)
+	7.) |00%|	Martin - The Clean Coder (600)
+_________________________________________________________
+
+_________________________________________________________
+GOALS
+1.) Complete 3D || 2D version of Conscientia
+2.) All Kaggle tutorials
+3.) CodeForces ladders up to level 1900
+4.) Simple self-driving car Neural Network
+5.) Complete SAT prep software
+6.) fast.ai
+7.) Voice control system for OpenPilot
+8.) Lie detector using voice and NNs
+_________________________________________________________

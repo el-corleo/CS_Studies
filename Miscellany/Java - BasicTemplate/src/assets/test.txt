@@ -1,0 +1,36 @@
+>Which of the following statements about abstract classes and interfaces is TRUE?<
+A.) An abstract class cannot extend another abstract class.
+B.) If an abstract class has no implemented constructors or methods, it is better to make it an interface.
+C.) An abstract class cannot implement an interface.
+D.) All subclasses of a class that implements an interface do not automatically implement the interface.
+E.) You can't declare variables with the type of an abstract class.
+B
+>Given the following declaration of a field in a class:
+
+public static final String GREETING = "Hi";
+
+Which of these statements is not true?<
+A.) The value of GREETING can not be changed in any methods.
+B.) GREETING.toUpperCase().equals("HI").
+C.) Each object of this class can access GREETING.
+D.) Each object of this class has a copy of GREETING.
+E.) GREETING.length() == 2.
+D
+>Consider the following code segment:
+
+List list1 = new ArrayList();
+list1.add(new Integer(1));
+list1.add(new Integer(2));
+list1.add(new Integer(3));
+list1.set(2, new Integer(4));
+list1.add(2, new Integer(5));
+list1.add(new Integer(6));
+System.out.println(list1);
+
+What is printed as a result of executing the code segment? <
+A.) [1, 2, 3, 4, 5] 
+B.) You get a compile error.
+C.) [1, 2, 5, 4, 6]
+D.) [1, 2, 4, 5, 6]
+E.) [1, 5, 2, 4, 6]
+C

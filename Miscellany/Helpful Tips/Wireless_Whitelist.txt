@@ -1,0 +1,4 @@
+// Look for default gateway to sign in to router
+$ ip r | grep default	// Linux
+
+$ ipconfig /all			// Windows

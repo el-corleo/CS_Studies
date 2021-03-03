@@ -1,0 +1,34 @@
+/*
+	URL:
+
+	DESCRIPTION:
+
+	INPUT:
+
+	OUTPUT:
+
+	SAMPLES:
+
+	OBSERVATIONS:
+		NOTABLE CONSTRAINTS
+
+		EDGE CASES
+		
+		POSS ALGOS
+		
+*/
+#include <iostream>
+
+template<typename T>
+void print(T t) { std::cout << t << std::endl; }
+
+int main()
+{
+	// Input
+
+	// Process
+
+	// Output
+
+	return 0;
+}

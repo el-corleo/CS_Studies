@@ -1,0 +1,35 @@
+// build image from a dockerfile
+docker build -t <container_name> .
+
+// list all docker images on machine
+docker image ls
+
+// run a container, -p tag maps local port to docker port
+docker run -pXXXX:XXXX <container_name>
+
+// show running(/not running) containers (container id, image name, etc.)
+docker ps (-a)
+
+// stop running container
+docker container stop <container_id>
+
+// start previously stopped container
+docker container start <container_id>
+
+// remove containers & images
+docker container rm <container_id>
+docker image rm <image_id>
+docker volume rm <volume_id>
+docker container prune
+docker image prune
+docker volume prune
+docker system prune
+
+// build a docker-compose file (when in same directory as docker-compose.yml
+docker-compose build
+
+// run docker-compose file
+docker-compose up -d
+
+// run multiple instances of an image
+docker-compose scale <image_name>=<num_instances>

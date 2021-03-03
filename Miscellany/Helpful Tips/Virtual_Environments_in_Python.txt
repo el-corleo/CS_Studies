@@ -1,0 +1,82 @@
+METHOD 1:
+
+Download and install virtual environment
+
+$ sudo pip install virtualenv virtualenvwrapper
+
+
+Once we have virtualenv and virtualenvwrapper installed, we’ll need to edit 
+our ~/.bashrc file. Place these 3 lines right at the bottom and save it.
+
+	export WORKON_HOME=$HOME/.virtualenvs
+	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+	source /usr/local/bin/virtualenvwrapper.sh
+
+
+Save the file and reload your changes:
+
+$ source ~/.bashrc
+
+
+Great! Now we can finally create our virtual environment like so:
+
+$ mkvirtualenv ml
+
+
+We’ve just created a virtual environment called ml . To enter it, do this:
+
+$ workon ml
+
+
+Nice! Any library installations that you do while in the ml virtualenv will be 
+isolated in there and never conflict with any other environments! So whenever you 
+wish to run code that depends on libraries installed in the mlenvironment, enter into 
+first with the workon command and then run your code as normal.
+
+If you need to exit the virtualenv, run this command:
+
+$ deactivate
+
+
+
+Install Machine Learning libraries
+
+ 
+Now we can install our ML libraries! We’ll go with the most commonly used ones:
+
+    numpy: for any work with matrices, especially math operations
+    scipy: scientific and technical computing
+    pandas: data handling, manipulation, and analysis
+    matplotlib: data visualisation
+    scikit learn: machine learning 
+
+Here’s a simple trick to install all of those libraries in one quick shot! Create a 
+requirements.txt file and list all of the packages you wish to install like so:
+
+	numpy
+	scipy
+	pandas
+	matplotlib
+	scikit-learn
+
+
+Once that’s done, just execute this command:
+
+$ pip install -r requirements.txt
+
+
+Voila! Pip will go ahead and install all of the packages listed in the file in one shot.
+Congratulations, your environment is set up and you’re ready to do Machine Learning!
+
+
+___________________________________________________
+METHOD 2
+
+// make a new dir
+$ mkdir ~/.venvs
+// setup new dir for specific environment
+$ virtualenv --system-site-packages ~/.venvs/<dir_name>
+// activate and enter virtual environment
+$ ~/.venvs/<dir_name>/bin/activate
+// deactivate and exit virtual environment
+$ deactivate

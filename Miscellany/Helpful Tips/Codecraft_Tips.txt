@@ -1,0 +1,84 @@
+PRAGMATIC PROGRAMMER
+
+QUESTIONS:
+
+- What is CORBA architecture?
+    - A specification for getting programs to communicate with one another
+
+
+LESSONS:
+
+- Broken windows lead to downward spiral [pg. 30]
+	- Leaving a broken window leads to apathy
+
+- Boiled frogs [pg. 32]
+	- Be aware of your surroundings so that you don't end up in a mess
+	- Basically, don't let things get out of control; nip them in the bud
+
+- When planning out a project, make sure critical decisions are reversible [pg. 44] 
+    - Don't depend on some third party library/product/service
+        - Write another layer that interfaces with your code and that library so that you can just rewrite the interface instead of the whole codebase
+
+- Tracer code [pg. 48]
+    - Integrate all parts of the program early and make sure everything is working by firing off code that will work end-to-end
+        - Limited functionality, but shows ability to go from input to output is important
+
+- Don't Repeat Yourself (DRY principle) [pg. 61]
+    - If you find yourself copying and pasting code, stop it
+    - Make it a method/function or put it in a library
+
+- Design by Contract DBC [pg.134]
+    - Stipulate preconditions, postconditions, and invariants for all classes and routines
+    - Can also say you are determining input domain range, boundary conditions and promised functionality before writing the class/method
+    - Can use assert statements to double check while developing/debugging 
+
+- Use assertions [pg. 147]
+	- Don't assume it can never happen; write code to check if it did happen
+	- Never put code that MUST be executed into an assert statement; you should be able to turn them off
+	- Assert statements do not replace error handling
+
+- Decouple [pg. 163]
+	- Program in modules that communicate with each other via interfaces; they are indpendent of each other
+	- Concept of spies divided into cells to protect the whole 
+
+- Use metadata (think like preference vars for program settings) [pg. 169]
+	- Don't hardcode
+	- Make things as configurable as possible w/o having to change code
+	- This can be accomplished with a database schema filled with variables
+	- "Program for the general case, and put the specifics somewhere else... Put Abstractions in Code, Details in Metadata." 
+
+- Events and Signals [pg. 182]
+	- Useful when helping large-scale programs communicate between modules
+	- Publish/subscribe model to maintain decoupling paradigm
+		- Only listen for signals for events that are relevant to a given module
+
+- Model-View-Controller (MVC) [pg. 185]
+	- Model = data container & manipulator
+	- View(s) = data displayer
+	- Controller = view manipulator
+		- Controller logic affects only view, not the Model
+	- Model outputs signals, View subscribes
+	- Controller outputs signals, View & Model subscribe
+
+- Blackboards [pg. 190]
+	- This approach makes facts/data available and methods can query/check for facts/data, but these can arrive asynchronously
+
+- Don't program by coincidence [pg. 198]
+	- Understand how your code works, inlcuding every call it relies upon to other libraries (relying only on documented behavior from library methods) 
+
+- Understand the 'real' constraints of a problem, not its 'imagined' ones [pg. 237]
+	- Think of the Gordian Knot
+	- Don't think outside the box; find the limits of the actual box instead
+
+- Test your tests [pg. 269]
+	- Deliberately cause the bug that your tests are testing for (e.g., by feeding bad inputs); this helps show the test will actually catch the bugs it's testing for
+
+- Focus on states tested, not % of code base tested [pg. 270]
+	- The edge cases can present problems
+	- The order in which input is fed can present problems
+
+- Test early, test often [pg. 271]
+	- Test regularly, not just before a deadline
+
+- You should only have to find a bug once [pg. 272]
+	- Make sure all tests henceforth check for that particular bug

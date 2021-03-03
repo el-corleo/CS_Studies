@@ -1,0 +1,62 @@
+//Skill = Category,Subject,Type,Duration,Frequency,Priority
+//Fixed = Category,Subject,Type,Day,Start,Duration
+//No spaces allowed
+// FUTURE SUBJECTS:
+// |Math,Applied,Lin_Alg,1,4,3;
+// |Writing,Applied,Consc,1,2,1;
+// |Science,Theory,Biology,1,4,3;
+// |Science,Theory,Chemistry,1,4,3;
+// |Music,Applied,Compose,1,2,1;
+// |Science,Applied,Physics,1,2,3;
+.
+|Music,Applied,Violin,1,6,5;
+|Music,Applied,Piano,1,5,5;
+
+|Math,Applied,Calculus,1,3,4;
+|Math,Applied,Stat/Prob,1,5,5;
+|Math,Applied,Discrete,1,3,4;
+
+|Comp_Sci,Applied,Yand_1,2,5,5;
+|Comp_Sci,Applied,Yand_2,2,5,5;
+|Comp_Sci,Applied,NNFS,1,3,5;
+|Comp_Sci,Applied,SE_Prncpls,1,3,5;
+|Comp_Sci,Applied,SE_Tools,1,4,5;
+|Comp_Sci,Applied,Algos_Sed,1,3,5;
+|Comp_Sci,Applied,Algos_PC,1,4,5;
+:
+*Aidos,Duty,Bath,0,22,1;
+*Aidos,Duty,Bath,2,22,1;
+*Aidos,Duty,Bath,3,22,1;
+*Aidos,Duty,Bath,5,22,1;
+*Aidos,Duty,Bath,6,22,1;
+
+*Rest,Sleep,Sleep,0,1,8;
+*Rest,Sleep,Sleep,1,1,8;
+*Rest,Sleep,Sleep,2,1,8;
+*Rest,Sleep,Sleep,3,1,8;
+*Rest,Sleep,Sleep,4,1,8;
+*Rest,Sleep,Sleep,5,1,8;
+*Rest,Sleep,Sleep,6,1,8;
+
+*Food,Bfast,Bfast,0,9,1;
+*Food,Bfast,Bfast,1,9,1;
+*Food,Bfast,Bfast,2,9,1;
+*Food,Bfast,Bfast,3,9,1;
+*Food,Bfast,Bfast,4,9,1;
+*Food,Bfast,Bfast,5,9,1;
+*Food,Bfast,Bfast,6,9,1;
+
+*Reading,Spanish,Reading,0,0,1;
+*Reading,Japanese,Reading,1,0,1;
+*Reading,Spanish,Reading,2,0,1;
+*Reading,Japanese,Reading,3,0,1;
+*Reading,Spanish,Reading,4,0,1;
+*Reading,Japanese,Reading,5,0,1;
+*Reading,Spanish,Reading,6,0,1;
+
+*Work,Teach,Dr._G,0,14,4;
+*Work,Teach,Dr._G,5,15,7;
+*Work,Teach,Dr._G,6,16,5;
+
+*Work,Teach,MMA,1,19,5;
+*Work,Teach,MMA,4,18,6;

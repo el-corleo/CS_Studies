@@ -1,0 +1,7 @@
+HOW TO MAKE A PACKAGE
+
+1. At the top of each *.java file in the package (outside the class curly brackets), write "package <package_name>;"
+2. When compiling, use the "javac -d directory javafilename" command
+	a. e.g., "javac -d . Simple.java"
+		- The -d is a switch that tells the compiler where to put the class file, i.e., it represents destination. The . represents the current folder.
+3. Use 'src' folder for '*.java' source code and 'bin' folder for '*.class' java bytecode.

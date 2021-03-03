@@ -1,0 +1,43 @@
+Array
+	- Advantages:
+		- Random access is O(1)
+		- Contiguous memory
+		- Sortable
+	- Disadvantages
+		- Fixed size (expansion/contraction requires making new array and copying values over)
+	- Great for:
+		- Collections of a known, fixed size
+		- Matrices
+		- Hash tables
+
+Linked List
+	- Advantages:
+		- Easily expandable/contractable
+	- Disadvantages:
+		- Memory not necessarily contiguous
+		- Not (easily) sortable
+		- Search is O(n)
+	- Great for:
+		- ???
+	- Types:
+		Singly Linked
+			- Can only traverse in one direction
+		Doubly Linked
+			- Can traverse in both directions
+
+Heap
+
+	- Great for:
+		- Priority Queues
+
+Tree
+
+	- Great for:
+		- BSTs
+
+Trie
+
+	- Great for:
+		- Text processing
+
+Graph

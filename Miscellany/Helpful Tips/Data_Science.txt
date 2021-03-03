@@ -1,0 +1,5 @@
+// Start new Jupyter Notebook Server
+$ python3 -m notebook
+
+// Navigate to directory
+$ jupyter notebook

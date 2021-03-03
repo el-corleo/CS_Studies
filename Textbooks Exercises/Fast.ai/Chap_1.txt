@@ -1,0 +1,139 @@
+1. Do you need these for deep learning?
+
+	Lots of math: F
+	Lots of data: F
+	Lots of expensive computers: F
+	A PhD: F
+
+	[But I'd argue that any and all of these are better to have than none of these for DL]
+
+2. Name five areas where deep learning is now the best in the world.
+	
+	Computer Vision	[e.g., face recognition]
+	NLP 			[e.g., sentiment analysis]
+	Game playing	[e.g., Alpha Go]
+	Image creation	[e.g., Deepfakes]
+	Rec systems		[e.g., Netflix]
+
+3. What was the name of the first device that was based on the principle of the artificial neuron?
+
+	Mark I Perceptron
+	[This is a terrible question, because it doesn't aid comprehension and merely tests memory of trivia]
+
+4. Based on the book of the same name, what are the requirements for parallel distributed processing (PDP)?
+
+	1.	A set of processing units	[Perceptrons(?)]
+	2.	A state of activation		[]
+	3.	An output function			[Weight*Input + Bias (?)]
+	4.	A pattern of connectivity	[]
+	5.	A propagation rule			[]
+	6.	An activation rule			[ReLU, etc. (?)]
+	7.	A learning rule				[SGD(?)]
+	8.	An operating environment	[]
+	
+5. What were the two theoretical misunderstandings that held back the field of neural networks?
+
+	1. Single hidden layer sufficiency [actually need at least two, but was technological infeasible until recent decades]
+	2. More than two hidden layers is better for most practical applications
+
+6. What is a GPU?
+
+	Graphics Processing Unit [are better at matrix multiplication than CPU because they are designed for that task]
+
+7. Open a notebook and execute a cell containing: 1+1. What happens?
+
+	It prints 2.
+
+8. Why is it hard to use a traditional computer program to recognize images in a photo?
+
+	It is difficult to define rules for classification. We don't even know how we do it.
+
+9. What did Samuel mean by "weight assignment"?
+
+	The weight is the relative importance of a given perceptron's activation in the network.
+
+10. What term do we normally use in deep learning for what Samuel called "weights"?
+
+	Parameters.
+	
+11. Why is it hard to understand why a deep learning model makes a particular prediction?
+
+	Because the rules are not human-encoded and are instead learned by auto adjustment of weights in the the network.
+
+12. What is the name of the theorem that shows that a neural network can solve any mathematical problem to any level of accuracy?
+
+	The universal approximation theory.
+
+13. What do you need in order to train a model?
+
+	Inputs and weights. [plus a way to update said weights]
+
+14. How could a feedback loop impact the rollout of a predictive policing model?
+
+	It there is bias to begin with and then more arrests and more data are collected based on the previous bias, then the biased data explodes in importance to the model
+
+15. Do we always have to use 224×224-pixel images with the cat recognition model?
+
+	No, but pretrained models often rely on these dimensions historically.
+
+16. What is the difference between classification and regression?
+
+	Classification is for discrete categories
+	Regression is for continuous values
+
+17. What is a validation set? What is a test set? Why do we need them?
+
+	Test set is used to train the data; they are the examples from which the model learns
+	Validation set is data withheld from training used to test the model's performance
+
+18. What will fastai do if you don't provide a validation set?
+
+	It defaults to 20% of the dataset
+
+19. Can we always use a random sample for a validation set? Why or why not?
+
+	Sometimes it's inappropriate to do so [e.g., time-sensitive data where you are trying to predict future trends, as in the stock market, as opposed to historical trends, as in face recognition]
+
+20. What is overfitting? Provide an example.
+
+	Overfitting is where the model aligns too perfectly to the test data and as a result cannot make accurate, generalized predictions
+
+21. What is a metric? How does it differ from "loss"?
+
+	A metric is a human-readable signal as to the model's performance; whereas, loss helps the model correct itself by knowing how far off it was
+
+22. How can pretrained models help?
+
+	Transfer learning leverages the fact that lots of resources were poured into making a model that's already good at a similar task, and thus the pretrained model will take fewer iterations to fine tune to the new, but related task
+
+23. What is the "head" of a model?
+
+	The head is the final/output layer of the model
+
+24. What kinds of features do the early layers of a CNN find? How about the later layers?
+
+	More general features suchs as gradients and larger line divisions (horizontal, diagonal, etc.)
+
+25. Are image models only useful for photos?
+
+	No, they can be used for many things that can be converted to images [e.g., text -> spectrogram]
+
+26. What is an "architecture"?
+
+	"The general template for how the model works internally"; "The mathematical function" used
+
+27. What is segmentation?
+
+	Classification for each pixel in an image
+
+28. What is y_range used for? When do we need it?
+
+	For regression problems, to specify range of output values
+
+29. What are "hyperparameters"?
+
+	The meta-level decisions about how to affect a model's actual parameters [e.g., learning rate]
+
+30. What's the best way to avoid failures when using AI in an organization?
+
+	Making sure you have a proper test/validation split [i.e., awareness of how to divide them; sometimes random is not the best way to go]

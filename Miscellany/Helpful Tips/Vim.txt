@@ -1,0 +1,47 @@
+// Controls
+i			// insert mode
+esc			// command mode
+:q			// quit
+:q!			// trash all changes
+:wq			// save & quit
+:w 			// save w/o quitting
+:set number	// show line numbers
+/(str)		// find occurence of (str), n to find next
+n			// find next occurence of string just searched for
+N			// find previous occurence of string jsut searched for
+gg			// move to top of file
+SHIFT+g		// move to the bottom of file
+# -> SHIFT+g// move to line #
+e			// move to the end of a word
+0			// cursor to start of line
+CTRL+z		// put vim in background
+fg			// bring vim back to foreground (?) after CTRL+z
+CTRL+s 		// scroll lock
+CTRL+q 		// cures CTRL+s
+:!(command)	// enter command line command (can run anything could run from cli)
+SHIFT+8		// takes you to next instance of word currently selected
+
+
+// Hex editor
+:%!xxd		// enter hex editor mode
+:%!xxd -r	// exit hex editor mode
+
+// ctags
+:!ctags (-R) <filename>	// generate tags file for given file (if no filename given, will gen for all)
+CTRL+]					// goto selected method
+CTRL+o					// return to previous method
+:tn						// goto next tag (in case 2+ methods have same name)
+:tp						// return to previous tag
+:ta CTRL+d				// gets a list of tags (type in method name you want to go to and then enter)
+
+
+// Edit
+u		// undo
+CTRL+r	// redo
+d(x)w	// delete x word(s) [replace x w/ a num]
+(x)dd	// delete x line(s) [replace x w/ a num]
+y		// copy line
+p		// after y will place copied line after cursor
+		// after dd will place deleted line after cursor
+A		// append text to end of line
+:%s/(string)/(string)(/g(c))	// find and replace [+/g = replace all; +c = ask for confirmation]
