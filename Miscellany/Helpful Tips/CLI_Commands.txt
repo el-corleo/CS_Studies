@@ -8,6 +8,7 @@ $ systeminfo	// gets computer info
 $ cd ~				// change to home directory
 $ cd ..				// change to parent directory
 $ cd ../..			// change to grandparent directory
+$ ln -s <path> <name> // creates a symbolic link (a shortcut) to the directory on <path> under the alias <name> from home
 $ mkdir dirName 	// makes a directory
 $ rmdir dirName 	// deletes a directory (must be empty before removing)
 $ rm -r dirName 	// deletes a directory and all sub directories (even if not empty)
@@ -61,7 +62,7 @@ $ sudo chmod 744 file 	// gives file permission to run
 			// Three columns are for user, group, and other, respectively
 			// 	user = owner of file
 			// 	group = a set of users
-			//	other = does not beling to group and is not owner of file
+			//	other = does not belong to group and is not owner of file
 			// 4 -> read; 2 -> write; 1 -> execute | combinations of these delineate permissions
 			// 1 is execute only, 2 is write only, 4 is read only
 			// 3 is execute+write, 5 is execute+read, ... , 7 is execute+write+read

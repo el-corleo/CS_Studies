@@ -39,3 +39,9 @@ git diff (<commit hash> (<commit hash>)) <filename>
 
 //can delete directories passed as params from git repo without removing from local machine
 git rm -r --cached "Dir - 1" "Dir - 2"
+
+// stashing changes to avoid losing changes that haven't been committed or staged when switching context
+git stash save "description"
+git stash pop (stash@#)	// removes stashed changes and applies them to current context
+git stash apply 		// same as pop but without removing the stashed changes, useful when applying changes to multiple branches
+git stash list			// lists all stashes

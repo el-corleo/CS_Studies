@@ -1,8 +1,11 @@
 _________________________________________________________
 CERTIFICATE COURSES
+--BASICS--
+	University of Illinois
+		1.) |25%|	
 --DATA SCIENCE--
 	Yandex Practicum
-		1.) |35%|	Practicum - Data Science Course	[https://practicum.yandex.com/profile/data-scientist/]
+		1.) |50%|	Practicum - Data Science Course	[https://practicum.yandex.com/profile/data-scientist/]
 
 
 
@@ -83,25 +86,25 @@ BOOKS
 	2.) |COMPLETE|	{Python} Shaw - Learn Python the Hard Way
 					Assignments (total: 45)
 	3.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
-	4.) |50%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (219)
-	5.) |25%|	{C#} Troelsen - Pro C# 7 (321)
-	6.) |50%|	{Java} Walls - Spring in Action (263)
-	7.) |45%|	{C} Shaw - Learn C the Hard Way (178)
-				Assignments (total: 17)
+	4.) |55%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (227)
+	5.) |25%|	{C#} Troelsen - Pro C# 7 (330)
+	6.) |60%|	{Java} Walls - Spring in Action (285)
+	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
+				Assignments (total: 18)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
 	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |75%|	{Python} Kinsely - Neural Networks from Scratch (512)
+	3.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
 	4.) |05%|	{Python} Gugger - Deep Learning for Coders
 				Chap. 1 Assignments (total: 30)
-	5.) |55%|	{Python} Grus - Data Science from Scratch First Principles (206)
+	5.) |65%|	{Python} Grus - Data Science from Scratch First Principles (224)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --MATH--
-	1.) |10%|	Rosen - Discrete Mathematics and Its Applications (164)
+	1.) |15%|	Rosen - Discrete Mathematics and Its Applications (169)
 				Chap. 1 Assignments (total: 41)
 	2.) |15%|	Downey - Think Stats (34)
 				Chap. 1 Assigments (total: 1)
@@ -121,7 +124,7 @@ BOOKS
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
 	5.) |COMPLETE|	Martin - Clean Code
-	6.) |25%|	Gamma, et al. - Design Patterns (117)
+	6.) |25%|	Gamma, et al. - Design Patterns (132)
 	7.) |00%|	Martin - The Clean Coder (600)
 _________________________________________________________
 
