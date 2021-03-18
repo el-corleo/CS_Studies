@@ -147,7 +147,7 @@ TEST_CASE("Benchmark: Measuring slowdown for insertOrdered and merge", "[weight=
 
     {
       auto studentList0 = list0_l.merge(list0_r);
-      // std::cout << studentList0 << " " << list0_correct << std::endl;
+      std::cout << studentList0 << " " << list0_correct << std::endl;
       if (studentList0 != list0_correct) {
         std::cout << "WARNING: It appears merge isn't correctly implemented yet.\n"
           << "  The running times below may not be meaningful." << std::endl;
@@ -281,6 +281,7 @@ TEST_CASE("Benchmark: Measuring slowdown for sorting algorithms", "[weight=0][.]
     }
 
     std::cout << std::endl;
+
 
     {
       auto testSort = unsortedListSmall.mergeSortRecursive();

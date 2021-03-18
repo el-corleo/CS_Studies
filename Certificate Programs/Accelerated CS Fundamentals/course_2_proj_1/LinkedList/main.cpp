@@ -50,71 +50,7 @@ void informalTests() {
   std::cout << "Remember that when you're ready to submit, you should do: make zip" << std::endl;
   std::cout << "That will package the zip file properly for submission." << std::endl;
 
-  {
-    std::cout << std::endl << "Testing splitHalves():" << std::endl;
-    LinkedList<int> l;
-    l.pushBack(5);
-    l.pushBack(6);
-    l.pushBack(7);
-    l.pushBack(8);
-    l.pushBack(9);
-    std::cout << "List: " << l << std::endl;
-    std::cout << "Size: " << l.size() << std::endl;
-    LinkedList<LinkedList<int>> halves = l.splitHalves();
-    std::cout << "Front half: " << halves.front()
-      << " Back half: " << halves.back() << std::endl;
-
-    LinkedList<int> expectedFrontHalf;
-    expectedFrontHalf.pushBack(5);
-    expectedFrontHalf.pushBack(6);
-    expectedFrontHalf.pushBack(7);
-    std::cout << "Expected front half: " << expectedFrontHalf << std::endl;
-    if (expectedFrontHalf != halves.front()) errorReaction("front half is wrong");
-    LinkedList<int> expectedBackHalf;
-    expectedBackHalf.pushBack(8);
-    expectedBackHalf.pushBack(9);
-    std::cout << "Expected back half: " << expectedBackHalf << std::endl;
-    if (expectedBackHalf != halves.back()) errorReaction("back half is wrong");
-  }
-
-  {
-    std::cout << std::endl << "Testing explode() and iterating with pointers:" << std::endl;
-    LinkedList<int> l;
-    l.pushBack(5);
-    l.pushBack(6);
-    l.pushBack(7);
-    l.pushBack(8);
-    l.pushBack(9);
-    std::cout << "Original list: " << l << std::endl;
-
-    auto lists = l.explode();
-    std::cout << "Exploded list of lists:" << std::endl;
-    std::cout << lists << std::endl;
-
-    std::cout << "Iterating through lists using pointers:" << std::endl;
-    auto nodePtr = lists.getHeadPtr();
-    while (nodePtr) {
-      auto list = nodePtr->data;
-      if (list.size() != 1) errorReaction("exploded list item should have size 1");
-      std::cout << "List: " << list << std::endl;
-      // std::cout << "Size: " << list.size() << std::endl << std::endl;
-      nodePtr = nodePtr->next;
-    }
-
-    // You can also avoid dealing with pointers entirely by using the
-    // push and pop interface to cycle through the list contents. (This is somewhat
-    // less efficient because it creates and destroys copies of the data throughout
-    // the process of shuffling the list.)
-    std::cout << "Fake iteration done by popping and pushing items:" << std::endl;
-    for (int i=0; i<lists.size(); i++) {
-      auto list = lists.front();
-      std::cout << "List: " << list << std::endl;
-      // std::cout << "Size: " << list.size() << std::endl << std::endl;
-      lists.popFront();
-      lists.pushBack(list);
-    }
-  }
-
+/*
   {
     std::cout << std::endl << "Testing insertOrdered:" << std::endl;
 
@@ -149,9 +85,10 @@ void informalTests() {
     std::cout << "Expected: " << expected << std::endl;
     if (l2 != expected) errorReaction("wrong result");
 
+
     std::cout << "Checking equivalency:" << std::boolalpha << (l == l2) << std::endl;
   }
-
+*/
   {
     std::cout << std::endl << "Testing insertionSort:" << std::endl;
     LinkedList<int> l;

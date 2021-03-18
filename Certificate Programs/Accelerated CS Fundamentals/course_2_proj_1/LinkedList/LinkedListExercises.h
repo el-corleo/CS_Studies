@@ -35,49 +35,6 @@
 
 #include "LinkedList.h"
 
-/********************************************************************
-  Exercise 1: insertOrdered
-
-  This LinkedList member function assumes that the current contents
-  of the list are already sorted in increasing order. The function
-  takes as input a new data item to be inserted to the same list.
-  The new data item should be inserted to the list in the correct
-  position, so that you preserve the overall sorted state of the list.
-
-  For example, if your LinkedList<int> contains:
-  [1, 2, 8, 9]
-  And the input is 7, then the list should be updated to contain:
-  [1, 2, 7, 8, 9]
-
-  To be more precise, a new node should be created on the heap, and
-  it should be inserted in front of the earliest node in the list that
-  contains a greater data element. If no such other node exists, then
-  the new item should be placed at the end (the back of the list).
-
-  Also, be sure to update the size_ member of the list appropriately.
-
-  Your implementation of this function should not change the memory
-  locations of the existing nodes. That is, you should not push or pop
-  the existing elements of the list if it would change their address.
-  (The member functions for push and pop will add a new node or delete
-  one, so these operations would not leave the original node in place
-  even if you recreated the node with equivalent data.) You should use
-  pointers to connect your new node at the correct insertion location,
-  being sure to adjust the list's head and tail pointers if necessary,
-  as well as any prev or next pointers of adjacent nodes in the list.
-  Remember: LinkedList is a doubly-linked list. That means each node
-  also refers to the previous item in the list, not just the next item.
-
-  A correct implementation of this function has O(n) time complexity
-  for a list of length n. That is, in the worst case, you would
-  traverse each element of the list some constant number of times.
-
-  You can use "make test" followed by "./test" to check the correctness
-  of your implementation, and then you can use "./test [bench]" to run
-  some interesting benchmarks on the speed of your code.
-
- ********************************************************************/
-
 template <typename T>
 void LinkedList<T>::insertOrdered(const T& newData) {
 	// create new node
@@ -86,7 +43,7 @@ void LinkedList<T>::insertOrdered(const T& newData) {
 	Node* traversal_ptr = head_;
 
 	// empty list
-	if (traversal_ptr == nullptr)
+	if (!traversal_ptr)
 	{
 		head_ = new_node_ptr;
 		tail_ = new_node_ptr;
@@ -97,36 +54,33 @@ void LinkedList<T>::insertOrdered(const T& newData) {
 	// find where element belongs
 	while(traversal_ptr->data < newData)
 	{
-		if (traversal_ptr->next != nullptr)	traversal_ptr = traversal_ptr->next;
-		else					break;
+		if (!traversal_ptr->next) break;
+		else	traversal_ptr = traversal_ptr->next;
 	}	
 
 	// insert at back
 	if (traversal_ptr->data < newData)
 	{
+		new_node_ptr->prev = tail_;
+		tail_->next = new_node_ptr;
 		tail_ = new_node_ptr;
-		new_node_ptr->prev = traversal_ptr;
-		traversal_ptr->next = new_node_ptr;
 	}
 	// insert at the front
-	else if (traversal_ptr->prev == nullptr)
+	else if (!traversal_ptr->prev)
 	{
+		new_node_ptr->next = head_; 
+		head_->prev = new_node_ptr;
 		head_ = new_node_ptr;
-		new_node_ptr->next = traversal_ptr; 
-		traversal_ptr->next->prev = new_node_ptr;
 	} else
 	{
-		// prev
 		traversal_ptr->prev->next = new_node_ptr;
 		new_node_ptr->prev = traversal_ptr->prev;
-		// next
 		traversal_ptr->prev = new_node_ptr;
 		new_node_ptr->next = traversal_ptr;
 	}
 	// increment size
 	size_++;
-
-  }
+}
 
 /********************************************************************
   Exercise 2: Linear-time Merge
@@ -221,36 +175,36 @@ LinkedList<T> LinkedList<T>::merge(const LinkedList<T>& other) const {
   // the function.
   LinkedList<T> merged;
 
-  // -----------------------------------------------------------
-  // TODO: Your code here!
-  // -----------------------------------------------------------
-  // Please implement this function according to the description
-  // above and in the instructions PDF.
+  while (!right.empty() || !left.empty())
+  {
+	if (left.empty())
+	{
+		while (!right.empty())
+		{
+			merged.pushBack(right.front());
+			right.popFront();
+		}
+	} else if (right.empty())
+	{
+		while (!left.empty())
+		{
+			merged.pushBack(left.front());
+			left.popFront();
+		}
+	} else
+	{
+		if (left.front() < right.front())
+		{
+			merged.pushBack(left.front());
+			left.popFront();
+		} else
+		{
+			merged.pushBack(right.front());
+			right.popFront();
+		}
+	}
+  }
 
-  // Hints:
-  // 1. Assuming that the left and right lists are already sorted, remember
-  //    that the smallest items are already available at the front. You can
-  //    access them immediately.
-  // 2. Think of which item needs to be placed first in the merged list.
-  //    Then think about what item should be placed second. You need to
-  //    think carefully about which list to take from next after you take
-  //    each single item.
-  // 3. You can do this while walking down the left and right lists exactly
-  //    once. Do not loop over the lists multiple times. If you are doing
-  //    that, your implementation is probably already running in O(n^2)
-  //    time or worse, and not O(n).
-  // 4. Remember, DO NOT try to use insertOrdered here. That would be
-  //    very slow.
-
-  // -----------------------------------------------------------
-
-  // We return the merged list by value here. It may be copied out of the
-  // function, but usually the compiler will optimize this to automatically
-  // create it directly in the correct memory space outside without copying.
-  // Don't worry about the speed of that right now. (By the way, did you
-  // notice that all of our nodes are created on the heap? The part of the
-  // list that we pass back is really small; it just contains two pointers
-  // and an int.)
   return merged;
 }
 
