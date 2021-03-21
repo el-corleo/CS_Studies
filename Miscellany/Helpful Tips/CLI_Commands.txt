@@ -66,3 +66,7 @@ $ sudo chmod 744 file 	// gives file permission to run
 			// 4 -> read; 2 -> write; 1 -> execute | combinations of these delineate permissions
 			// 1 is execute only, 2 is write only, 4 is read only
 			// 3 is execute+write, 5 is execute+read, ... , 7 is execute+write+read
+			
+$ amixer set Master 100%	// sets volume to max
+$ amixer set Master 10%+	// increases volume by 10%
+$ amixer set Master toggle	// mute/unmute

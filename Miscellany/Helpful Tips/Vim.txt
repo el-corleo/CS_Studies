@@ -6,7 +6,7 @@ esc			// command mode
 :wq			// save & quit
 :w 			// save w/o quitting
 :set number	// show line numbers
-/(str)		// find occurence of (str), n to find next
+/.(str)		// find occurence of (str), n to find next
 n			// find next occurence of string just searched for
 N			// find previous occurence of string jsut searched for
 gg			// move to top of file
@@ -20,7 +20,9 @@ CTRL+s 		// scroll lock
 CTRL+q 		// cures CTRL+s
 :!(command)	// enter command line command (can run anything could run from cli)
 SHIFT+8		// takes you to next instance of word currently selected
-
+:tabe <filename>	// Add a new tab with <filename> to edit
+:tabn		// move to next tab
+:tabp		// move to previous tab
 
 // Hex editor
 :%!xxd		// enter hex editor mode

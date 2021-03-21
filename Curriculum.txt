@@ -2,7 +2,7 @@ _________________________________________________________
 CERTIFICATE COURSES
 --BASICS--
 	University of Illinois
-		1.) |25%|	
+		1.) |25%|	Accelerated CS Fundamentals Specialization [https://www.coursera.org/specializations/cs-fundamentals]
 --DATA SCIENCE--
 	Yandex Practicum
 		1.) |50%|	Practicum - Data Science Course	[https://practicum.yandex.com/profile/data-scientist/]
