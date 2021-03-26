@@ -1,7 +1,8 @@
 #include <stdio.h>
-#include "dbg.h"
 #include <stdlib.h>
 #include <dlfcn.h>
+
+#include "dbg.h"
 
 typedef int (*lib_function) (const char* data, int len);
 

@@ -23,7 +23,10 @@ git checkout <branch>
 // merge checked out branch to currently checked out branch
 git merge <branch>
 
-// 
+// set as remote
+git remote add origin https://Chaos_is_Harmony@bitbucket.org/Chaos_is_Harmony/<reponame>.git
+
+// change remote 
 git remote set-url origin https://Chaos_is_Harmony@bitbucket.org/Chaos_is_Harmony/<reponame>.git
 
 // see list of commits

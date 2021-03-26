@@ -86,9 +86,9 @@ BOOKS
 	2.) |COMPLETE|	{Python} Shaw - Learn Python the Hard Way
 					Assignments (total: 45)
 	3.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
-	4.) |55%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (227)
-	5.) |25%|	{C#} Troelsen - Pro C# 7 (330)
-	6.) |60%|	{Java} Walls - Spring in Action (285)
+	4.) |65%|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps (259)
+	5.) |30%|	{C#} Troelsen - Pro C# 7 (339)
+	6.) |65%|	{Java} Walls - Spring in Action (291)
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
 
@@ -98,7 +98,7 @@ BOOKS
 	3.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
 	4.) |05%|	{Python} Gugger - Deep Learning for Coders
 				Chap. 1 Assignments (total: 30)
-	5.) |65%|	{Python} Grus - Data Science from Scratch First Principles (224)
+	5.) |85%|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
@@ -112,7 +112,7 @@ BOOKS
 
 --PROGRAMMING CHALLENGES--
 	1.) {C++} CodeForces Ladders
-		Lv. 600-1300 (total: 74)
+		Lv. 600-1300 (total: 85)
 	2.) {Java/C++} Hackerrank
 		Easy-Medium (total: 32)
 	3.) {Python/C++} Project Euler
