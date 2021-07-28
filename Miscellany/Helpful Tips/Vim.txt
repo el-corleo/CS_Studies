@@ -8,10 +8,10 @@ esc			// command mode
 :set number	// show line numbers
 /.(str)		// find occurence of (str), n to find next
 n			// find next occurence of string just searched for
-N			// find previous occurence of string jsut searched for
+N			// find previous occurence of string just searched for
 gg			// move to top of file
 SHIFT+g		// move to the bottom of file
-# -> SHIFT+g// move to line #
+<#> -> SHIFT+g// move to line #
 e			// move to the end of a word
 0			// cursor to start of line
 CTRL+z		// put vim in background

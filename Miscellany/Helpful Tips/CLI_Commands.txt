@@ -27,7 +27,7 @@ $ df 				// shows how much free disk space there is
 $ du 				// shows how much used disk space there is
 $ lshw				// shows hardware specs
 $ du -sh dirName 	// see disk usage of given directory (how much space it takes up on disk)
-$ ls | wc -l		// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
+$ ls <dir> | wc -l		// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
 $ mount -t drvfs D: /mnt/d 	// mounts drive from D: on linux subsystem on Windows 10
 
 $ nano file		// opens text editor and creates file
@@ -70,3 +70,30 @@ $ sudo chmod 744 file 	// gives file permission to run
 $ amixer set Master 100%	// sets volume to max
 $ amixer set Master 10%+	// increases volume by 10%
 $ amixer set Master toggle	// mute/unmute
+
+$ ps aux			// lists all processes
+$ pidof prog		// find process id of program
+$ kill -9 <pid>		// kill process
+
+$ <start process>	// The following steps will detach a process from its original shell
+$ CTRL+Z			// Interrupt process
+$ bg				// put process in background
+$ jobs				// list jobs in background
+$ disown %<job #>	// detach process from current shell
+
+$ sudo systemctl mask --now sleep.target suspend.target hibernate.target hybrid-sleep.target
+						// turns off sleep, suspend, and hibernate | unmask renables them
+						
+$ tmux					// multiple cli in same window
+$ tmux new -s <name>	// start a new session and name it <name>
+$ tmux attach -t <name>	// restart session <name>
+$ CTRL+B s				// list all sessions available
+$ CTRL+B d				// detach current session
+$ CTRL+B <%/">			// splits window vertically or horizontally; opens new cli
+$ CTRL+B <arrow key>	// toggle between windows; holding CTRL+B and pressing arrow key will resize window
+$ :resize-pane -D (10)	// resize window
+$ CTRL+B [			// scroll, q to quit scrolling mode
+$ CTRL+B &			// kills current tmux window
+$ CTRL+B x			// kills current tmux pane
+
+$ locate <filename>

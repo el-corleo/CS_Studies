@@ -1,0 +1,6 @@
+Haskell
+
+$ stack ghci			// run haskell compiler
+Prelude> :l <filename>	// load .hs file
+*Main> :r				// run loaded file
+*Main> :t <func>		// prints function signature to screen; operators may require ()
