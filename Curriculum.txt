@@ -92,11 +92,11 @@ BOOKS
 					Assignments (total: 45)
 	3.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
 	4.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
-	5.) |40%|	{C#} Troelsen - Pro C# 7 (521)
+	5.) |40%|	{C#} Troelsen - Pro C# 7 (525)
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |10%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (38)
+	8.) |10%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (43)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
@@ -107,15 +107,15 @@ BOOKS
 	5.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --BLOCKCHAIN--
-	1.) |50%|	Daniel Drescher - Blockchain Basics (101)
+	1.) |50%|	Daniel Drescher - Blockchain Basics (108)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --MATH--
-	1.) |15%|	Rosen - Discrete Mathematics and Its Applications (185)
-	2.) |50%|	Downey - Think Stats (183)
-	3.) |00%|	Downey - Think Bayes ()
+	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
+	2.) |50%|	Downey - Think Stats (193)
+	3.) |50%|	Downey - Think Bayes (80)
 	4.) |COMPLETE|	Byers - How Mathematicians Think
 
 --PROGRAMMING CHALLENGES--
