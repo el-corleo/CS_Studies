@@ -47,7 +47,7 @@ bmiTell' weight height
     | bmi <= skinny = "Underweight"
     | bmi <= normal = "Just right"
     | bmi <= heavy  = "Danger"
-    | otherwise   = "Fatty"
+    | otherwise     = "Fatty"
     where bmi    = weight / height^2
           skinny = 18.5
           normal = 25.0

@@ -10,9 +10,9 @@ CERTIFICATE COURSES
 
 --BLOCKCHAIN--
 	UC Irvine
-		1.) |25%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+		1.) |35%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
 
-NON-CERTIFICATE COURSES
+AUDITED COURSES
 --BASICS--
 	Stanford
 		1.) |COMPLETE|	CS106A - Programming Methodology [https://see.stanford.edu/Course/CS106A/194]
@@ -92,11 +92,11 @@ BOOKS
 					Assignments (total: 45)
 	3.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
 	4.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
-	5.) |40%|	{C#} Troelsen - Pro C# 7 (525)
+	5.) |40%|	{C#} Troelsen - Pro C# 7 (532)
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |18%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (71)
+	8.) |20%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (79)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
