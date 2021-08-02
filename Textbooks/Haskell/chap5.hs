@@ -116,4 +116,77 @@ addThree' :: Int -> Int -> Int -> Int
 addThree' = \x -> \y -> \z -> x + y + z
 
 
+-- Traversing lists with folds
+sum' :: [Int] -> Int
+sum' xs = foldl (\acc x -> acc + x) 0 xs
+
+sum'' :: [Int] -> Int
+sum'' = foldl (+) 0 
+
+
+-- NOTE: "Generally, if you have a function like foo a = bar b a, you can rewrite it as foo = bar b because of currying."
+
+
+-- experiment
+minusL :: [Int] -> Int
+minusL = foldl (-) 0
+minusR :: [Int] -> Int
+minusR = foldr (-) 0
+
+
+-- On using foldr to build new lists: "However, the ++ function is much slower than :, so we usually use right folds when we’re building up new lists from a list. One big difference between the two types of folds is that right folds work on infinite lists, whereas left ones don’t!"
+
+-- implement elem using foldr
+-- my attempt: FAILURE
+--elem' :: a -> [a] -> Bool
+--elem' x xs = foldr (\j k -> j == k) x xs
+
+-- book
+-- "Remember that the type of the accumulator value and the type of the end result are always the same when dealing with folds."
+elem' :: (Eq a) => a -> [a] -> Bool
+elem' y ys = foldr (\x acc -> if x == y then True else acc) False ys
+
+-- other functions re-implemented with folds
+reverse' :: [a] -> [a]
+reverse' = foldl (\acc x -> x : acc ) []
+
+reverse'' :: [a] -> [a]
+reverse'' = foldl (flip (:)) []
+
+product' :: (Num a) => [a] -> a
+product' = foldl (\x acc -> x * acc) 1
+
+filter'' :: (a -> Bool) -> [a] -> [a]
+filter'' p = foldr (\x acc -> if p x then x : acc else acc) []
+
+
+-- $
+-- "You can imagine $ as almost being the equivalent of writing an opening parenthesis and then writing a closing parenthesis on the far right side of the expression."
+this       = sum (map sqrt [1..130])
+sameAsThis = sum $ map sqrt [1..130]
+
+that         = sqrt 3 + 4 + 9   -- sqrt 3 + (4 + 9)
+diffFromThat = sqrt $ 3 + 4 + 9 -- sqrt (3 + 4 + 9)
+
+
+whoa = map ($ 3) [(4+), (5*), (10/), (^2), sqrt]
+
+
+-- function composition f ( g (x))
+funcComp = map (negate . abs) [5, -3, -6, 7]
+funcComp' = map (negate . sum . tail) [[1..5], [-3..6], [1..7]]
+
+equiv   = sum (replicate 5 (max 6.7 8.9))
+equiv'  = (sum . replicate 5) (max 6.7 8.9)
+equiv'' = sum . replicate 5 $ max 6.7 8.9
+
+
+sameAsBelow = replicate 2 (product (map (*3) (zipWith max [1,2] [4,5])))
+sameAsAbove = replicate 2 . product . map (*3) $ zipWith max [1,2] [4,5]
+
+
+-- Point-free style
+-- A note on style: "However, if a function is too complex, writing it in point-free style can actually be less readable. For this reason, making long chains of function composition is discouraged. The preferred style is to use let bindings to give labels to intermediary results or to split the problem into subproblems that are easier for someone reading the code to understand."
+fn x = ceiling (negate (tan (cos (max 50 x))))
+fn' = ceiling . negate . tan . cos . max 50
 
