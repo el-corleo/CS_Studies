@@ -10,7 +10,11 @@ CERTIFICATE COURSES
 
 --BLOCKCHAIN--
 	UC Irvine
-		1.) |35%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+		1.) |50%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+
+--CYBERSECURITY--
+	NYU
+		1.) |05%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
 
 AUDITED COURSES
 --BASICS--
@@ -96,7 +100,7 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |25%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (107)
+	8.) |30%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (124)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
@@ -107,7 +111,7 @@ BOOKS
 	5.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --BLOCKCHAIN--
-	1.) |50%|	Daniel Drescher - Blockchain Basics (108)
+	1.) |60%|	Daniel Drescher - Blockchain Basics (141)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
