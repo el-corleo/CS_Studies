@@ -5,6 +5,8 @@ esc			// command mode
 :q!			// trash all changes
 :wq			// save & quit
 :w 			// save w/o quitting
+:bd			// delete the buffer, i.e., close the window w/o quitting vim
+:w|bd		// save & close buffer
 :set number	// show line numbers
 /.(str)		// find occurence of (str), n to find next
 n			// find next occurence of string just searched for
@@ -47,3 +49,8 @@ p		// after y will place copied line after cursor
 		// after dd will place deleted line after cursor
 A		// append text to end of line
 :%s/(string)/(string)(/g(c))	// find and replace [+/g = replace all; +c = ask for confirmation]
+SHIFT+V							// indent multiple lines
+	arrow keys to select lines
+	SHIFT+(< or >)				
+<leader>ci // toggle line comment
+<leader>cc // toggle selected line(s) comment in visual mode

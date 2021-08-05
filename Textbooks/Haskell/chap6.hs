@@ -117,12 +117,80 @@ phoneBookMap = Map.fromList $ phoneBook
 addValues = Map.fromListWith (+) [(1, 2), (1, -2), (2, 0), (3, 1), (3, -1)]
 
 
+{-
+   - Modules
+
+    "However, Geometry.hs must be in the same folder as the module that’s
+    importing it." <- There has to be some packaging system, I guess?
+
+   Example:
+
+   module Geometry3D
+   ( sphereVolume,
+     sphereArea,
+     cubeVolume,
+     cubeArea,
+     cuboidVolume,
+     cuboidArea
+     -- All of the functions exported for external use (i.e., public functions)
+   ) where
+
+    sphereVolume :: Float -> Float
+    sphereVolume r = (4.0/3.0) * pi * (r^3)
+    
+    sphereArea :: Float -> Float
+    sphereArea r = 4 * pi (r^2)
+
+    cubeVolume :: Float -> Float
+    cubeVolume s = cuboidVolume s s s
+
+    cubeArea :: Float -> Float
+    cubeArea s = cuboidArea s s s 
+
+    cuboidVolume :: Float -> Float -> Float -> Float
+    cuboidVolume l w h = (rectArea l w) * h
+
+    cuboidArea :: Float -> Float -> Float -> Float
+    cuboidArea l w h = (rectArea l w) * 2 + (rectArea w h) * 2 + (rectArea h l) * 2 
+    
+    rectArea :: Float -> Float -> Float
+    rectArea l w = l * w
+
+-}
+
+{-
+   Heirarchical Modules
+
+   - Geometry3D
+        |
+        | Sphere
+        | Cuboid
+        | Cube
 
 
+    ...
 
+    module Geometry3D.Cuboid
+    ( volume,
+      area
+    ) where
 
+    volume :: Float -> Float -> Float -> Float
+    volume l w h = (rectArea l w) * h
 
+    ...
 
+    module Geometry3D.Cube
+    ( volume,
+      area
+    ) where
 
+    import qualified Geometry3D.Cuboid as Cuboid
 
+    volume :: Float -> Float
+    volume s = Cuboid.volume s s s
 
+    ...
+
+    "If we want to juggle two or more of these modules, we need to do qualified imports because they export functions with the same names."
+-}
