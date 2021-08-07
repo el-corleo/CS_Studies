@@ -111,7 +111,7 @@ BOOKS
 	5.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --BLOCKCHAIN--
-	1.) |60%|	Daniel Drescher - Blockchain Basics (141)
+	1.) |65%|	Daniel Drescher - Blockchain Basics (161)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
@@ -128,7 +128,7 @@ BOOKS
 	2.) {Java/C++} Hackerrank
 		Easy-Medium (total: 32)
 	3.) {Python/C++} Project Euler
-		Diff = 5% (total: 12)
+		Diff = 5% (total: 15)
 
 --MISC--
 	1.) |50%|	Chacon - Pro Git
