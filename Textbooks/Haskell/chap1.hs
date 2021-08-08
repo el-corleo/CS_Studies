@@ -65,7 +65,7 @@ maxOfThese = max 9 10
 -- Logical operators
 andOp = True && False
 orOp = True || False
-notOp = not(True)
+notOp = not True
 equals = 5 == 5
 notEquals = 5 /= 4
 
@@ -86,13 +86,13 @@ lenPrimesExt = length primesExtended
 nullCheck = null []
 nullCheck' = null primes
 invert = reverse primes
-get = take 2 primes
-del = drop 2 primes                     -- lists are immutable so doesn't actually change primes, just creates a new list without the first x elems
+listOfOnlyFirstTwoElems = take 2 primes
+listWithoutFirstTwoElems = drop 2 primes                     -- lists are immutable so doesn't actually change primes, just creates a new list without the first x elems
 maxNum = maximum primes
 minNum = minimum primes
 prodOfPrimes = product primes
 sumOfPrimes = sum primes
-inList = 4 `elem` primes
+inList = 4 `elem` primes								-- Check for membership
 letters = ['a'..'z']
 letters' = ['K'..'P']
 stepBy3 = [3,6..90]
@@ -116,11 +116,14 @@ xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]]
 nestedListComp = [ [ x | x <- xs, even x ] | xs <- xxs]
 
 -- Custom functions
+multiply :: (Num a) => a -> a -> a
 multiply x y = x * y
 toThePower x y = x ** y
 
 -- Functions composed of other functions
+increment :: (Num a) => a -> a
 increment x = x + 1
+incThenMult :: (Num a) => a -> a -> a
 incThenMult x y = (increment x) * y
 
 -- Conditional functions
@@ -158,8 +161,12 @@ zippedList' = zip list3 list4 -- will only produce pairs up to length on smalles
 	   - All side lengths are <= 10
 	   - All sides add up to 24
 -}
+-- my attempt
+rightTri :: (Eq a, Floating a) => a -> a -> a -> Bool
 rightTri x y z = ((x ** 2) + (y ** 2)) == (z ** 2)
 candidates = [(x, y, z) | x <- [1 .. 10 ], y <- [1 .. 10], z <- [1 .. 10], (x + y + z ) == 24, (rightTri x y z) ]
+
+-- Book solution
 bookSolution = [(a, b, c) | c <- [1 .. 10 ], a <- [1 .. c], b <- [1 .. a], a^2 + b^2 == c^2, a+b+c == 24 ]
 
 
