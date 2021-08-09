@@ -13,16 +13,19 @@ reverseTup (a, b) = (b, a)
 
 -- Type classes define interfaces for functions and operators for a given type
 -- Must use type constraint notation
--- e.g., (==) :: (Eq a) => a -> a-> Bool [defines the == operator]
+-- e.g., (==) :: (Eq a) => a -> a -> Bool [defines the == operator]
 --       (Num b, Integral a) => a -> b   [defines fromIntegral function]
 
 -- show prints to console for any type that can be represented as a string
 -- read takes a string as input and converts to appropriate type
-showFloat = show 5.334
-readListAndAppend n = read "[1,2,3]" ++ n
+showFloat :: Float -> String
+showFloat f = show f
+readListAndAppend :: [Int] -> [Int]
+readListAndAppend xs = read "[1,2,3]" ++ xs
 -- note read "4" doesn't work because the compiler doesn't know which type it should convert 4 to
 -- Type annotations solve this issue
 annotated = read "4" :: Int
+annotated' = read "4" :: Float
 
 -- define finding maximum element recursively
 -- my attempt
@@ -47,7 +50,7 @@ maximum'' (x:xs) = max x (maximum'' xs)
 replicate' :: Int -> a -> [a]
 replicate' times item
     | times == 1 = [item]
-    | otherwise  = item:(replicate' (times-1) item)
+    | otherwise  = item : replicate' (times-1) item
 
 -- book
 -- better in that it deals with edge cases like 0 and negative numbers
@@ -60,7 +63,7 @@ replicate'' n x
 -- define take recursively
 take' :: Int -> [a] -> [a]
 take' n xs
-    | length xs == 0 = []
+    | length xs <= 0 = []
     | n <= 0         = []
     | otherwise      = (head xs) : take' (n - 1) (tail xs)
 
@@ -88,8 +91,10 @@ reverse' (x:xs) = reverse' xs ++ [x]
 -- book
 -- infinite list; recursion with no base case
 repeat' :: a -> [a]
-repeat' x = x:repeat' x
+repeat' x = x : repeat' x
 
+nTimes :: Int -> a -> [a] 
+nTimes n x = take n $ repeat' x
 
 -- define zip recursively
 -- my attempt
@@ -103,11 +108,12 @@ zip' xs ys
 zip'' :: [a] -> [b] -> [(a, b)]
 zip'' _ []          = []
 zip'' [] _          = []
-zip'' (x:xs) (y:ys) = (x,y):zip'' xs ys
+zip'' (x:xs) (y:ys) = (x,y) : zip'' xs ys
 
 
 -- Quicksort in Haskell
--- black magic (?)... don't quite understand this
+-- x is the pivot, and then you recursively perform on arrays that contain smaller and larger numbers than the pivot
+--      smaller and larger arrays use list comprehension
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x:xs) =

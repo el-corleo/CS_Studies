@@ -101,6 +101,7 @@ BOOKS
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
 	8.) |30%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (124)
+	9.) |75%|	{Python} Sweigart - Automate the Boring Stuff with Python (365)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
