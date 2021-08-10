@@ -9,7 +9,7 @@ maximum' xs
           otherElem = maximum' (tail xs)
 
 -- book
--- better because of error reporting
+-- better because of error reporting [and because of Ord class limiting a to only things that can be ordered]
 maximum'' :: (Ord a) => [a] -> a
 maximum'' []     = error "maximum of emplty list!"
 maximum'' [x]    = x
@@ -21,7 +21,7 @@ maximum'' (x:xs) = max x (maximum'' xs)
 replicate' :: Int -> a -> [a]
 replicate' times item
     | times == 1 = [item]
-    | otherwise  = item:(replicate' (times-1) item)
+    | otherwise  = item : (replicate' (times-1) item)
 
 -- book
 -- better in that it deals with edge cases like 0 and negative numbers
@@ -32,6 +32,7 @@ replicate'' n x
 
 
 -- define take recursively
+-- my attempt
 take' :: Int -> [a] -> [a]
 take' n xs
     | length xs == 0 = []
@@ -64,6 +65,9 @@ reverse' (x:xs) = reverse' xs ++ [x]
 repeat' :: a -> [a]
 repeat' x = x:repeat' x
 
+nTimes :: Int -> a -> [a] 
+nTimes n x = take n $ repeat' x
+
 
 -- define zip recursively
 -- my attempt
@@ -81,11 +85,11 @@ zip'' (x:xs) (y:ys) = (x,y):zip'' xs ys
 
 
 -- Quicksort in Haskell
+-- x is the pivot, and then you recursively perform on arrays that contain smaller and larger numbers than the pivot
+--      smaller and larger arrays use list comprehension
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x:xs) =
     let smallerOrEqual = [a | a <- xs, a <= x]
         larger         = [a | a <- xs, a > x]
     in quicksort smallerOrEqual ++ [x] ++ quicksort larger
-
-
