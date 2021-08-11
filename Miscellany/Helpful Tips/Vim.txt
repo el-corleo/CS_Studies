@@ -5,6 +5,9 @@ esc			// command mode
 :q!			// trash all changes
 :wq			// save & quit
 :w 			// save w/o quitting
+:bp			// go to previous buffer
+:bn			// go to next buffer
+:b<#>		// go to buffer #x
 :bd			// delete the buffer, i.e., close the window w/o quitting vim
 :w|bd		// save & close buffer
 :set number	// show line numbers
@@ -54,3 +57,5 @@ SHIFT+V							// indent multiple lines
 	SHIFT+(< or >)				
 <leader>ci // toggle line comment
 <leader>cc // toggle selected line(s) comment in visual mode
+:set expandtab
+:retab			// will convert all tabs in the current doc to spaces

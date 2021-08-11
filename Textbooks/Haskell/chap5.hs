@@ -1,6 +1,6 @@
 -- Curried functions are functions that take only a single parameter as input and return a function that takes a single input
 is5     = max 4 5
-isAlso5 = (max 4) 5 -- max actually only takes one parameter 
+isAlso5 = (max 4) 5 -- max actually only takes one parameter
 
 -- book example
 -- NOTE: Parentheses in definition are optional
@@ -15,7 +15,8 @@ areSame = result == result'
 
 
 -- function composition
--- QUESTION: why don't we need to specify inputs for mult2With9? Shouldn't it be mult2with9 x y = mult3 9 x y?
+-- QUESTION: why don't we need to specify inputs for mult2With9? Shouldn't it be mult2With9 x y = mult3 9 x y?
+-- If you read the above example, you'll see that similarly mult2With9 only takes one input but returns a function that takes another input
 mult2With9 :: Int -> (Int -> Int)
 mult2With9 = mult3 9
 
@@ -67,18 +68,20 @@ filter' p (x:xs)
 -- the book claims this is more 'readable' than the list comprehension version; I disagree; set-builder notation is much more readable in my opinion
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
-quicksort (x:xs) = 
+quicksort (x:xs) =
     let smallerOrEqual = filter (<= x) xs
         larger         = filter (> x) xs
     in quicksort smallerOrEqual ++ [x] ++ quicksort larger
 
 -- largest number under 100,000 divisible by 3829
 -- by using head, we guarantee that Haskell stops evaluating after finding the first value, hence being able to use the infinite list
+-- The below is functionally equivalent to the much uglier:
+lD = head (filter (\x -> x `mod` 3829 == 0) [100000, 99999..])
 largestDivisor = head (filter p [100000, 99999..])
     where p x = x `mod` 3829 == 0
 
 -- sum of all odd squares under 10000
--- my attempt [mine is infinite and can only be fixed by putting an upper bound on the list [1..], e.g., [1..100] 
+-- my attempt [mine is infinite and can only be fixed by putting an upper bound on the list [1..], e.g., [1..100]
 sumOfOddSq = sum [x^2 | x <- [1..], odd (x^2) && (x^2) < 10000]
 
 -- book
@@ -96,7 +99,11 @@ chain n
 
 numLongChains :: Int
 numLongChains = length (filter isLong (map chain [1..100]))
-    where isLong xs = length xs > 15 
+    where isLong xs = length xs > 15
+
+
+
+-- REVIEW ENDED HERE 8/11 --
 
 
 -- lambda functions
@@ -104,7 +111,7 @@ numLongChains = length (filter isLong (map chain [1..100]))
 -- e.g., map (+3) [1, 2, 3] is equivalent to map (\x -> x + 3) [1, 2, 3]
 -- Also: "If a pattern match fails in a lambda, a runtime error occurs, so be careful!"
 numLongChains' :: Int
-numLongChains' = length (filter (\xs -> length xs > 15) (map chain [1..100])) 
+numLongChains' = length (filter (\xs -> length xs > 15) (map chain [1..100]))
 
 anotherExample = zipWith (\a b -> (a * 30 - 3) / b) [5, 4, 3] [3, 4, 5]
 
@@ -121,7 +128,7 @@ sum' :: [Int] -> Int
 sum' xs = foldl (\acc x -> acc + x) 0 xs
 
 sum'' :: [Int] -> Int
-sum'' = foldl (+) 0 
+sum'' = foldl (+) 0
 
 
 -- NOTE: "Generally, if you have a function like foo a = bar b a, you can rewrite it as foo = bar b because of currying."
