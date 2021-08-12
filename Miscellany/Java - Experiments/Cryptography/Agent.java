@@ -17,8 +17,10 @@ public class Agent {
   }
 
   public String encryptMsg(String msg) { return crypter.processMessage(msg, getCombinedKey(), true); }
+  public byte[] encryptMsg(byte[] msg) { return crypter.processMessage(msg, getCombinedKey(), true); }
 
   public String decryptMsg(String msg) { return crypter.processMessage(msg, getCombinedKey(), false); }
+  public byte[] decryptMsg(byte[] msg) { return crypter.processMessage(msg, getCombinedKey(), false); }
 
   public int getPublicKey() { return publicKey; }
 

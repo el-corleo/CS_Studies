@@ -1,13 +1,36 @@
 import java.util.Scanner;
+import java.nio.charset.StandardCharsets;
 
 public class Main {
 
-  public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
+  static Scanner sc = new Scanner(System.in);
 
-    System.out.println("Type in Alice's secret number (>10): ");
+  private static void passAStringMessage(Agent a, Agent b, String msg) {
+    String encryptedMsg = a.encryptMsg(msg);
+    System.out.println("Your message has been encrypted: " + encryptedMsg);
+    sc.nextLine();
+
+    String decryptedMsg = b.decryptMsg(encryptedMsg);
+    System.out.println("Your message has been decrypted: " + decryptedMsg);
+    sc.nextLine();
+  }
+
+
+  private static void passAByteArrayMessage(Agent a, Agent b, String msg) {
+    byte[] encryptedMsg = a.encryptMsg(msg.getBytes(StandardCharsets.UTF_8));
+    System.out.println("Your message has been encrypted: " + encryptedMsg);
+    sc.nextLine();
+
+    byte[] decryptedMsg = b.decryptMsg(encryptedMsg);
+    System.out.println("Your message has been decrypted: " + new String(decryptedMsg, StandardCharsets.UTF_8));
+    sc.nextLine();
+  }
+
+
+  public static void main(String[] args) {
+    System.out.println("Type in Alice's secret number (>2): ");
     int aSecretNum = sc.nextInt();
-    System.out.println("Type in Bobo's secret number (>10): ");
+    System.out.println("Type in Bobo's secret number (>2): ");
     int bSecretNum = sc.nextInt();
     sc.nextLine();
 
@@ -20,12 +43,8 @@ public class Main {
     System.out.println("Write message: ");
     String msg = sc.nextLine();
 
-    String encryptedMsg = alice.encryptMsg(msg);
-    System.out.println("Your message has been encrypted: " + encryptedMsg);
-    sc.nextLine();
+    passAStringMessage(alice, bobo, msg);
+    passAByteArrayMessage(alice, bobo, msg);
 
-    String decryptedMsg = bobo.decryptMsg(encryptedMsg);
-    System.out.println("Your message has been decrypted: " + decryptedMsg);
-    sc.nextLine();
   }
 }
