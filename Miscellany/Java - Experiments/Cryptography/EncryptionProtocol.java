@@ -1,3 +1,11 @@
+/*
+ * This is a rather naive implementation of El Gamal encryption.
+ * One of the major limitations is the application of the offset to each character in the string
+ *  or each byte in the array, which means an attacker would only need 128 attempts to crack the
+ *  code for the string, and 256 attempts to crack the code for the byte array.
+ * In short, this is not a practical example, but more born of intellectual curiosity and perhaps
+ *  as a pedagogical tool.
+ */
 public class EncryptionProtocol {
 
   public final int ASCII_RANGE = 128;

@@ -10,7 +10,7 @@ CERTIFICATE COURSES
 
 --BLOCKCHAIN--
 	UC Irvine
-		1.) |50%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+		1.) |65%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
 
 --CYBERSECURITY--
 	NYU
@@ -112,7 +112,7 @@ BOOKS
 	5.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --BLOCKCHAIN--
-	1.) |80%|	Daniel Drescher - Blockchain Basics (206)
+	1.) |85%|	Daniel Drescher - Blockchain Basics (215)
 
 --NETWORKING--
 	1.) |05%|	Stevens - TCP/IP Illustrated (40)
@@ -122,7 +122,7 @@ BOOKS
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
-	2.) |50%|	Downey - Think Stats (193)
+	2.) |90%|	Downey - Think Stats (237)
 	3.) |50%|	Downey - Think Bayes (80)
 	4.) |COMPLETE|	Byers - How Mathematicians Think
 	
@@ -155,4 +155,5 @@ GOALS
 6.) fast.ai
 7.) Voice control system for OpenPilot
 8.) Lie detector using voice and NNs
+_________________________________________________________
 _________________________________________________________

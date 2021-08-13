@@ -1,12 +1,12 @@
 import qualified Data.Map as Map
 import           Data.Char
-import           Data.List 
+import           Data.List
 -- To import only specific functions:
 -- 		import Data.List (nub, sort)
 -- To import all except for some specific functions:
 -- 		import Data.List hiding (nub, sort)
 -- To import methods that would clash with methods in the current module:
--- 		import qualified Data.List as DL 
+-- 		import qualified Data.List as DL
 
 
 -- functions from Data.List
@@ -45,6 +45,21 @@ decode offset msg = map (\c -> chr $ ord c - offset) msg
 -- book version
 decode' :: Int -> String -> String
 decode' shift msg = encode (negate shift) msg
+
+
+-- Apropos ciphers, how about El Gamal?
+elGamal :: Int -> Int -> Int -> Int
+elGamal x y z = x^y `mod` z
+
+alice_pub_key = elGamal 5 6 13
+bobo_pub_key = elGamal 5 7 13
+bobo_secret_msg = 13 + (elGamal 5 (elGamal 5 (alice_pub_key * 7) 13) 13)
+decrypted_msg = bobo_secret_msg - (elGamal 5 (elGamal 5 (bobo_pub_key * 6) 13) 13)
+
+
+
+-- REVIEW ENDED HERE 8/13
+
 
 
 -- foldl can cause stack overflow
@@ -137,7 +152,7 @@ addValues = Map.fromListWith (+) [(1, 2), (1, -2), (2, 0), (3, 1), (3, -1)]
 
     sphereVolume :: Float -> Float
     sphereVolume r = (4.0/3.0) * pi * (r^3)
-    
+
     sphereArea :: Float -> Float
     sphereArea r = 4 * pi (r^2)
 
@@ -145,14 +160,14 @@ addValues = Map.fromListWith (+) [(1, 2), (1, -2), (2, 0), (3, 1), (3, -1)]
     cubeVolume s = cuboidVolume s s s
 
     cubeArea :: Float -> Float
-    cubeArea s = cuboidArea s s s 
+    cubeArea s = cuboidArea s s s
 
     cuboidVolume :: Float -> Float -> Float -> Float
     cuboidVolume l w h = (rectArea l w) * h
 
     cuboidArea :: Float -> Float -> Float -> Float
-    cuboidArea l w h = (rectArea l w) * 2 + (rectArea w h) * 2 + (rectArea h l) * 2 
-    
+    cuboidArea l w h = (rectArea l w) * 2 + (rectArea w h) * 2 + (rectArea h l) * 2
+
     rectArea :: Float -> Float -> Float
     rectArea l w = l * w
 

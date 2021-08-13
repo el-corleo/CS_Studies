@@ -103,9 +103,6 @@ numLongChains = length (filter isLong (map chain [1..100]))
 
 
 
--- REVIEW ENDED HERE 8/11 --
-
-
 -- lambda functions
 -- easy to abuse if we don't understand currying
 -- e.g., map (+3) [1, 2, 3] is equivalent to map (\x -> x + 3) [1, 2, 3]
@@ -117,10 +114,10 @@ anotherExample = zipWith (\a b -> (a * 30 - 3) / b) [5, 4, 3] [3, 4, 5]
 
 -- anotherEquivalence
 addThree :: Int -> Int -> Int -> Int
-addThree x y z = x + y +z
+addThree x y z = x + y + z
 
 addThree' :: Int -> Int -> Int -> Int
-addThree' = \x -> \y -> \z -> x + y + z
+addThree' = (\x -> (\y -> (\z -> x + y + z)))   -- the parentheses are not necessary
 
 
 -- Traversing lists with folds
@@ -135,6 +132,7 @@ sum'' = foldl (+) 0
 
 
 -- experiment
+--      first elems are subtracted from 0 and thus result in a negative value when the elem is positive
 minusL :: [Int] -> Int
 minusL = foldl (-) 0
 minusR :: [Int] -> Int
@@ -155,10 +153,11 @@ elem' y ys = foldr (\x acc -> if x == y then True else acc) False ys
 
 -- other functions re-implemented with folds
 reverse' :: [a] -> [a]
-reverse' = foldl (\acc x -> x : acc ) []
+reverse' = foldl (\acc x -> x : acc) []
 
 reverse'' :: [a] -> [a]
 reverse'' = foldl (flip (:)) []
+-- reverse''' = foldr (flip (:)) [] -- impossible because could possible be infinite
 
 product' :: (Num a) => [a] -> a
 product' = foldl (\x acc -> x * acc) 1
@@ -175,7 +174,7 @@ sameAsThis = sum $ map sqrt [1..130]
 that         = sqrt 3 + 4 + 9   -- sqrt 3 + (4 + 9)
 diffFromThat = sqrt $ 3 + 4 + 9 -- sqrt (3 + 4 + 9)
 
-
+-- applies all operations to 3 and stores them in a list
 whoa = map ($ 3) [(4+), (5*), (10/), (^2), sqrt]
 
 
