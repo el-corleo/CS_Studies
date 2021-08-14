@@ -10,7 +10,7 @@ CERTIFICATE COURSES
 
 --BLOCKCHAIN--
 	UC Irvine
-		1.) |65%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+		1.) |75%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
 
 --CYBERSECURITY--
 	NYU
@@ -112,7 +112,7 @@ BOOKS
 	5.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --BLOCKCHAIN--
-	1.) |85%|	Daniel Drescher - Blockchain Basics (215)
+	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
 	1.) |05%|	Stevens - TCP/IP Illustrated (40)

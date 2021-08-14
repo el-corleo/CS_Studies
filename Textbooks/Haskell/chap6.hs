@@ -51,14 +51,17 @@ decode' shift msg = encode (negate shift) msg
 elGamal :: Int -> Int -> Int -> Int
 elGamal x y z = x^y `mod` z
 
-alice_pub_key = elGamal 5 6 13
-bobo_pub_key = elGamal 5 7 13
-bobo_secret_msg = 13 + (elGamal 5 (elGamal 5 (alice_pub_key * 7) 13) 13)
-decrypted_msg = bobo_secret_msg - (elGamal 5 (elGamal 5 (bobo_pub_key * 6) 13) 13)
+base = 5
+n = 13
 
+keyGen :: Int -> Int
+keyGen y = elGamal base y n
 
+alice_pub_key = keyGen 6
+bobo_pub_key = keyGen 7
+bobo_secret_msg = 13 + (keyGen $ keyGen (alice_pub_key * 7))
+decrypted_msg = bobo_secret_msg - (keyGen $ keyGen (bobo_pub_key * 6))
 
--- REVIEW ENDED HERE 8/13
 
 
 
@@ -79,7 +82,7 @@ sumDigits :: Int -> Int
 sumDigits x = sum $ splitDigits x
 
 findNumSumsTo :: Int -> Int
-findNumSumsTo limit = head [x | x <- [1..], (sumDigits x) == limit]
+findNumSumsTo limit = head [x | x <- [9999..], (sumDigits x) == limit]
 
 
 -- book version
