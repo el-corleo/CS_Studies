@@ -100,8 +100,8 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |30%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (124)
-	9.) |75%|	{Python} Sweigart - Automate the Boring Stuff with Python (365)
+	8.) |35%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (142)
+	9.) |85%|	{Python} Sweigart - Automate the Boring Stuff with Python (386)
 
 --AI/ML--
 	1.) |00%|	Abu-Mostafa - Learning From Data
@@ -123,7 +123,7 @@ BOOKS
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
 	2.) |90%|	Downey - Think Stats (237)
-	3.) |50%|	Downey - Think Bayes (80)
+	3.) |60%|	Downey - Think Bayes (113)
 	4.) |COMPLETE|	Byers - How Mathematicians Think
 	
 --MISC--
