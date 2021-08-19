@@ -1,0 +1,35 @@
+C.I.A. - Confidentiality - Integrity - Accessibility
+
+  1.) Confidentiality refers to control of access to resources: only authorized individuals
+      can access resources.
+  2.) Integrity refers to the resources themselves: a program with a backdoor has had its
+      integrity compromised.
+        a.) One appropriate question to ask is whether the software being used has been
+            tampered with (checksums can help answer this)
+  3.) Accessibility refers to the ability to access a given resource: a DDoS attack floods
+      the server with requests making it impossible for even authorized individuals to access
+      resources.
+
+Threat Matrix - A framework for limiting the infinite attack vector space to a manageable size.
+
+  1.) Hardware - Software - Information
+    a.) Hardware involves a physical device being compromised: e.g., with a hidden chip in the
+        device.
+    b.) Software involves programs run on the hardware: e.g., software with a Trojan Horse.
+    c.) Information involves sensitive data: e.g., medical records, or company trade secrets.
+  2.) Insider - Outsider - Combined
+    a.) Insiders are attackers who come from within the organization itself.
+    b.) Outsider are attackers who have no affiliation with the organization.
+    c.) Combined attackers come from collusion between insiders and outsiders.
+
+Communication Channels
+
+  1.) Overt - using a method of communication that was intended as a medium of communication.
+  2.) Covert - hiding communication within media that were not originally intended for that
+      purpose.
+
+Security is a tradeoff
+
+  1.) Cost
+  2.) Convenience
+  3.) Resources

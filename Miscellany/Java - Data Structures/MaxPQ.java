@@ -4,7 +4,7 @@
  * 
  * NOTES:
  * If cannot handle resizing array lag on 2^n inserts, then should use a linked list
- * If space is more important that time, then arrays are better in all cases
+ * If space is more important than time, then arrays are better in all cases
  *
  * IMPROVEMENTS:
  *		- Heapsort

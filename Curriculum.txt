@@ -115,14 +115,14 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |05%|	Stevens - TCP/IP Illustrated (40)
+	1.) |05%|	Stevens - TCP/IP Illustrated (52)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
-	2.) |90%|	Downey - Think Stats (237)
+	2.) |COMPLETE|	Downey - Think Stats
 	3.) |60%|	Downey - Think Bayes (113)
 	4.) |COMPLETE|	Byers - How Mathematicians Think
 	
