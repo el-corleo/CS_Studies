@@ -160,3 +160,18 @@ nums = [6,3,7,2,9,1,6,4,8,7,5,3,6,5]
 
 numsTree = foldr treeInsert EmptyTree nums
 
+-- instance keyword
+--  same can often be achieved by using deriving keyword (though overriding Show here allows for custom message)
+data TrafficLight = Red | Yellow | Green
+
+instance Eq TrafficLight where
+  Red == Red = True
+  Yellow == Yellow = True
+  Green == Green = True
+  _ == _ = False
+
+instance Show TrafficLight where
+  show Red = "Red Light"
+  show Yellow = "Yellow Light"
+  show Green = "Green Light"
+

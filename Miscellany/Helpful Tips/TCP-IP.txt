@@ -1,0 +1,46 @@
+Transmission Control Protocol (TCP)
+  - A Layer 4 Protocol
+  - Deals with: packet loss, duplication, and reordering
+  - Provides reliable flow of data
+  - Divides data into appropriately sized chunks
+  - Acknowledges received packets, sets timeouts to wait for others' acknowledgements
+
+User Datagram Protocol (UDP)
+  - Allows applications to send messages that preserve message boundaries
+  - Application Layer must be responsible for reliable as UDP allows transfer of datagrams,
+    but cares not for their safe arrival
+
+Open Systems Interconnection (OSI) 7-Layer Model
+
+  7 - Application - user-initiated procedures
+  6 - Presentation - information formats (JSON?)
+  5 - Session - establishing, closing, restarting connections
+  4 - Transport - ??
+  3 - Network - ??
+  2 - Link - single link communication protocols
+  1 - Physical - connectors, data rates, how bits are encoded
+
+A datagram is a basic transfer unit of a packet-switched network.
+  - Typically have headers and payload
+  - Delivery, arrival time, and order of arrival are not guaranteed by the network
+  - Can be fragmented, i.e., a single file sent in multiple fragments that will be reassembled
+
+Protocol Data Unit (PDU) is a unit of info transmitted among peer entities of a computer network.
+  - Examples:
+    - Packet
+    - Segment
+    - Datagram
+
+There are different modes of forwarding packets:
+
+  1.) unicast - destined for a single host
+  2.) broadcast - destined for all hosts on a given network
+  3.) multicast - destined for a set of hosts belonging to a multicast group (??)
+
+
+Internet Control Message Protocol (IMCP)
+  - Used to exchange error messages and other vital info with the IP layer
+
+
+Internet Group Management Protocol (IGMP)
+  - Used to manage which hosts are members of a multicast group

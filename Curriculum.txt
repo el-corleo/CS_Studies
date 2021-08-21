@@ -115,7 +115,7 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |05%|	Stevens - TCP/IP Illustrated (52)
+	1.) |05%|	Stevens - TCP/IP Illustrated (55)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
