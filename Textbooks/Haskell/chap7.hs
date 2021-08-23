@@ -175,3 +175,12 @@ instance Show TrafficLight where
   show Yellow = "Yellow Light"
   show Green = "Green Light"
 
+-- I do not understand Functors at all
+-- It seems like it just defines a class where a function is mapped to a certain type of input(?)
+--
+-- I also don't understand Kinds
+-- :k Int in ghci yields Int :: *
+--    meaning it takes no parameters and is a concrete type (?)
+--
+-- whereas, :k Maybe yields Maybe :: * -> *
+--    meaning it takes a concrete parameter and returns a concrete parameter(?)

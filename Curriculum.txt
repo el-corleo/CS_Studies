@@ -10,11 +10,11 @@ CERTIFICATE COURSES
 
 --BLOCKCHAIN--
 	UC Irvine
-		1.) |75%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+		1.) |85%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
 
 --CYBERSECURITY--
 	NYU
-		1.) |25%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
+		1.) |40%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
 
 AUDITED COURSES
 --BASICS--
@@ -100,7 +100,7 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |35%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (142)
+	8.) |45%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (173)
 	9.) |85%|	{Python} Sweigart - Automate the Boring Stuff with Python (386)
 
 --AI/ML--
