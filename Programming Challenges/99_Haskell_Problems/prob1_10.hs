@@ -50,3 +50,53 @@ elementAt xs x
 ------------------------------------------------------------
 -- PROBLEM 4
 -- Find the number of elements of a list.
+length' :: [a] -> Int
+length' []  = 0
+length' (_:xs) = 1 + length' xs
+
+-- cool solutions
+myLength :: [a] -> Int
+myLength = sum . map (\_->1)
+
+myLength1 :: [a] -> Int
+myLength1 =  foldl (\n _ -> n + 1) 0
+
+
+------------------------------------------------------------
+-- PROBLEM 5
+-- reverse a list
+reverse' :: [a] -> [a]
+reverse' [] = []
+reverse' (x:xs) = reverse' xs ++ [x]
+
+-- cool solutions
+myReverse :: [a] -> [a]
+myReverse list = reverse'' list []
+  where
+    reverse'' [] reversed     = reversed
+    reverse'' (x:xs) reversed = reverse'' xs (x:reversed)
+
+reverse''' :: [a] -> [a]
+reverse''' =  foldl (flip (:)) []
+
+
+------------------------------------------------------------
+-- PROBLEM 6
+-- isPalindrome
+isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome []     = True
+isPalindrome [_]    = True
+isPalindrome [x,y]  = if x == y then True else False
+isPalindrome (x:xs)
+  | (x == (head $ reverse xs)) && (isPalindrome (tail $ reverse xs))  = True
+  | otherwise                                                         = False
+
+-- cool solutions
+isPalindrome' :: (Eq a) => [a] -> Bool
+isPalindrome' []  = True
+isPalindrome' [_] = True
+isPalindrome' xs  = (head xs) == (last xs) && (isPalindrome' $ init $ tail xs)
+
+-- WTAF?
+isPalindromeM :: (Eq a) => [a] -> Bool
+isPalindromeM = reverse >>= (==)
