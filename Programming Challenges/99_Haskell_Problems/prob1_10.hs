@@ -1,3 +1,4 @@
+import Data.Typeable
 -- PROBLEM 1
 -- Find the last element of a list
 -- myLast [1,2,3,4] yields 4
@@ -100,3 +101,16 @@ isPalindrome' xs  = (head xs) == (last xs) && (isPalindrome' $ init $ tail xs)
 -- WTAF?
 isPalindromeM :: (Eq a) => [a] -> Bool
 isPalindromeM = reverse >>= (==)
+
+
+------------------------------------------------------------
+-- PROBLEM 7
+-- flatten a nested list structure
+data NestedList a = Elem a | List [NestedList a]
+flatten :: [a] -> [a]
+flatten [] = []
+flatten (Elem x) = [x]
+flatten (x:xs)
+  | typeOf x == List [NestedList x]  = flatten x ++ flatten xs
+  | otherwise         = x ++ flatten xs
+

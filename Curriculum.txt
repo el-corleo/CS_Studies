@@ -10,7 +10,7 @@ CERTIFICATE COURSES
 
 --BLOCKCHAIN--
 	UC Irvine
-		1.) |85%|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+		1.) |COMPLETE|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
 
 --CYBERSECURITY--
 	NYU
@@ -100,16 +100,15 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |45%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (173)
+	8.) |45%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (181)
 	9.) |85%|	{Python} Sweigart - Automate the Boring Stuff with Python (386)
 
 --AI/ML--
-	1.) |00%|	Abu-Mostafa - Learning From Data
-	2.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	3.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
-	4.) |05%|	{Python} Gugger - Deep Learning for Coders
+	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
+	2.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
+	3.) |05%|	{Python} Gugger - Deep Learning for Coders
 				Chap. 1 Assignments (total: 30)
-	5.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
+	4.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --BLOCKCHAIN--
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics

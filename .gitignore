@@ -1,4 +1,5 @@
 *.swp
+*.hi
 *.class
 *.jar
 *.o
