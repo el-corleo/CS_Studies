@@ -100,8 +100,8 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |45%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (181)
-	9.) |85%|	{Python} Sweigart - Automate the Boring Stuff with Python (386)
+	8.) |50%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (195)
+	9.) |90%|	{Python} Sweigart - Automate the Boring Stuff with Python (421)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
@@ -114,7 +114,7 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |05%|	Stevens - TCP/IP Illustrated (55)
+	1.) |05%|	Stevens - TCP/IP Illustrated (70)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
@@ -122,7 +122,7 @@ BOOKS
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
 	2.) |COMPLETE|	Downey - Think Stats
-	3.) |60%|	Downey - Think Bayes (113)
+	3.) |75%|	Downey - Think Bayes (142)
 	4.) |COMPLETE|	Byers - How Mathematicians Think
 	
 --MISC--
