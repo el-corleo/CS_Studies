@@ -7,7 +7,7 @@ Transmission Control Protocol (TCP)
 
 User Datagram Protocol (UDP)
   - Allows applications to send messages that preserve message boundaries
-  - Application Layer must be responsible for reliable as UDP allows transfer of datagrams,
+  - Application Layer must be responsible for reliability as UDP allows transfer of datagrams,
     but cares not for their safe arrival
 
 Open Systems Interconnection (OSI) 7-Layer Model
@@ -15,7 +15,7 @@ Open Systems Interconnection (OSI) 7-Layer Model
   7 - Application - user-initiated procedures
   6 - Presentation - information formats (JSON?)
   5 - Session - establishing, closing, restarting connections
-  4 - Transport - ??
+  4 - Transport - ?? (TCP belongs here, I think)
   3 - Network - ??
   2 - Link - single link communication protocols
   1 - Physical - connectors, data rates, how bits are encoded
@@ -44,3 +44,22 @@ Internet Control Message Protocol (IMCP)
 
 Internet Group Management Protocol (IGMP)
   - Used to manage which hosts are members of a multicast group
+
+
+Simple Mail Transfer Protocol (SMTP) & Interactive Mail Access Protocol (IMAP) are email-related transfer protocols
+
+"This notion [that separate, non-interoperable smaller networks were not as valuable as one large, interoperable network] is the basis for the so-called Metcalfe’s Law, which states roughly that the value of a computer network is proportional to the square of the number of connected endpoints (e.g., users or devices)."
+
+"...it is worth observing that the Internet architecture delivers IP datagrams based on destination IP addresses. As a result, malicious users are able to insert whatever IP address they choose into the source IP address field of each IP datagram they send, an activity called spoofing."
+
+
+"The resulting datagrams are delivered to their destinations, but it is difficult to perform attribution. That is, it may be difficult or impossible to determine the origin of a datagram received from the Internet."
+
+
+"In TCP/IP, the distinction between the network layer and the transport layer is critical: the network layer (IP) provides an unreliable datagram service and must be implemented by all systems addressable on the Internet, whereas the transport layers (TCP and UDP) provide an end-to-end service to applications running on end hosts."
+
+
+"The most common API for TCP/IP networks is called sockets."
+  - I've heard the term 'sockets' many times before, but need more exposure before having a solid grasp of what they are and what their existence entails
+
+

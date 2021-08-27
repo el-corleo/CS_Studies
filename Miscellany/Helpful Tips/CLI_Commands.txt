@@ -38,6 +38,7 @@ $ grep "keywords" file1 file2 file3	// searches for keywords in file (case sensi
 $ grep -i "keywords" file 		// searches for keywords in file (case insensitive)
 $ grep -R "keywords" dir 		// searches for keywords in all files of dir (case insensitive)
 $ grep -c "keywords" file 		// searches and displays # of times keywords in file
+$ ls -R <dir> | grep -R "keywords" `pwd`"\"*	// prints fully qualified path of files keyword is found in
 
 $ diff file1 file2		// shows difference between two files
 $ diff -q file1 file2		// shows that two files differ, but not the differences
