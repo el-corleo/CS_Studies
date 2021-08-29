@@ -3,6 +3,8 @@ CERTIFICATE COURSES
 --BASICS--
 	University of Illinois
 		1.) |COMPLETE|	Accelerated CS Fundamentals Specialization [https://www.coursera.org/specializations/cs-fundamentals]
+	University of Alberta
+		1.) |05%|	Software Design and Architecture Specialization [https://www.coursera.org/specializations/software-design-architecture]
 
 --DATA SCIENCE--
 	Yandex Practicum
@@ -114,7 +116,7 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |05%|	Stevens - TCP/IP Illustrated (70)
+	1.) |10%|	Stevens - TCP/IP Illustrated (78)
 
 --GAMES--
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial

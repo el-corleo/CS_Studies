@@ -33,10 +33,10 @@ Protocol Data Unit (PDU) is a unit of info transmitted among peer entities of a 
 
 There are different modes of forwarding packets:
 
-  1.) unicast - destined for a single host
+  1.) unicast - destined for a single host (interface from intranet to internet)
   2.) broadcast - destined for all hosts on a given network
   3.) multicast - destined for a set of hosts belonging to a multicast group (??)
-
+  4.) anycast - ????
 
 Internet Control Message Protocol (IMCP)
   - Used to exchange error messages and other vital info with the IP layer
@@ -51,6 +51,7 @@ Simple Mail Transfer Protocol (SMTP) & Interactive Mail Access Protocol (IMAP) a
 "This notion [that separate, non-interoperable smaller networks were not as valuable as one large, interoperable network] is the basis for the so-called Metcalfe’s Law, which states roughly that the value of a computer network is proportional to the square of the number of connected endpoints (e.g., users or devices)."
 
 "...it is worth observing that the Internet architecture delivers IP datagrams based on destination IP addresses. As a result, malicious users are able to insert whatever IP address they choose into the source IP address field of each IP datagram they send, an activity called spoofing."
+  - Wouldn't a confirmation message eliminate most spoofing attempts? If the server receives a packet from X, and then the server sends a message to X asking for confirmation, then only botnets and man-in-the-middles would be able to continue with the charade
 
 
 "The resulting datagrams are delivered to their destinations, but it is difficult to perform attribution. That is, it may be difficult or impossible to determine the origin of a datagram received from the Internet."
@@ -62,4 +63,23 @@ Simple Mail Transfer Protocol (SMTP) & Interactive Mail Access Protocol (IMAP) a
 "The most common API for TCP/IP networks is called sockets."
   - I've heard the term 'sockets' many times before, but need more exposure before having a solid grasp of what they are and what their existence entails
 
+"The conventional notation adopted for IPv6 addresses is a series of four hexadecimal (“hex,” or base-16) numbers called blocks or fields separated by colons. An example IPv6 address containing eight blocks would be written as 5f05:2000:80ad:5800:0058:0800:2023:1d71."
 
+"Blocks of all zeros can be omitted and replaced by the notation ::. For example, the IPv6 address 0:0:0:0:0:0:0:1 can be written more compactly as ::1. Similarly, the address 2001:0db8:0:0:0:0:0:2 can be written more compactly as 2001:db8::2. To avoid ambiguities, the :: notation may be used only once in an IPv6 address."
+
+"...the IPv6 address ::ffff:10.0.0.1 represents the IPv4 address 10.0.0.1. This is called an IPv4-mapped IPv6 address."
+
+"The IPv6 address ::0102:f001 is therefore equivalent to the address ::1.2.240.1. This is called an IPv4-compatible IPv6 address."
+  - "This type of addressing was originally required for transition plans between IPv4 and IPv6 but is now no longer required"
+
+
+"Most of the IPv4 address chunks are eventually subdivided down to a single address and used to identify a single network interface of a computer attached to the Internet or to some private intranet. These addresses are called unicast addresses. Most of the IPv4 address space is unicast address space."
+
+
+"The approach adopted to support this [making the world see the traditional class A-C partitions, while being able to include most host machines on the actual network] capability is called subnet addressing."
+  - "Essentially, subnet addressing adds one additional field to the IP address structure, but without adding any bits to its length."
+
+Subnetting is NOT used to increase available addresses!
+  - Instead, it's used to increasing routing efficiency by reducing central points of congestion
+    - "In addition to logical groups, hosting on subnets is much more efficient for network administrators. This is because of host limits and address allocation; instead of having one network with a limit of 16 million IP addresses, there could be hundreds of networks with 64,000 addresses, which would take much less time to parse through." [https://www.accessagility.com/blog/benefits-of-subnetting]
+  - Also used to isolate security threats (fewer devices on a subnet mean fewer points of access, and ability to control who accesses resources more precisely); AND compromised areas of the network can be cut off from the rest of the network without impacting too many users
