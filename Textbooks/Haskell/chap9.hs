@@ -2,6 +2,7 @@
 import Control.Monad
 import Data.Char
 import System.IO
+import System.Random
 
 main = forever $ do
 	l <- getLine
@@ -74,3 +75,30 @@ main = do
 -- "We could just open a normal file called todo2.txt or something like that, but it’s better practice to use openTempFile so you know you’re probably not overwriting anything."
 
 -- "The System.Environment module has two cool I/O actions that are useful for getting command-line arguments: getArgs and getProgName."
+
+-- randoms returns an infinite list of randomly generated values
+randInts = take 5 $ randoms (mkStdGen 11) :: [Int]
+randBool = take 5 $ randoms (mkStdGen 11) :: [Bool]
+
+-- randomR takes a range (inclusive) and spits a random value from within that range
+dieRoll = randomR (1,6) (mkStdGen 359353)
+take 10 $ randomRs ('a','z') (mkStdGen 3) :: [Char]
+
+
+-- gets the global random generator
+main = do
+	gen <- getStdGen
+	putStrLn $ take 20 (randomRs ('a','z') gen)
+
+-- can't reuse same gen or it will produce same result
+main = do
+	gen <- getStdGen
+	putStrLn $ take 20 (randomRs ('a','z') gen)
+	gen' <- newStdGen
+	putStr $ take 20 (randomRs ('a','z') gen')
+
+-- "If you evaluate the first byte of a strict bytestring, you must evaluate the whole thing."
+-- "Lazy bytestrings are kind of like lists of strict bytestrings, with a size of 64KB. When you process a file with lazy bytestrings, it will be read chunk by chunk. This is cool because it won’t cause the memory usage to skyrocket, and the 64KB probably fits neatly into your CPU’s L2 cache."
+
+
+

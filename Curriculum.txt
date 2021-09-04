@@ -85,7 +85,8 @@ BOOKS
 --ALGORITHMS--
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
 					Chap. 1 Assignments (total: 0)
-	2.) |65%|	Heineman - Algorithms in a Nutshell (240) [Stopped reading as it was too difficult to stomach; time will be better spent elsewhere]
+	2.) |65%|	Heineman - Algorithms in a Nutshell (240) 
+				[Stopped reading as it was too difficult to stomach; time will be better spent elsewhere]
 
 --OS--
 	1.) |60%|	{C} Silberschatz - Operating System Concepts
@@ -102,7 +103,7 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |55%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (210)
+	8.) |55%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (223)
 	9.) |90%|	{Python} Sweigart - Automate the Boring Stuff with Python (421)
 
 --AI/ML--
