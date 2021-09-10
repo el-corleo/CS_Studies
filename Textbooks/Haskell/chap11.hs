@@ -12,3 +12,7 @@ main = do line <- fmap reverse getLine
 
 main = do line <- fmap (intersperse '-' . reverse . map toUpper) getLine
 					putStrLn line
+
+-- "It’s not very important that you get how the (->) r instance for Applicative works, so don’t despair ifyou don’t understand this all right now."
+-- 	Praise Jeebus, because I have absolutely no clue what the hell this whole chap is about
+-- 	Methinks it won't click until my second Haskell book

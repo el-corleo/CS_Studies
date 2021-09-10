@@ -106,11 +106,17 @@ isPalindromeM = reverse >>= (==)
 ------------------------------------------------------------
 -- PROBLEM 7
 -- flatten a nested list structure
+-- NOTE: couldn't solve this one; had to look up the solution
 data NestedList a = Elem a | List [NestedList a]
-flatten :: [a] -> [a]
-flatten [] = []
-flatten (Elem x) = [x]
-flatten (x:xs)
-  | typeOf x == List [NestedList x]  = flatten x ++ flatten xs
-  | otherwise         = x ++ flatten xs
 
+flatten :: NestedList a -> [a]
+flatten (Elem x) = [x]
+flatten (List xs) = foldr (++) [] $ map flatten xs
+
+
+------------------------------------------------------------
+-- PROBLEM 8
+-- eliminate consecutive duplicates of list of elements
+compress :: (Eq a) => [a] -> [a]
+-- compress (x:y:ys) = foldr (\acc x y -> if x == y then acc ++ x else (acc ++ x ++ y)) [] $ compress (ys)
+compress x = foldr (\a b -> if a == (head b) then b else a:b) [last x] x

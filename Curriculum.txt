@@ -103,8 +103,8 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |60%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (237)
-	9.) |90%|	{Python} Sweigart - Automate the Boring Stuff with Python (421)
+	8.) |65%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (269)
+	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
@@ -145,6 +145,8 @@ PROGRAMMING CHALLENGES
 		Easy-Medium (total: 32)
 	3.) {Python/C++/Haskell} Project Euler
 		Diff = 5% (total: 17)
+	4.) {Haskell} 99 Haskell Problems
+		(total: 8)
 		
 _________________________________________________________
 _________________________________________________________
