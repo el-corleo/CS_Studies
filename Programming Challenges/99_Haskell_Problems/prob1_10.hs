@@ -119,4 +119,31 @@ flatten (List xs) = foldr (++) [] $ map flatten xs
 -- eliminate consecutive duplicates of list of elements
 compress :: (Eq a) => [a] -> [a]
 -- compress (x:y:ys) = foldr (\acc x y -> if x == y then acc ++ x else (acc ++ x ++ y)) [] $ compress (ys)
+-- Solution closest to the one I thought of, but couldn't get to work
 compress x = foldr (\a b -> if a == (head b) then b else a:b) [last x] x
+
+
+------------------------------------------------------------
+-- PROBLEM 9
+-- pack consecutive duplicates into sublists
+pack :: (Eq a) => [a] -> [[a]]
+-- Idea: use foldl & takeWhile (?)
+-- pack x = foldl (\a b -> takeWhile (== b) (last x)) [] x
+-- Solution closest to my failed attempt; learned about the dropWhile function
+pack [] = []
+pack (x:xs) = (x : takeWhile (==x) xs) : pack (dropWhile (==x) xs)
+
+
+------------------------------------------------------------
+-- PROBLEM 10
+-- use solution to prob 9 to implement run-length encoding
+encode :: (Eq a) => [a] -> [(Int, a)]
+encode x = reverse $ foldl (\acc a -> (length a, head a):acc) [] (pack x)
+
+-- most similar to mine
+encode' xs = (enc . pack) xs
+  where enc = foldr (\x acc -> (length x, head x) : acc) []
+
+-- with Applicative combinators
+encode'' :: Eq a => [a] -> [(Int, a)]
+encode'' = map ((,) <$> length <*> head) . pack

@@ -29,10 +29,13 @@ tup = (3, 2)
 always5 :: Int
 always5 = 5
 
-{- 
-	always5 = 6
-	
-	error: Multiple declarations of 'always5'
+{-
+	cannot reassign variables to different values in Haskell
+
+	e.g.,
+		always5 = 6
+
+		error: Multiple declarations of 'always5'
 -}
 
 -- sum is a built-in function
@@ -52,7 +55,7 @@ piVal = pi
 epow9 = exp 9
 logOf9 = log 9    -- natural log (i.e., ln)
 is9 = log (exp 9)
-squared9 = 9 ** 2
+squared9 = 9 ** 2 -- 9^2 is also valid syntax
 truncated = truncate 9.999
 rounded = round 9.999
 ceilinged = ceiling 9.999
@@ -76,18 +79,18 @@ firstElem = head primes
 remainingElems = tail primes
 lastElem = last primes
 allButLastElem = init primes
-morePrimes = primes ++ [13, 17, 19]     -- Note the ++ for concatenation
+morePrimes = primes ++ [13, 17, 19]     -- Note the (++) for concatenation (append to end)
 lastPrime = morePrimes ++ [23]          -- Must wrap 23 in brackets to act like a list
 colonForm = 3 : 5 : 7 : 11 : []         -- Creates a list like primes
 multiDimList = [[2, 3, 5], [7, 11, 13]]
-primesExtended = 2 : morePrimes         -- can only append to front of list
+primesExtended = 2 : morePrimes         -- (:) is used for prepending
 lenPrimes = length primes
 lenPrimesExt = length primesExtended
 nullCheck = null []
 nullCheck' = null primes
 invert = reverse primes
 listOfOnlyFirstTwoElems = take 2 primes
-listWithoutFirstTwoElems = drop 2 primes                     -- lists are immutable so doesn't actually change primes, just creates a new list without the first x elems
+listWithoutFirstTwoElems = drop 2 primes-- lists are immutable so doesn't actually change primes, just creates a new list without the first x elems
 maxNum = maximum primes
 minNum = minimum primes
 prodOfPrimes = product primes
@@ -96,20 +99,20 @@ inList = 4 `elem` primes								-- Check for membership
 letters = ['a'..'z']
 letters' = ['K'..'P']
 stepBy3 = [3,6..90]
-down = [20,19..1]                       -- Must list second number when going down
+down = [20,19..1]                       -- Must list second element when going down, to infer descending
 infiniteList = take 24 [13,26..]        -- No upper bound; Haskell's lazy execution means it only generates as many elements as are needed
 firstThree = [1,2,3]
 cycles = take ((length firstThree) * 10) (cycle firstThree)
 cycles' = take (((length firstThree) * 10) - 1) (cycle firstThree)
 repetition = take 10 (repeat 'a')
 listComp = [ 2 * x | x <- [1..10]]      -- Set builder notation inspired syntax
-listComp' = [ 2 * x | x <- [1..10], x < 5 && x*2 > 4]     
-listCompRedux = [ 2 * x | x <- [1..10], x < 5, x*2 > 4]     
+listComp' = [ 2 * x | x <- [1..10], x < 5 && x*2 > 4]
+listCompRedux = [ 2 * x | x <- [1..10], x < 5, x*2 > 4]
 fizzBuzz = [if (x `mod` 5 == 0 && x `mod` 3 == 0) then "FIZZBUZZ"
             else if (x `mod` 5 == 0) then "FIZZ"
             else if (x `mod` 3 == 0) then "BUZZ"
             else "" | x <- [1..100]]
-listComb = [ x + y | x <- [1, 2, 3], y <- [2, 4, 6]]  -- [1+2, 1+4, 1+6, 2+2...] 
+listComb = [ x + y | x <- [1, 2, 3], y <- [2, 4, 6]]  -- [1+2, 1+4, 1+6, 2+2...]
 listComb' = [ x + y | x <- [1, 2, 3], y <- [2, 4, 6, 8]]
 length' xs = sum [ 1 | _ <- xs]
 xxs = [[1,3,5,2,3,1,2,4,5],[1,2,3,4,5,6,7,8,9],[1,2,4,2,1,6,3,1,3,2,3,6]]
@@ -142,18 +145,18 @@ diffFrom = "bug" /= "buggy"
 -- Tuples are of fixed size; whereas, Lists are singly-linked
 tupHomo = (1, 2)
 tupHetero = (3, "monkeys")
-tupList = [(1, 2), (3, 4)]    -- Note that since lists are homogenous, you can't have tuples of different sizes or different compositions, e.g., [(1, 2), (3, 4, 5)] and [(1, 2), ('a'', 'b')]
+tupList = [(1, 2), (3, 4)]    -- Note that since lists are homogenous, you can't have tuples of different sizes or different compositions, e.g., [(1, 2), (3, 4, 5)] and [(1, 2), ('a', 'b')]
 firstTupElem = fst tupHomo
 secondTupElem = snd tupHomo   -- Only work on pairs
 list1 = [1 .. 5]
 list2 = ['e', 'd' .. 'a']
-zippedList = zip list1 list2
+zippedList = zip list1 list2	-- [(1, 'e'), (2, 'd') ... etc.]
 list3 = [1 ..]
 list4 = ['a' .. 'g']
 zippedList' = zip list3 list4 -- will only produce pairs up to length on smallest list
 
 
-{- 
+{-
     Practical example
 
 	Find a right triangle where:
@@ -168,18 +171,3 @@ candidates = [(x, y, z) | x <- [1 .. 10 ], y <- [1 .. 10], z <- [1 .. 10], (x + 
 
 -- Book solution
 bookSolution = [(a, b, c) | c <- [1 .. 10 ], a <- [1 .. c], b <- [1 .. a], a^2 + b^2 == c^2, a+b+c == 24 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
