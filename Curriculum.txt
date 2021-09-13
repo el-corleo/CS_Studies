@@ -16,7 +16,7 @@ CERTIFICATE COURSES
 
 --CYBERSECURITY--
 	NYU
-		1.) |45%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
+		1.) |50%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
 
 AUDITED COURSES
 --BASICS--
@@ -125,7 +125,7 @@ BOOKS
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
 	2.) |COMPLETE|	Downey - Think Stats
-	3.) |75%|	Downey - Think Bayes (142)
+	3.) |COMPLETE|	Downey - Think Bayes
 	4.) |COMPLETE|	Byers - How Mathematicians Think
 	
 --MISC--
@@ -148,16 +148,5 @@ PROGRAMMING CHALLENGES
 	4.) {Haskell} 99 Haskell Problems
 		(total: 8)
 		
-_________________________________________________________
-_________________________________________________________
-GOALS
-1.) Complete 3D || 2D version of Conscientia
-2.) All Kaggle tutorials
-3.) CodeForces ladders up to level 1900
-4.) Simple self-driving car Neural Network
-5.) Complete SAT prep software
-6.) fast.ai
-7.) Voice control system for OpenPilot
-8.) Lie detector using voice and NNs
 _________________________________________________________
 _________________________________________________________
