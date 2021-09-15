@@ -2,11 +2,20 @@
 -- my attempt
 maximum' :: [Int] -> Int
 maximum' [x] = x
-maximum' xs 
+maximum' xs
     | firstElem > otherElem = firstElem
     | otherwise             = otherElem
     where firstElem = head xs
           otherElem = maximum' (tail xs)
+
+-- a more Haskellian version of the above
+-- maximum' (x:xs)
+--  | firstElem > otherElem = firstElem
+--  | otherwise             = otherElem
+--  where
+--      firstElem = x
+--      otherElem = maximum' xs
+
 
 -- book
 -- better because of error reporting [and because of Ord class limiting a to only things that can be ordered]
@@ -65,7 +74,7 @@ reverse' (x:xs) = reverse' xs ++ [x]
 repeat' :: a -> [a]
 repeat' x = x:repeat' x
 
-nTimes :: Int -> a -> [a] 
+nTimes :: Int -> a -> [a]
 nTimes n x = take n $ repeat' x
 
 

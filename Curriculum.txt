@@ -3,8 +3,6 @@ CERTIFICATE COURSES
 --BASICS--
 	University of Illinois
 		1.) |COMPLETE|	Accelerated CS Fundamentals Specialization [https://www.coursera.org/specializations/cs-fundamentals]
-	University of Alberta
-		1.) |10%|	Software Design and Architecture Specialization [https://www.coursera.org/specializations/software-design-architecture]
 
 --DATA SCIENCE--
 	Yandex Practicum
@@ -16,7 +14,7 @@ CERTIFICATE COURSES
 
 --CYBERSECURITY--
 	NYU
-		1.) |50%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
+		1.) |55%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
 
 AUDITED COURSES
 --BASICS--
@@ -140,13 +138,13 @@ _________________________________________________________
 _________________________________________________________
 PROGRAMMING CHALLENGES
 	1.) {C++} CodeForces Ladders
-		Lv. 600-1300 (total: 87)
+		(total: 87)
 	2.) {Java/C++} Hackerrank
-		Easy-Medium (total: 32)
+		(total: 32)
 	3.) {Python/C++/Haskell} Project Euler
-		Diff = 5% (total: 17)
+		(total: 17)
 	4.) {Haskell} 99 Haskell Problems
-		(total: 13)
+		(total: 15)
 		
 _________________________________________________________
 _________________________________________________________

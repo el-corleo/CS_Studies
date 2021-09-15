@@ -59,8 +59,43 @@ encodeDirect x = makeEncodedType (takeWhile (==a) x) : encodeDirect (dropWhile (
   where a = head x
 
 
+-------------------------------------------------------------
+-- PROBLEM 14
+-- Duplicate the elements of a list
+duplicate :: [a] -> [a]
+duplicate [] = []
+duplicate (x:xs) = x : x : duplicate xs
+
+-- solutions from website
+dupli list = concat [[x,x] | x <- list]
+-- dupli' = (<**> [id,id])                 -- Applicative
+dupli''' xs = xs >>= (\x -> [x,x])      -- list monad
 
 
+-------------------------------------------------------------
+-- PROBLEM 15
+-- Replicate the elements of a list a given number of times.
+-- successful adaptation based off of solution from above (but I don't quite understand how it works)
+replicate' :: [a] -> Int -> [a]
+replicate' [] _ = []
+replicate' xs n = xs >>= (\x -> take n $ repeat x)
 
+-- version easier for me to understand
+expand :: a -> Int -> [a]
+expand _ 0 = []
+expand x n = x : expand x (n-1)
 
+replicate'' :: [a] -> Int -> [a]
+replicate'' [] _ = []
+replicate'' xs n = concat $ foldl (\acc x -> (expand x n):acc) [] xs
+
+-- solutions from website
+repli :: [a] -> Int -> [a]
+repli xs n = concatMap (take n . repeat) xs
+-- solution like mine but using where (I need to learn to use this feature)
+repli' :: [a] -> Int -> [a]
+repli' xs n = foldl (\acc e -> acc ++ repli'' e n) [] xs
+  where
+    repli'' _ 0 = []
+    repli'' x n = x : repli'' x (n-1)
 
