@@ -99,3 +99,62 @@ repli' xs n = foldl (\acc e -> acc ++ repli'' e n) [] xs
     repli'' _ 0 = []
     repli'' x n = x : repli'' x (n-1)
 
+
+-------------------------------------------------------------
+-- PROBLEM 16
+-- Drop every N'th element from a list.
+dropEvery :: [a] -> Int -> [a]
+dropEvery [] _ = []
+dropEvery x 0 = x
+dropEvery x n = take (n-1) x ++ dropEvery (drop n x) n
+
+-- solutions from website
+-- using list comprehension
+dropEvery' xs n = [ i | (i,c) <- ( zip xs [1,2..] ), (mod c n) /= 0 ]
+
+
+-------------------------------------------------------------
+-- PROBLEM 17
+-- Split a list into two parts; the length of the first part is given.
+split :: [a] -> Int -> ([a], [a])
+split [] _ = ([],[])  -- should probably be an error
+split x n = (take n x, drop n x)
+
+
+-------------------------------------------------------------
+-- PROBLEM 18
+-- Extract a slice from a list.
+slice :: [a] -> Int -> Int -> [a]
+slice [] _ _ = []
+slice x start end
+  | end > length x || start < 0  = error "Index out of bounds"
+  | start > end     = error "Impossible slice."
+  | start == end    = []
+  | otherwise       = cutEnd (drop (start-1) x) (end-start)
+  where cutEnd y n = take n y
+
+-- solution from website
+slice' xs i k = drop (i-1) $ take k xs
+
+
+-------------------------------------------------------------
+-- PROBLEM 19
+-- Rotate a list N places to the left.
+rotate :: [a] -> Int -> [a]
+rotate [] _ = []
+rotate x 0 = x
+rotate x n
+  | n > 0     = drop n x ++ take n x
+  | otherwise = drop (l+n) x ++ take (l+n) x
+  where l = length x
+
+-- solutions from website
+rotate' xs n = take len . drop (n `mod` len) . cycle $ xs
+    where len = length xs
+
+rotate'' xs n = take (length xs) $ drop (length xs + n) $ cycle xs
+
+
+-------------------------------------------------------------
+-- PROBLEM 20
+--
