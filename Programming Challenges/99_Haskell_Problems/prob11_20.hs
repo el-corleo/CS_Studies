@@ -157,4 +157,11 @@ rotate'' xs n = take (length xs) $ drop (length xs + n) $ cycle xs
 
 -------------------------------------------------------------
 -- PROBLEM 20
---
+-- Remove the K'th element from a list.
+removeAt :: [a] -> Int -> (a, [a])
+removeAt [] _ = error "List cannot be empty."
+removeAt x n
+  | n > length x  = error "Index out of bounds"
+  | n < 0         = error "Index out of bounds"
+  | otherwise     = (x !! (n-1), take (n-1) x ++ drop n x)
+

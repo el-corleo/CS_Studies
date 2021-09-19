@@ -14,7 +14,7 @@ CERTIFICATE COURSES
 
 --CYBERSECURITY--
 	NYU
-		1.) |55%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
+		1.) |60%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
 
 AUDITED COURSES
 --BASICS--
@@ -83,9 +83,7 @@ BOOKS
 --ALGORITHMS--
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
 					Chap. 1 Assignments (total: 0)
-	2.) |65%|	Heineman - Algorithms in a Nutshell (240) 
-				[Stopped reading as it was too difficult to stomach; time will be better spent elsewhere]
-
+	
 --OS--
 	1.) |60%|	{C} Silberschatz - Operating System Concepts
 	2.) |COMPLETE|	{C} Downey - Think OS
@@ -147,7 +145,7 @@ PROGRAMMING CHALLENGES
 	3.) {Python/C++/Haskell} Project Euler
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems
-		(total: 19)
+		(total: 21)
 		
 _________________________________________________________
 _________________________________________________________
