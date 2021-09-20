@@ -4,7 +4,7 @@ isAlso5 = (max 4) 5 -- max actually only takes one parameter
 
 -- book example
 -- NOTE: Parentheses in definition are optional
--- notice that the type of the left is the parameter and the one on the right is the return value
+-- notice that the type on the left is the parameter and the one on the right is the return value
 -- Thus, mult3 takes an Int and returns a function that takes an Int and returns a function that takes an Int and returns an Int
 mult3 :: Int -> (Int -> (Int -> Int))
 mult3 x y z = x * y * z
@@ -117,7 +117,7 @@ addThree :: Int -> Int -> Int -> Int
 addThree x y z = x + y + z
 
 addThree' :: Int -> Int -> Int -> Int
-addThree' = (\x -> (\y -> (\z -> x + y + z)))   -- the parentheses are not necessary
+addThree' = (\x -> (\y -> (\z -> x + y + z)))
 
 
 -- Traversing lists with folds
@@ -150,6 +150,7 @@ minusR = foldr (-) 0
 -- "Remember that the type of the accumulator value and the type of the end result are always the same when dealing with folds."
 elem' :: (Eq a) => a -> [a] -> Bool
 elem' y ys = foldr (\x acc -> if x == y then True else acc) False ys
+-- QUESTION: why is the acc the second parameter instead of the first in the lambda?!?
 
 -- other functions re-implemented with folds
 reverse' :: [a] -> [a]
@@ -157,10 +158,11 @@ reverse' = foldl (\acc x -> x : acc) []
 
 reverse'' :: [a] -> [a]
 reverse'' = foldl (flip (:)) []
--- reverse''' = foldr (flip (:)) [] -- impossible because could possible be infinite
+-- reverse''' = foldr (flip (:)) [] -- impossible because could possibly be infinite
 
 product' :: (Num a) => [a] -> a
 product' = foldl (\x acc -> x * acc) 1
+-- QUESTION: same as above, why is the accumulator the second parameter?
 
 filter'' :: (a -> Bool) -> [a] -> [a]
 filter'' p = foldr (\x acc -> if p x then x : acc else acc) []

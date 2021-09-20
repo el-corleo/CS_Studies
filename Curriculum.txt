@@ -145,7 +145,7 @@ PROGRAMMING CHALLENGES
 	3.) {Python/C++/Haskell} Project Euler
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems
-		(total: 21)
+		(total: 24)
 		
 _________________________________________________________
 _________________________________________________________
