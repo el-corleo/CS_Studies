@@ -108,7 +108,7 @@ phoneBook = [
 
 -- throws RuntimeError if key not in list
 findKey :: (Eq k) => k -> [(k, v)] -> v
-findKey key xs = snd . head . filter (\(k,v) -> key == k) $ xs
+findKey key xs = snd . head . filter (\(k,v) -> key == k) $ xs -- why the '$'?
 
 -- better version
 findKey' :: (Eq k) => k -> [(k, v)] -> Maybe v

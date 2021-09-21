@@ -51,3 +51,25 @@ diff_select' n xs = do r <- randomRIO (0,(length xs)-1)
 --    Then selects an index 'r'
 --    Assigns all numbers in array except for the number at 'r' to remaining array
 --    Returns number at index 'r' prepended to n-1 recursive calls on the remaining array
+
+
+-------------------------------------------------------------
+-- PROBLEM 25
+-- Generate a random permutation of the elements of a list.
+-- I cheated using the solution to the previous question
+rnd_perm :: [a] -> IO [a]
+rnd_perm x = diff_select' (length x) x
+
+
+-------------------------------------------------------------
+-- PROBLEM 26
+-- Generate the combinations of K distinct objects chosen from the N elements of a list.
+combinations :: Int -> [a] -> [[a]]
+combinations 0 _  = [[]]
+combinations _ [] = [[]]
+-- combinations n (x:xs)
+  -- | n > length (x:xs) = error "Number of elements desired exceeds the number of elements in list."
+  -- | otherwise         = error "Can't figure it out, but I think I could maybe shift the list n-1 times, take the head and append it to combinations n-1 xs on each shift"
+--
+-- This was what I was trying to do, but I'm still not entirely certain how it works
+combinations n (x:xs) = (map (x:) (combinations (n-1) xs)) ++ (combinations n xs)
