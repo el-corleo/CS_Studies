@@ -1,4 +1,5 @@
 import System.Random
+import Data.List
 -------------------------------------------------------------
 -- PROBLEM 21
 -- Insert an element at a given position into a list.
@@ -73,3 +74,43 @@ combinations _ [] = [[]]
 --
 -- This was what I was trying to do, but I'm still not entirely certain how it works
 combinations n (x:xs) = (map (x:) (combinations (n-1) xs)) ++ (combinations n xs)
+
+
+-------------------------------------------------------------
+-- PROBLEM 27
+-- Group the elements of a set into disjoint subsets.
+-- NOTE: I didn't think this was possible... don't sets need to be homogenous? e.g., [[1,2], [1,2,3]] should be impossible because |[1,2]| \= |[1,2,3]|
+-- website explanation
+combination :: Int -> [a] -> [([a],[a])]
+combination 0 xs     = [([],xs)]
+combination n []     = []
+combination n (x:xs) = ts ++ ds
+  where
+    ts = [ (x:ys,zs) | (ys,zs) <- combination (n-1) xs  ]
+    ds = [ (ys,x:zs) | (ys,zs) <- combination  n    xs  ]
+
+group :: [Int] -> [a] -> [[[a]]]
+group [] _ = [[]]
+group (n:ns) xs =
+  [ g:gs | (g,rs) <- combination n xs,  gs    <- group ns rs ]
+
+
+-------------------------------------------------------------
+-- PROBLEM 28
+-- Sorting a list of lists according to length of sublists.
+-- a.) In order of length
+-- b.) In order of length frequency (i.e., how often that length appears)
+--
+-- a
+-- PLAN: adapt quicksort to problem
+lsort :: [[a]] -> [[a]]
+lsort [] = []
+lsort (x:xs) =
+  let shorterOrEqual  = filter (\y -> length y <= length x) xs
+      longer          = filter (\y -> length y > length x) xs
+  in lsort shorterOrEqual ++ [x] ++ lsort longer
+-- b
+-- PLAN
+lfsort :: [[a]] -> [[a]]
+lfsort [] = []
+lfsort xs = groupBy () -- UNFINISHED
