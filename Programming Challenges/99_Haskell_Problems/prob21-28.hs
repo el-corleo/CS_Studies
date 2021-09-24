@@ -1,5 +1,6 @@
 import System.Random
 import Data.List
+import Data.Function
 -------------------------------------------------------------
 -- PROBLEM 21
 -- Insert an element at a given position into a list.
@@ -89,10 +90,10 @@ combination n (x:xs) = ts ++ ds
     ts = [ (x:ys,zs) | (ys,zs) <- combination (n-1) xs  ]
     ds = [ (ys,x:zs) | (ys,zs) <- combination  n    xs  ]
 
-group :: [Int] -> [a] -> [[[a]]]
-group [] _ = [[]]
-group (n:ns) xs =
-  [ g:gs | (g,rs) <- combination n xs,  gs    <- group ns rs ]
+group' :: [Int] -> [a] -> [[[a]]]
+group' [] _ = [[]]
+group' (n:ns) xs =
+  [ g:gs | (g,rs) <- combination n xs, gs <- group' ns rs ]
 
 
 -------------------------------------------------------------
@@ -110,7 +111,21 @@ lsort (x:xs) =
       longer          = filter (\y -> length y > length x) xs
   in lsort shorterOrEqual ++ [x] ++ lsort longer
 -- b
--- PLAN
+lfsort' xs begin end
+  | begin > end  = []
+  | otherwise     = (filter (\y -> length y == begin) xs) ++ lfsort' xs (begin+1) end
+
 lfsort :: [[a]] -> [[a]]
 lfsort [] = []
-lfsort xs = groupBy () -- UNFINISHED
+lfsort xs =
+  let maxLength = maximum [ length x | x <- xs ]
+      minLength = minimum [ length x | x <- xs ]
+  in concat . lsort . groupBy (\n m -> length n == length m) $ lfsort' xs minLength maxLength
+
+
+-- website solution (quite similar to what I initially wanted to do)
+lfsort'' :: [[a]] -> [[a]]
+lfsort'' = map snd . concat . sortOn length . groupBy ((==) `on` fst) . sortOn fst . map (\x -> (length x, x))
+
+
+-- PROBLEMS 29 & 30 were nowhere to be found on the website
