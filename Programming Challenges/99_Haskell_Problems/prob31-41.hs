@@ -25,3 +25,23 @@ myGCD a b = myGCD b (a `mod` b)
 -- Determine whether two positive integer numbers are coprime. Two numbers are coprime if their greatest common divisor equals 1.
 coprime :: Int -> Int -> Bool
 coprime a b = myGCD a b == 1
+
+
+-------------------------------------------------------------
+-- PROBLEM 34
+-- Calculate Euler's totient function phi(m).
+-- Euler's so-called totient function phi(m) is defined as the number of positive integers r (1 <= r < m) that are coprime to m.
+--
+-- Example: m = 10: r = 1,3,7,9; thus phi(m) = 4. Note the special case: phi(1) = 1.
+totient :: Int -> Int
+totient 1 = 1
+totient m = length $ filter (\x -> coprime m x) [1..(m-1)]
+
+
+-------------------------------------------------------------
+-- PROBLEM 35
+-- Determine the prime factors of a given positive integer. Construct a flat list containing the prime factors in ascending order.
+primes = -- Infinite list of primes
+
+primeFactors :: Int -> [Int]
+primeFactors x -- divide by 2 as many times as possible, then by 3 until remaining value is 1
