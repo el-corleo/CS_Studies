@@ -41,7 +41,31 @@ totient m = length $ filter (\x -> coprime m x) [1..(m-1)]
 -------------------------------------------------------------
 -- PROBLEM 35
 -- Determine the prime factors of a given positive integer. Construct a flat list containing the prime factors in ascending order.
-primes = -- Infinite list of primes
+-- borrowed primes generator: https://stackoverflow.com/questions/63596587/generating-finite-lists-of-primes-in-haskell
+primes = sieve [2..]
+sieve (p : xs) = p : sieve [ x | x <- xs, x `mod` p > 0  ]
 
 primeFactors :: Int -> [Int]
-primeFactors x -- divide by 2 as many times as possible, then by 3 until remaining value is 1
+primeFactors x = primeFactors' x primes
+  where
+    primeFactors' 1 _ = []
+    primeFactors' x (n:ns)
+      | isPrimeFactor x n = n : primeFactors' (x `div` n) (n:ns)
+      | otherwise         = primeFactors' x ns
+      where isPrimeFactor x n = x `mod` n == 0
+
+
+-- can do with where:
+-- primeFactors x  = primeFactors' x 2
+--  where
+--    primeFactors' 1 _ = []
+--    primeFactors' n f
+--      | n`mod` f == 0 = f : primeFactors' (n `div` f) f
+--      | otherwise     = primeFactors' n (f+1)
+--
+-- But this solution from the website tries non-prime numbers unnecessarily
+
+
+-------------------------------------------------------------
+-- PROBLEM 36
+--

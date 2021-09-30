@@ -118,7 +118,7 @@ BOOKS
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --CYBERSEC--
-	1.) |10%|	Mitnick - The Art of Deception (60)
+	1.) |25%|	Mitnick - The Art of Deception (100)
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
@@ -144,7 +144,7 @@ PROGRAMMING CHALLENGES
 	3.) {Python/C++/Haskell} Project Euler
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems
-		(total: 31)
+		(total: 33)
 		
 _________________________________________________________
 _________________________________________________________
