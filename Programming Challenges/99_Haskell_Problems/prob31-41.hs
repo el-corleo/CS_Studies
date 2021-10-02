@@ -68,4 +68,17 @@ primeFactors x = primeFactors' x primes
 
 -------------------------------------------------------------
 -- PROBLEM 36
---
+-- Determine the prime factors of a given positive integer. Construct a list containing the prime factors and their multiplicity.
+primeFactorsMult :: Int -> [(Int, Int)]
+primeFactorsMult n =
+  let xs = primeFactors n
+  in zip xs (countFactors xs)
+    where
+      countFactors [] = []
+      countFactors (ys) = (length (takeWhile (head ys ==) ys)) : (countFactors (dropWhile (head ys ==) ys))
+
+
+
+-------------------------------------------------------------
+-- PROBLEM 37
+-- Calculate Euler's totient function phi(m) (improved).
