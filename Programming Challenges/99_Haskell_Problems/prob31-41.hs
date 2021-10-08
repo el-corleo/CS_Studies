@@ -82,3 +82,34 @@ primeFactorsMult n =
 -------------------------------------------------------------
 -- PROBLEM 37
 -- Calculate Euler's totient function phi(m) (improved).
+toientImproved :: Int -> Int
+toientImproved m = foldl (\acc (p,x) -> acc * ((p-1) * p ^ (x-1))) 1 $ primeFactorsMult m
+
+
+-- website solution
+--  Nice use of list comprehension & product function
+totientImproved' m = product [(p - 1) * p ^ (c - 1) | (p, c) <- primeFactorsMult m]
+
+
+-------------------------------------------------------------
+-- PROBLEM 39
+-- A list of prime numbers.
+-- Given a range of integers by its lower and upper limit, construct a list of all prime numbers in that range.
+primesR :: Int -> Int -> [Int]
+primesR lo hi
+  | lo > hi  = error "Impossible range."
+  | lo == hi = []
+  | otherwise = takeWhile (\n -> n <= hi && n >= lo) primeNums
+  where primeNums = [ x | x <- [lo..hi], isPrime x ]
+
+
+-- website
+primesR' :: Integral a => a -> a -> [a]
+primesR' a b = takeWhile (== b) $ dropWhile (< a) $ sieve [2..]
+  where sieve (n:ns) = n:sieve [ m | m <- ns, m `mod` n /= 0 ]
+
+-- primesR'' :: Integral a => a -> a -> [a]
+primesR'' :: Int -> Int -> [Int]
+primesR'' a b
+  | even a = filter isPrime [a+1,a+3..b]
+  | True   = filter isPrime [a,a+2..b]

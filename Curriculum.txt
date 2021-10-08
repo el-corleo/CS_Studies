@@ -14,7 +14,7 @@ CERTIFICATE COURSES
 
 --CYBERSECURITY--
 	NYU
-		1.) |70%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
+		1.) |75%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
 
 AUDITED COURSES
 --BASICS--
@@ -45,7 +45,6 @@ AUDITED COURSES
 --GAMES--
 	Games
 		1.) |COMPLETE|	Godot - HeartBeast 2D ARPG tutorial
-		2.) |60%|	Godot - HeartBeast 2D Platformer tutorial
 
 --MATH--
 	-Calculus-
@@ -98,7 +97,7 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |75%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (300)
+	8.) |80%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (318)
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
 
 --AI/ML--
@@ -118,7 +117,7 @@ BOOKS
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --CYBERSEC--
-	1.) |25%|	Mitnick - The Art of Deception (100)
+	1.) |30%|	Mitnick - The Art of Deception (120)
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
@@ -144,7 +143,7 @@ PROGRAMMING CHALLENGES
 	3.) {Python/C++/Haskell} Project Euler
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems
-		(total: 33)
+		(total: 36)
 		
 _________________________________________________________
 _________________________________________________________

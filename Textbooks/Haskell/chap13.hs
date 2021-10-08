@@ -25,3 +25,17 @@ landRight n (left, right)
 -- Otherwise, must use monad bind operator to chain
 balancedBirdsOnPole = landLeft 1 (0,0) >>= landRight 1 >>= landLeft 2
 unbalancedBirdsOnPole = landLeft 1 (0,0) >>= landRight 4 >>= landLeft (-1) >>= landRight (-4)
+
+
+-- do notation helps us avoid having to write out chained lambdas
+foo :: Maybe String
+foo = Just 3 >>= (\x -> Just "!" >>= (\y -> Just (show x ++ y)))
+-- the above is equivalent to the following
+foo' :: Maybe String
+foo' = do
+  x <- Just 3
+  y <- Just "!"
+  Just (show x ++ y)
+
+-- "If any of the values that we try to extract from are Nothing, the whole do expression will result in a Nothing."
+-- "When to use do notation and when to explicitly use >>= is up to you."
