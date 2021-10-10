@@ -113,3 +113,38 @@ primesR'' :: Int -> Int -> [Int]
 primesR'' a b
   | even a = filter isPrime [a+1,a+3..b]
   | True   = filter isPrime [a,a+2..b]
+
+
+-------------------------------------------------------------
+-- PROBLEM 40
+-- Goldbach's conjecture says that every positive even number greater than 2 is the sum of two prime numbers. Example: 28 = 5 + 23. It is one of the most famous facts in number theory that has not been proved to be correct in the general case. It has been numerically confirmed up to very large numbers. Write a predicate to find the two prime numbers that sum up to a given even integer.
+
+-- subtract first prime from n, if result is prime, you found your answer
+goldbach :: Int -> (Int, Int)
+goldbach n = summands primes n
+  where summands (x:xs) n
+          | (n `mod` 2) /= 0  = error "Invalid input."
+          | x > (n-2)         = error "Goldbach was wrong."
+          | isPrime (n-x)     = (x, n-x)
+          | otherwise         = summands xs n
+
+
+-------------------------------------------------------------
+-- PROBLEM 41
+-- Given a range of integers by its lower and upper limit, print a list of all even numbers and their Goldbach composition.
+--
+-- In most cases, if an even number is written as the sum of two prime numbers, one of them is very small. Very rarely, the primes are both bigger than say 50. Try to find out how many such cases there are in the range 2..3000.
+goldbachList :: Int -> Int -> [(Int, Int)]
+goldbachList lo hi
+  | lo > hi                       = []
+  | (lo `mod` 2 /= 0) || lo <= 2  = goldbachList (lo+1) hi
+  | (hi `mod` 2 /= 0)             = goldbachList lo (hi-1)
+  | otherwise                     = goldbach lo : goldbachList (lo+2) hi
+
+goldbachSummandsBothLarge :: Int -> Int -> Int -> Int
+goldbachSummandsBothLarge lo hi lim =
+  length . filter (\(x,y) -> x > lim && y > lim) $ goldbachList lo hi
+
+-- website answer
+goldbachList' n m = map goldbach $ dropWhile (<4) $ filter even [n..m]
+
