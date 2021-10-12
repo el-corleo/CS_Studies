@@ -97,7 +97,7 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |80%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (326)
+	8.) |85%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (332)
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
 
 --AI/ML--

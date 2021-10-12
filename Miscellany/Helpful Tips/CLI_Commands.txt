@@ -27,7 +27,7 @@ $ df 				// shows how much free disk space there is
 $ du 				// shows how much used disk space there is
 $ lshw				// shows hardware specs
 $ du -sh <dir> 		// see disk usage of given directory (how much space it takes up on disk)
-$ du -a <dir> | sort -n -t | head -n <num>		// get <num> largest files
+$ du -a <dir> | sort -n -r | head -n <num>		// get <num> largest files
 $ ls <dir> | wc -l		// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
 $ mount -t drvfs D: /mnt/d 	// mounts drive from D: on linux subsystem on Windows 10
 
