@@ -51,6 +51,40 @@ table' n f = mapM_ putStrLn [toStr a ++ " => " ++ show (f a) | a <- args n]
         space False = " "
 
 
+-------------------------------------------------------------
+-- PROBLEM 49
+-- Gray codes.
+--
+-- An n-bit Gray code is a sequence of n-bit strings constructed according to certain rules.
+-- List out all members of the gray code in order for a given number of bits
+switchBit :: Int -> [Char] -> [Char]
+switchBit ind code = (take (ind) code) ++ [(switchedBit (code !! ind))] ++ (drop (ind+1) code)
+  where switchedBit char = if char == '1' then '0' else '1'
+
+genGrayNum :: [[Char]] -> Int -> [Char]
+genGrayNum _ (-1) = []
+genGrayNum nums ind
+  | newNum `elem` nums  = genGrayNum nums (ind-1)
+  | otherwise           = newNum
+  where newNum = switchBit ind (last nums)
+
+gray' :: [[Char]] -> Int ->[[Char]]
+gray' list n
+  | length list == 2^n  = list
+  | otherwise           = gray' newList n
+  where newList = list ++ (genGrayNum list (n-1)) : []
+
+gray :: Int -> [[Char]]
+gray n = gray' list n
+  where list = (take n $ repeat '0') : []
+
+-- website solution... notably more... eh... terse
+-- NOTE: builds a different but equally valid Gray code
+gray'' :: Integral a => a -> [String]
+gray'' 0 = [""]
+gray'' n = foldr (\s acc -> ("0" ++ s):("1" ++ s):acc) [] $ gray'' (n-1)
 
 
-
+-------------------------------------------------------------
+-- PROBLEM 50
+--
