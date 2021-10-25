@@ -14,7 +14,11 @@ CERTIFICATE COURSES
 
 --CYBERSECURITY--
 	NYU
-		1.) |85%|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
+		1.) |COMPLETE|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
+
+--GAME DEVELOPMENT--
+	Michigan State University
+		1.) |00%|	Game Design and Development with Unity [https://www.coursera.org/specializations/game-design-and-development]
 
 AUDITED COURSES
 --BASICS--
@@ -97,8 +101,10 @@ BOOKS
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
 	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
 				Assignments (total: 18)
-	8.) |90%|	{Haskell} Lipovaca - Learn You a Haskell for Great Good (363)
+	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
+	10.)|05%|	{Haskell} Allen - Haskell Programming from First Principles (50)
+	11.)|00%|	{Haskell} Mena - Beginning Haskell (7)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
@@ -117,7 +123,7 @@ BOOKS
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --CYBERSEC--
-	1.) |30%|	Mitnick - The Art of Deception (120)
+	1.) |50%|	Mitnick - The Art of Deception (180)
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)

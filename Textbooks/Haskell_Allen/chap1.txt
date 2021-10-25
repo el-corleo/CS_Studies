@@ -1,0 +1,27 @@
+Equivalence
+1. b
+2. c
+3. b
+
+Combinators
+1. true   [only one variable 'x' and it is bound]
+2. false  [free variable 'z']
+3. true
+4. true
+5. false
+
+Divergence
+1. false
+2. true
+3. false
+
+Beta Reduction
+1. z
+2. bb
+3. qq
+4. yy
+5. yy
+6. aac
+7. [lambda]z.za
+  - Wrong, I should have distinguished between the two z's as they are not the same variable
+  - e.g., [lambda]z1.za

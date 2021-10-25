@@ -87,4 +87,7 @@ gray'' n = foldr (\s acc -> ("0" ++ s):("1" ++ s):acc) [] $ gray'' (n-1)
 
 -------------------------------------------------------------
 -- PROBLEM 50
+-- Huffman codes.
 --
+-- We suppose a set of symbols with their frequencies, given as a list of fr(S,F) terms. Example: [fr(a,45),fr(b,13),fr(c,12),fr(d,16),fr(e,9),fr(f,5)]. Our objective is to construct a list hc(S,C) terms, where C is the Huffman code word for the symbol S. In our example, the result could be Hs = [hc(a,'0'), hc(b,'101'), hc(c,'100'), hc(d,'111'), hc(e,'1101'), hc(f,'1100')] [hc(a,'01'),...etc.].
+
