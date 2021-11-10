@@ -18,7 +18,7 @@ CERTIFICATE COURSES
 
 --GAME DEVELOPMENT--
 	Michigan State University
-		1.) |00%|	Game Design and Development with Unity [https://www.coursera.org/specializations/game-design-and-development]
+		1.) |05%|	Game Design and Development with Unity [https://www.coursera.org/specializations/game-design-and-development]
 
 AUDITED COURSES
 --BASICS--
@@ -103,8 +103,8 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|05%|	{Haskell} Allen - Haskell Programming from First Principles (83)
-	11.)|05%|	{Haskell} Mena - Beginning Haskell (29)
+	10.)|10%|	{Haskell} Allen - Haskell Programming from First Principles (200)
+	11.)|10%|	{Haskell} Mena - Beginning Haskell (46)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
