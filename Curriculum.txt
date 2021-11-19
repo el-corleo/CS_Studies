@@ -103,9 +103,9 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|15%|	{Haskell} Allen - Haskell Programming from First Principles (240)
-	11.)|13%|	{Haskell} Mena - Beginning Haskell (56)
-	12.)|10%|	{Rust} Milanesi - Beginning Rust (24)
+	10.)|15%|	{Haskell} Allen - Haskell Programming from First Principles (256)
+	11.)|15%|	{Haskell} Mena - Beginning Haskell (61)
+	12.)|10%|	{Rust} Milanesi - Beginning Rust (31)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
