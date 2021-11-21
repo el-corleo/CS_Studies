@@ -1,6 +1,6 @@
 module Section2 where
 
-import Data.List (permutations, subsequence)
+import Data.List (permutations)
 
 
 permutationsStartingWith :: Char -> String -> [String]
@@ -42,3 +42,24 @@ filterGovOrgs xs = filter (isGovOrg) xs
 duplicateOdds list = map (*2) $ filter odd list
 -- this is functionally equivalent to the point-free composed function
 duplicateOdds' = map (*2) . filter odd
+
+
+-- smart constructors
+data Range = Range Integer Integer deriving Show
+
+range :: Integer -> Integer -> Range
+range a b = if a <= b then Range a b else error "a must be <= b"
+
+
+-- redefining maximum
+data InfNumber a  = MinusInfinity
+                  | Number a
+                  | PlusInfintity
+                  deriving Show
+
+infMax :: Ord a => InfNumber a -> InfNumber a -> InfNumber a
+infMax MinusInfinity x = x
+infMax x MinusInfinity = x
+infMax PlusInfintity _ = PlusInfintity
+infMax _ PlusInfintity = PlusInfintity
+infMax (Number a) (Number b) = Number (max a b)
