@@ -103,15 +103,14 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|15%|	{Haskell} Allen - Haskell Programming from First Principles (256)
+	10.)|15%|	{Haskell} Allen - Haskell Programming from First Principles (278)
 	11.)|15%|	{Haskell} Mena - Beginning Haskell (66)
-	12.)|10%|	{Rust} Milanesi - Beginning Rust (41)
+	12.)|10%|	{Rust} Milanesi - Beginning Rust (47)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
 	2.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
 	3.) |05%|	{Python} Gugger - Deep Learning for Coders
-				Chap. 1 Assignments (total: 30)
 	4.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
 
 --BLOCKCHAIN--
@@ -124,7 +123,7 @@ BOOKS
 	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
 
 --CYBERSEC--
-	1.) |65%|	Mitnick - The Art of Deception (231)
+	1.) |85%|	Mitnick - The Art of Deception (276)
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)

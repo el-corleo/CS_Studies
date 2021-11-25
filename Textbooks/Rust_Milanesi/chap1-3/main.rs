@@ -6,7 +6,7 @@ fn main() {
     // println!("{}", 100 / 7.2); // <- This yields a compiler error
     println!("{}", 100. / 7.2);   // <- This does not
 
-    let mut this_num = 20;
+    let mut this_num = 20; // <- variables are immutable by default; must declare mutable if desired
     let that_num = -20;
 
     println!("{}", this_num + that_num);
@@ -35,4 +35,33 @@ fn main() {
     if "ab" < "Ac" { println!("True"); } // <- sorting is lexicographical
     if "Ab" < "ac" { println!("True"); } // <- sorting is lexicographical
     if "ab" < "abc" { println!("True"); } // <- sorting is lexicographical
+
+    if !("ab" < "ac") { println!("!"); }
+    else              { println!("!!"); }
+
+
+    // can redeclare variables
+    // these can change types
+    let mut n = 0;
+    println!("mut n {}", n);
+    n = 1;
+    println!("mut n {}", n);
+    let n = 2.1;
+    println!("n {}", n);
+
+    let x = 3.2;
+    println!("x {}", x);
+    let mut x = 3;
+    println!("mut x {}", x);
+    x = 2;
+    println!("mut x {}", x);
+
+    let y = 3;
+    println!("y {}", y);
+    let y = 3.1;
+    println!("y {}", y);
+
+
+    // std library functions need to be imported
+    println!("{} {}", str::len("abcde"), "abcde".len());
 }
