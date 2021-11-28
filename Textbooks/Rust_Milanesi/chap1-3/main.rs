@@ -64,4 +64,30 @@ fn main() {
 
     // std library functions need to be imported
     println!("{} {}", str::len("abcde"), "abcde".len());
+
+    // while (true) equivalent is:
+    let mut n = 1;
+    let limit = 10;
+    loop {
+        n += 1;
+        if n >= limit { break; }
+    }
+
+    // for loops share some Python and some Haskell features
+    // index variable declared in for loop shadows but does not affect the other index variable
+    //      - Different scopes(?)
+    let index = 8;
+    for index in 1..10 {
+        println!("{}", index);
+    }
+    println!("{}", index);
+
+    // limit used in for loop is fixed at what value is at start
+    // thus, this loop still goes through 3 cycles instead of 2 (as it would in C languages)
+    let mut limit = 4;
+    for i in 1..limit {
+        limit -= 1;
+        println!("{}", i);
+    }
+    println!("{}", limit);
 }

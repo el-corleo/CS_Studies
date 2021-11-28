@@ -49,3 +49,14 @@ kessel x y = x
 -- 2.) constrained poly, constrained poly, constrained poly
 -- 3.) full poly, constrained poly, constrained poly
 -- 4.) full poly, full poly, constrained poly
+--
+-- Type 3
+-- 1.) [a] -> a
+-- 2.) (Ord a, Ord b) => a -> b -> Bool
+-- 3.) (a, b) -> b
+--
+-- Type-Kwon-Do
+-- 1.) h x = g $ f x
+-- 2.) e x = w $ q x
+-- 3.) xform (x, y) = (xz x, yz y)
+-- 4.) munge f g x = fst (g $ f x)
