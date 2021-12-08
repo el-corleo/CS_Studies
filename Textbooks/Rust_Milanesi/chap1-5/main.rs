@@ -128,5 +128,37 @@ fn main() {
     x.push("not a pipe.");
     for i in 0..x.len() { print!("{} ", x[i]); }
 
+    // empty arrays & vectors are declared thus
+    let _x = [""; 0];
+    let _y = vec![true; 0];
+
+
+    // debug printing for arrays & vectors
+    let _a = ["a"; 4];
+    let _b = vec![true; 4];
+
+    println!("{:?} {:?}", _a, _b);
+
+    // copying arrays: assignment does not just change pointer address, but actually copies the values
+    // NOTE: does not work with arrays of different lengths, e.g., and array of length 3 cannot
+    // be reassigned to an array of length 4
+    let mut _c = [1, 2, 3];
+    let mut _d = [4, 5, 6];
+    println!("{:?}", _c);
+    _c = _d;
+    println!("{:?}", _c);
+    _d[0] = -4;
+    println!("{:?}", _c);
+
+    // vectors of different lengths can be swapped
+    let mut _e = vec![1, 2, 3];
+    let mut _f = vec![4, 5];
+    println!("{:?}", _e);
+    _e = _f.to_vec();
+    println!("{:?}", _e);
+    _f.remove(0);
+    _f.insert(0, -4);
+    println!("{:?}", _e);
+
 
 }
