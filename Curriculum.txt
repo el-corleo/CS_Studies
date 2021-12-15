@@ -16,9 +16,9 @@ CERTIFICATE COURSES
 	NYU
 		1.) |COMPLETE|	Introduction to Cybersecurity Specialization [https://www.coursera.org/specializations/intro-cyber-security]
 
---GAME DEVELOPMENT--
-	Michigan State University
-		1.) |05%|	Game Design and Development with Unity [https://www.coursera.org/specializations/game-design-and-development]
+--NETWORKING--
+	University of Colorado
+		1.) |05%|	Computer Communications Specialization [https://www.coursera.org/specializations/computer-communications]
 
 AUDITED COURSES
 --BASICS--
@@ -87,9 +87,9 @@ BOOKS
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
 	
 --OS--
-	1.) |60%|	{C} Silberschatz - Operating System Concepts ()
+	1.) |10%|	{C} Silberschatz - Operating System Concepts (89)
 	2.) |COMPLETE|	{C} Downey - Think OS
-	3.) |00%| {C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces ()
+	3.) |15%| {C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (106)
 
 --LANG/FRAMEWORK--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
@@ -104,7 +104,7 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|15%|	{Haskell} Allen - Haskell Programming from First Principles (337)
+	10.)|15%|	{Haskell} Allen - Haskell Programming from First Principles (349)
 	11.)|15%|	{Haskell} Mena - Beginning Haskell (66)
 	12.)|10%|	{Rust} Milanesi - Beginning Rust (74)
 
@@ -118,10 +118,7 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |10%|	Stevens - TCP/IP Illustrated (78)
-
---GAMES--
-	1.) |66%|	{GDScript} Godot - 3D FPS tutorial
+	1.) |15%|	Stevens - TCP/IP Illustrated (100)
 
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception

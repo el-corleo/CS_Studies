@@ -19,3 +19,9 @@ instance Eq Date where
        (Date weekday' dayOfMonth') =
          weekday == weekday'
          && dayOfMonth == dayOfMonth'
+
+-- Ex. 6.8
+-- 1. Yes - 5
+-- 2. Yes - LT
+-- 3. No - [Char] cannot be compared to Bool
+-- 4. Yes - False
