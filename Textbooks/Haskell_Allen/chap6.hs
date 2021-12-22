@@ -25,3 +25,11 @@ instance Eq Date where
 -- 2. Yes - LT
 -- 3. No - [Char] cannot be compared to Bool
 -- 4. Yes - False
+
+
+-- Ex. 6.14
+-- 1. c
+-- 2. a
+-- 3. a
+-- 4. c
+-- 5. a

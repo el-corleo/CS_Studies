@@ -18,7 +18,7 @@ CERTIFICATE COURSES
 
 --NETWORKING--
 	University of Colorado
-		1.) |05%|	Computer Communications Specialization [https://www.coursera.org/specializations/computer-communications]
+		1.) |10%|	Computer Communications Specialization [https://www.coursera.org/specializations/computer-communications]
 
 AUDITED COURSES
 --BASICS--
@@ -104,9 +104,9 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|15%|	{Haskell} Allen - Haskell Programming from First Principles (349)
+	10.)|20%|	{Haskell} Allen - Haskell Programming from First Principles (365)
 	11.)|15%|	{Haskell} Mena - Beginning Haskell (66)
-	12.)|10%|	{Rust} Milanesi - Beginning Rust (74)
+	12.)|25%|	{Rust} Milanesi - Beginning Rust (81)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
