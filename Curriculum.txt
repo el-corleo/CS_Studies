@@ -18,7 +18,7 @@ CERTIFICATE COURSES
 
 --NETWORKING--
 	University of Colorado
-		1.) |10%|	Computer Communications Specialization [https://www.coursera.org/specializations/computer-communications]
+		1.) |15%|	Computer Communications Specialization [https://www.coursera.org/specializations/computer-communications]
 
 AUDITED COURSES
 --BASICS--
@@ -87,9 +87,9 @@ BOOKS
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
 	
 --OS--
-	1.) |10%|	{C} Silberschatz - Operating System Concepts (89)
+	1.) |15%|	{C} Silberschatz - Operating System Concepts (115)
 	2.) |COMPLETE|	{C} Downey - Think OS
-	3.) |15%| {C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (106)
+	3.) |25%| {C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (141)
 
 --LANG/FRAMEWORK--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
@@ -104,7 +104,7 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|20%|	{Haskell} Allen - Haskell Programming from First Principles (365)
+	10.)|20%|	{Haskell} Allen - Haskell Programming from First Principles (377)
 	11.)|15%|	{Haskell} Mena - Beginning Haskell (66)
 	12.)|25%|	{Rust} Milanesi - Beginning Rust (81)
 
@@ -118,7 +118,7 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |15%|	Stevens - TCP/IP Illustrated (100)
+	1.) |15%|	Stevens - TCP/IP Illustrated (141)
 
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
