@@ -1,6 +1,7 @@
 import moviepy.editor as mp
 
-clip = mp.VideoFileClip("zoom.mkv")
+filename = input("Enter filename: (must be in same directory; must have extension): ")
 
-clip.audio.write_audiofile(r"my_result.mp3")
+clip = mp.VideoFileClip(filename)
+clip.audio.write_audiofile(f"{filename[:filename.find('.')]}.mp3")
 

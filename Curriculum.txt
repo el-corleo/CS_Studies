@@ -106,7 +106,7 @@ BOOKS
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
 	10.)|20%|	{Haskell} Allen - Haskell Programming from First Principles (377)
 	11.)|15%|	{Haskell} Mena - Beginning Haskell (66)
-	12.)|25%|	{Rust} Milanesi - Beginning Rust (81)
+	12.)|25%|	{Rust} Milanesi - Beginning Rust (88)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
