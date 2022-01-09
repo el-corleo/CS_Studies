@@ -104,4 +104,75 @@ fn main() {
             _ => "positive",
         })
     }
+
+    // tuples
+    let mut tup_1 = ("Bobo", 5, 29.9);
+    println!("{} {} {}", tup_1.0, tup_1.1, tup_1.2);
+    tup_1.0 = "Bobo McGee";
+    println!("{} {} {}", tup_1.0, tup_1.1, tup_1.2);
+
+    // can also be explicit
+    let tup_2: (&str, u8, f32) = ("Bobo", 5, 29.9);
+    println!("{} {} {}", tup_2.0, tup_2.1, tup_2.2);
+
+    // structs are like tuples but with named fields
+    struct Bobo {
+        name: String,
+        age: u8,
+        wenis: f32,
+    }
+
+    let generic_bobo = Bobo {
+        name: "Bobo McGee".to_string(),
+        age: 10,
+        wenis: 29.9,
+    };
+
+    println!("{} {} {}", generic_bobo.name, generic_bobo.age, generic_bobo.wenis);
+
+    // tuple-structs exist, which are basically structs with unnamed fields
+    // NOTE: use parentheses instead of curly braces
+    struct SomeData (
+        i32,
+        f32,
+        char,
+        [u8; 5],
+    );
+    let data = SomeData (
+        10_000_000,
+        183.19,
+        'Q',
+        [9, 0, 250, 60, 200],
+    );
+    println!("{}, {}, {}, {}", data.2, data.0, data.1, data.3[2]);
+
+
+    // ON CONVENTIONS
+    const MAXIMUM_POWER: u16 = 600; // constants are underscore-separated caps
+
+    // structs and enums are PascalCase
+    enum VehicleKind {
+        Motorcycle,
+        Car,
+        Truck,
+    }
+
+    // variable names are underscore-separated lower case
+    struct VehicleData {     
+        kind: VehicleKind,     
+        registration_year: u16,     
+        registration_month: u8,     
+        power: u16,
+    }
+
+    let vehicle = VehicleData {     
+        kind: VehicleKind::Car,     
+        registration_year: 2003,     
+        registration_month: 11,     
+        power: 120,
+    };
+
+    if vehicle.power > MAXIMUM_POWER {     
+        println!("Too powerful");
+    }
 }
