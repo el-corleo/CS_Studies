@@ -11,6 +11,8 @@ CERTIFICATE COURSES
 --BLOCKCHAIN--
 	UC Irvine
 		1.) |COMPLETE|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
+	IOHK
+		1.) |50%|	Plutus Pioneers Program - Third Cohort
 
 --CYBERSECURITY--
 	NYU
@@ -18,7 +20,7 @@ CERTIFICATE COURSES
 
 --NETWORKING--
 	University of Colorado
-		1.) |25%|	Computer Communications Specialization [https://www.coursera.org/specializations/computer-communications]
+		1.) |50%|	Computer Communications Specialization [https://www.coursera.org/specializations/computer-communications]
 
 AUDITED COURSES
 --BASICS--
@@ -87,9 +89,9 @@ BOOKS
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
 	
 --OS--
-	1.) |15%|	{C} Silberschatz - Operating System Concepts (115)
+	1.) |50%|	{C} Silberschatz - Operating System Concepts (380)
 	2.) |COMPLETE|	{C} Downey - Think OS
-	3.) |25%| {C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (141)
+	3.) |60%| {C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (390)
 
 --LANG/FRAMEWORK--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
@@ -104,9 +106,8 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|23%|	{Haskell} Allen - Haskell Programming from First Principles (424)
-	11.)|15%|	{Haskell} Mena - Beginning Haskell (66)
-	12.)|30%|	{Rust} Milanesi - Beginning Rust (117)
+	10.)|25%|	{Haskell} Allen - Haskell Programming from First Principles (444)
+	11.)|50%|	{Rust} Milanesi - Beginning Rust (142)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
@@ -118,10 +119,11 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |15%|	Stevens - TCP/IP Illustrated (141)
+	1.) |35%|	Stevens - TCP/IP Illustrated (350)
 
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
+	2.) |35%|	Andress - Foundations of Information Security
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)

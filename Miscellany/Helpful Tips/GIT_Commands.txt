@@ -13,6 +13,9 @@ git push origin <branch>
 // pull from branch
 git pull origin <branch>
 
+// see all branches
+git branch -a
+
 // branch repo from master
 // for creating new branch
 git checkout -b "branch"

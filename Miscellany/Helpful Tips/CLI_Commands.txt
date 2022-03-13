@@ -8,14 +8,14 @@ $ systeminfo	// gets computer info
 $ cd ~				// change to home directory
 $ cd ..				// change to parent directory
 $ cd ../..			// change to grandparent directory
-$ ln -s <path> <name> // creates a symbolic link (a shortcut) to the directory on <path> under the alias <name> from home
+$ ln -s <path> <name>	// creates a symbolic link (a shortcut) to the directory on <path> under the alias <name> from home
 $ mkdir dirName 	// makes a directory
 $ rmdir dirName 	// deletes a directory (must be empty before removing)
 $ rm -r dirName 	// deletes a directory and all sub directories (even if not empty)
-$ rm filename       	// deletes a file
-$ rm *.extension    	// deletes all files of type extension
+$ rm filename       // deletes a file
+$ rm *.<extension>  // deletes all files of type extension
 $ cp file dir 		// copies file from current directory into destination directory
-$ cp * dir 		// copies all files from current dir into destination dir
+$ cp * dir 			// copies all files from current dir into destination dir
 $ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
 $ mv file dir 		// moves file into dir
 
@@ -28,20 +28,20 @@ $ du 				// shows how much used disk space there is
 $ lshw				// shows hardware specs
 $ du -sh <dir> 		// see disk usage of given directory (how much space it takes up on disk)
 $ du -a <dir> | sort -n -r | head -n <num>		// get <num> largest files
-$ ls <dir> | wc -l		// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
+$ ls <dir> | wc -l			// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
 $ mount -t drvfs D: /mnt/d 	// mounts drive from D: on linux subsystem on Windows 10
 
 $ nano file		// opens text editor and creates file
-$ touch file 		// creates new file
+$ touch file 	// creates new file
 
-$ tree 					// shows all subdirectories
+$ tree 								// shows all subdirectories
 $ grep "keywords" file1 file2 file3	// searches for keywords in file (case sensitive)
-$ grep -i "keywords" file 		// searches for keywords in file (case insensitive)
-$ grep -R "keywords" dir 		// searches for keywords in all files of dir (case insensitive)
-$ grep -c "keywords" file 		// searches and displays # of times keywords in file
+$ grep -i "keywords" file 			// searches for keywords in file (case insensitive)
+$ grep -R "keywords" dir 			// searches for keywords in all files of dir (case insensitive)
+$ grep -c "keywords" file 			// searches and displays # of times keywords in file
 $ ls -R <dir> | grep -R "keywords" `pwd`"\"*	// prints fully qualified path of files keyword is found in
 
-$ diff file1 file2		// shows difference between two files
+$ diff file1 file2			// shows difference between two files
 $ diff -q file1 file2		// shows that two files differ, but not the differences
 $ diff -s file1 file2		// shows that two files at the same
 $ diff -i file1 file2		// shows that two files at the differ, but ignores case
@@ -60,14 +60,14 @@ $ prog1 || prog2	// prog2 executes only if prog1 fails
 $ rm -r !(*.java)	// delete all files in a folder that are not
 
 $ sudo chmod 744 file 	// gives file permission to run
-			// Explanation of 744
-			// Three columns are for user, group, and other, respectively
-			// 	user = owner of file
-			// 	group = a set of users
-			//	other = does not belong to group and is not owner of file
-			// 4 -> read; 2 -> write; 1 -> execute | combinations of these delineate permissions
-			// 1 is execute only, 2 is write only, 4 is read only
-			// 3 is execute+write, 5 is execute+read, ... , 7 is execute+write+read
+						// Explanation of 744
+						// Three columns are for user, group, and other, respectively
+						// 	user = owner of file
+						// 	group = a set of users
+						//	other = does not belong to group and is not owner of file
+						// 4 -> read; 2 -> write; 1 -> execute | combinations of these delineate permissions
+						// 1 is execute only, 2 is write only, 4 is read only
+						// 3 is execute+write, 5 is execute+read, ... , 7 is execute+write+read
 			
 $ amixer set Master 100%	// sets volume to max
 $ amixer set Master 10%+	// increases volume by 10%
@@ -94,9 +94,9 @@ $ CTRL+B d				// detach current session
 $ CTRL+B <%/">			// splits window vertically or horizontally; opens new cli
 $ CTRL+B <arrow key>	// toggle between windows; holding CTRL+B and pressing arrow key will resize window
 $ :resize-pane -D (10)	// resize window
-$ CTRL+B [			// scroll, q to quit scrolling mode
-$ CTRL+B &			// kills current tmux window
-$ CTRL+B x			// kills current tmux pane
+$ CTRL+B [				// scroll, q to quit scrolling mode
+$ CTRL+B &				// kills current tmux window
+$ CTRL+B x				// kills current tmux pane
 
 $ locate <filename>
 
