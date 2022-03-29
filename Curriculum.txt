@@ -12,7 +12,7 @@ CERTIFICATE COURSES
 	UC Irvine
 		1.) |COMPLETE|	Blockchain Specialization [https://www.coursera.org/specializations/uci-blockchain]
 	IOHK
-		1.) |50%|	Plutus Pioneers Program - Third Cohort
+		1.) |75%|	Plutus Pioneers Program - Third Cohort
 
 --CYBERSECURITY--
 	NYU
@@ -89,9 +89,9 @@ BOOKS
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
 	
 --OS--
-	1.) |50%|	{C} Silberschatz - Operating System Concepts (380)
+	1.) |55%|	{C} Silberschatz - Operating System Concepts (400)
 	2.) |COMPLETE|	{C} Downey - Think OS
-	3.) |60%| {C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (390)
+	3.) |65%|	{C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (400)
 
 --LANG/FRAMEWORK--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
@@ -106,8 +106,8 @@ BOOKS
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|25%|	{Haskell} Allen - Haskell Programming from First Principles (444)
-	11.)|50%|	{Rust} Milanesi - Beginning Rust (142)
+	10.)|25%|	{Haskell} Allen - Haskell Programming from First Principles (473)
+	11.)|55%|	{Rust} Milanesi - Beginning Rust (164)
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
@@ -123,7 +123,7 @@ BOOKS
 
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
-	2.) |35%|	Andress - Foundations of Information Security
+	2.) |65%|	Andress - Foundations of Information Security (150)
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)

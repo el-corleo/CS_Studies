@@ -124,3 +124,11 @@ STRIDE
 	- Info Leak					[Confidentiality]
 	- DoS						[Availability]
 	- Elevation of Privilege	[C, I, A]
+	
+OpSec
+	- Identify critical assets (physical/intellectual)
+	- Identify threats
+	- Identify vulnerabilities
+	- Identify risks (if a threat and vulnerability match, there is a risk)
+	- Implement countermeasures
+	- Determine efficacy of countermeasures
