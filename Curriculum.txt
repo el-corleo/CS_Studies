@@ -145,7 +145,7 @@ PROGRAMMING CHALLENGES
 	1.) {C++} CodeForces Ladders
 		(total: 87)
 	2.) {Java/C++} Hackerrank
-		(total: 32)
+		(total: 33)
 	3.) {Python/C++/Haskell} Project Euler
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems

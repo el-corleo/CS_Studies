@@ -1,0 +1,89 @@
+https://www.hackerrank.com/challenges/the-grid-search/problem
+
+inputs:
+	- Grid (R x C matrix)
+	- Pattern 
+	
+outputs:
+	- if contains pattern: YES
+	- otherwise: NO
+	
+constraints:
+	- 1 <= R,C <= 1000 (for Grid)
+	- 1 <= r,c <= 1000 (for Pattern)
+	- r <= R && c <= C
+	
+approach:
+	- Search 0th row to (R - r - 1)th row for match of first Pattern row
+		- if found, record starting column; repeat in next row search second Pattern row, etc.
+		
+tools:
+	- Regex (?) given that they are strings
+	- Simple traversal
+		
+edge cases:
+	- Jagged arrays (?)
+
+troubles:
+	- I missed the case where a potential pattern existed, but was wrong, and then right after it was the real pattern
+		- e.g., G = 1212	P = 12
+					1112		12
+	
+	
+SOLUTION:
+
+	public static String gridSearch(List<String> G, List<String> P) {
+        // to keep track of where we are in the Grid & Pattern
+        int R = 0, C = 0;
+        int r = 0, c = 0;
+        
+        // traverse the Grid in search of pattern
+        boolean potentialPattern = false;
+        while (R < G.size() && C < G.get(R).length()) {
+            if (G.get(R).charAt(C) == P.get(r).charAt(c)) {
+                potentialPattern = true;
+                // end of pattern
+                if (c == P.get(r).length() - 1) {
+                    // have found the pattern
+                    if (r == P.size() - 1)
+                        return "YES";
+        
+                    // go to next line
+                    r++;
+                    c = 0;
+                    R++;
+                    C -= P.get(r).length() - 1;
+                } 
+                // more in pattern, but end of GridStr
+                else if (C == G.get(R).length() - 1) {
+                    r = 0;
+                    c = 0;
+                    R++;
+                    C = 0;
+                } else {
+                    C++;
+                    c++;
+                }
+            } else {
+                // reset to place prior to potential pattern match
+                if (potentialPattern) {
+                    R -= r;
+                    C = (C - c) + 1;
+                    potentialPattern = false;
+                }
+                // advance Grid coords
+                else if (C == G.get(R).length() - 1) {
+                    R++;
+                    C = 0;
+                } else {
+                    C++;
+                }
+                
+                // reset Pattern coords
+                r = 0;
+                c = 0;
+            }
+        }
+        
+        return "NO";
+    }
