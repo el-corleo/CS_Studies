@@ -1,0 +1,60 @@
+https://www.hackerrank.com/challenges/bomber-man/problem?isFullScreen=true
+
+Inputs:
+	- r, c = rows and columns [. = empty; 0 = bomb]
+	- n = seconds to simulate
+	
+Output:
+	- Matrix state after n seconds
+
+Constraints:
+	- 1 <= r,c <= 200
+	- 1 <= n <= 10^9
+
+Key points:
+	- Bombs detonate after 3 secs
+	- Explosions affect the location of the bomb +4 adjacent (cardinal directions) cells
+	- No chain reactions (a bomb that explodes because it is adjacent to a 3-sec detonated bomb only affects its current position)
+	
+Samples:
+	-	1				2				3				4				5				6
+	 	...				000				0.0				000				...				000
+		.0.		->		000		->		...		->		000		->		.0.		->		000			etc.
+		...				000				0.0				000				...				000
+		
+	-	1				2				3				4				5				6
+		.0.0.0			000000			......			000000			000000			......
+		0.0.0.	->		000000	->		......	->		000000	->		000000	->		......
+		.0.0.0			000000			......			000000			000000			......
+		
+	- 	1				2				3				5				7				9
+		..0..			00000			0...0			.....
+		0...0			00000			..0..			.....
+		..0..	->		00000	->		0...0	->		.....
+		0...0			00000			..0..			.....
+		..0..			00000			0...0			.....
+		
+	-	1				2				3				5			7			9
+		.0...			00000			...0.			00...		...0.		00...
+		0...0	->		00000	->		..0..	->		0...0	->	..0..	->	0...0
+		..00.			00000			.....			.....		.000.		.....
+		.....			00000			00000			.....		00000		.....
+		
+		
+		
+Observations:
+	- if n%2==0, then board is filled with bombs
+		- Nope
+	- else at n%2!=0 for n>=3, locate all bombs from n-2 and explode them in 4 directions
+		- must bounds check for edges
+		- e.g., 3-2 = 1, the only bomb there is at (1,1), thus explode [(1,1), (1-1,1), (1,1-1), (1+1,1), (1,1+1)]
+	- Not sure, but does it simply oscillate between a set number of configurations (?)
+		- Nope, but it seems like it will inevitably hit a cycle at a certain point
+		
+Possible approach:
+	- ArrayList<Coords> bombs1 + ArrayList<Coords> bombs2
+	- Steps:
+		1. Save init state in bombs1
+		2. Store detonated state in bombs2
+		3. Store next detonated state in bombs1
+		4. Rinse-repeat n/2 times

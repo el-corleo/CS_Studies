@@ -89,44 +89,45 @@ BOOKS
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
 	
 --OS--
-	1.) |55%|	{C} Silberschatz - Operating System Concepts (400)
+	1.) |65%|	{C} Silberschatz - Operating System Concepts
 	2.) |COMPLETE|	{C} Downey - Think OS
-	3.) |65%|	{C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces (400)
+	3.) |80%|	{C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces
 
 --LANG/FRAMEWORK--
-	1.) |15%|	{C++} Lospinoso - C++ Crash Course (150)
+	1.) |15%|	{C++} Lospinoso - C++ Crash Course
 				Chap. 1-3 Assignments (total: 10)
 	2.) |COMPLETE|	{Python} Shaw - Learn Python the Hard Way
 					Assignments (total: 45)
 	3.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
 	4.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
-	5.) |40%|	{C#} Troelsen - Pro C# 7 (532)
+	5.) |40%|	{C#} Troelsen - Pro C# 7
 	6.) |COMPLETE|	{Java} Walls - Spring in Action
-	7.) |45%|	{C} Shaw - Learn C the Hard Way (184)
+	7.) |45%|	{C} Shaw - Learn C the Hard Way
 				Assignments (total: 18)
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
-	10.)|25%|	{Haskell} Allen - Haskell Programming from First Principles (473)
-	11.)|55%|	{Rust} Milanesi - Beginning Rust (164)
+	10.)|25%|	{Haskell} Allen - Haskell Programming from First Principles
+	11.)|55%|	{Rust} Milanesi - Beginning Rust
 
 --AI/ML--
 	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
 	2.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
 	3.) |05%|	{Python} Gugger - Deep Learning for Coders
-	4.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles (293)
+	4.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles
 
 --BLOCKCHAIN--
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
 
 --NETWORKING--
-	1.) |35%|	Stevens - TCP/IP Illustrated (350)
+	1.) |50%|	Stevens - TCP/IP Illustrated
 
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
-	2.) |65%|	Andress - Foundations of Information Security (150)
+	2.) |COMPLETE|	Andress - Foundations of Information Security
+	3.) |05%|	McDonald - Web Security for Developers
 
 --MATH--
-	1.) |25%|	Rosen - Discrete Mathematics and Its Applications (289)
+	1.) |25%|	Rosen - Discrete Mathematics and Its Applications
 	2.) |COMPLETE|	Downey - Think Stats
 	3.) |COMPLETE|	Downey - Think Bayes
 	4.) |COMPLETE|	Byers - How Mathematicians Think
@@ -137,7 +138,7 @@ BOOKS
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
 	5.) |COMPLETE|	Martin - Clean Code
-	6.) |30%|	Gamma, et al. - Design Patterns (143)
+	6.) |30%|	Gamma, et al. - Design Patterns
 	7.) |00%|	Martin - The Clean Coder (600)
 _________________________________________________________
 _________________________________________________________
@@ -145,7 +146,7 @@ PROGRAMMING CHALLENGES
 	1.) {C++} CodeForces Ladders
 		(total: 87)
 	2.) {Java/C++} Hackerrank
-		(total: 33)
+		(total: 35)
 	3.) {Python/C++/Haskell} Project Euler
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems

@@ -1,0 +1,48 @@
+https://www.hackerrank.com/challenges/almost-sorted/problem
+
+inputs:
+	- arr of size n
+	
+output:
+	- yes if sorted (in ascending order)
+	- if can be sorted by using a single operation:
+		- NOTE: using 1-indexed notation, not 0-indexed
+		- reverse l r (where l r are indexes of endpoints of sequence to be reversed)
+		- swap l r
+	- no if cannot be sorted in a single operation
+	
+constraints:
+	- 2 <= n <= 100,000
+	- 0 <= arr[i] <= 1,000,000
+	- all arr[i] are distinct
+	
+example:
+	arr = [2,3,5,4]
+	output = swap 3 4
+	(?) arr = [5,2,3,4,1]
+	output = swap 1 5
+	
+	arr = [2,5,4,3,6]
+	output = reverse 2 4
+	
+	arr = [2,1,4,3,5,6]
+	output = no
+	
+	arr = [1,2,3]
+	output = yes
+	
+approaches:
+	- traverse list a single time maintaining four variables:
+		- firstOutOfOrderInd [tracks the first index found out of order]
+		- lastOutOfOrderInd [tracks the last index of the out of order sequence]
+		- lengthSequence [tracks length of misordered sequence]
+		- sequenceFound [tracks whether a sequence has been started]
+	- termination conditions:
+		- if sequence already found and then another misordered sequence found
+			- no
+		- firstOutOfOrderInd && lastOutOfOrderInd == -1 && sequenceFound == false
+			- yes
+		- if lengthSequence > 1
+			- reverse firstOutOfOrderInd lastOutOfOrderInd
+		- else
+			- swap firstOutOfOrderInd lastOutOfOrderInd

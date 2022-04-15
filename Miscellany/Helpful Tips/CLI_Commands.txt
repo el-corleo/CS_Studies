@@ -101,3 +101,7 @@ $ CTRL+B x				// kills current tmux pane
 $ locate <filename>
 
 $ sudo hwclock -s	// resyncs the date and time on WSL
+
+$ stat file			// prints to STDOUT file stats (including name, size, inode value, access permissions, last time accessed, last time modified, creation date)
+
+$ strace prog		// show all the system calls made by a program
