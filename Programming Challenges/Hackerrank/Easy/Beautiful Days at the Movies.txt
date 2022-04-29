@@ -1,0 +1,13 @@
+https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem?isFullScreen=true
+
+(Written in Haskell)
+
+Code:
+
+Import Data.List
+
+reverseInt :: Int -> Int
+reverseInt = read . reverse . show
+
+beautifulDays i j k = do
+    length [x | x <- [i .. j], (x - reverseInt x) `mod` k == 0]

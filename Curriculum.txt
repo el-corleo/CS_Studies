@@ -71,28 +71,35 @@ AUDITED COURSES
 	Khan Academy
 		1.) |38%|   AP Physics 1
 		2.) |0%|    AP Physics 2
-		3.) |0%|    AP Chemistry
-		4.) |0%|    AP Biology
 		
 
 [mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
 _________________________________________________________
 _________________________________________________________
 BOOKS
---CS BASICS--
-	1.) |COMPLETE|	{Java} Sedgewick - Computer Science: An Interdisciplinary Approach
+--AI/ML--
+	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
+	2.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
+	3.) |05%|	{Python} Gugger - Deep Learning for Coders
+	4.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles
+
+--ALGORITHMS--
+	1.) |COMPLETE|	{Java} Sedgewick - Algorithms [!]
+	
+--BASICS--
+	1.) |COMPLETE|	{Java} Sedgewick - Computer Science: An Interdisciplinary Approach [!]
 					Chap. 1-2 Assignments (total: 76)
 	2.) |COMPLETE|	{C++} Roberts - Programming Abstractions
 					Chap. 1-3 Assignments (total: 21)
 
---ALGORITHMS--
-	1.) |COMPLETE|	{Java} Sedgewick - Algorithms
-	
---OS--
-	1.) |65%|	{C} Silberschatz - Operating System Concepts
-	2.) |COMPLETE|	{C} Downey - Think OS
-	3.) |80%|	{C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces
+--BLOCKCHAIN--
+	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics [!]
 
+--CYBERSEC--
+	1.) |COMPLETE|	Mitnick - The Art of Deception
+	2.) |COMPLETE|	Andress - Foundations of Information Security
+	3.) |20%|	McDonald - Web Security for Developers [!]
+	
 --LANG/FRAMEWORK--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course
 				Chap. 1-3 Assignments (total: 10)
@@ -107,24 +114,7 @@ BOOKS
 	8.) |COMPLETE|	{Haskell} Lipovaca - Learn You a Haskell for Great Good
 	9.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
 	10.)|25%|	{Haskell} Allen - Haskell Programming from First Principles
-	11.)|55%|	{Rust} Milanesi - Beginning Rust
-
---AI/ML--
-	1.) |20%|	Russell - Artificial Intelligence A Modern Approach
-	2.) |COMPLETE|	{Python} Kinsely - Neural Networks from Scratch
-	3.) |05%|	{Python} Gugger - Deep Learning for Coders
-	4.) |COMPLETE|	{Python} Grus - Data Science from Scratch First Principles
-
---BLOCKCHAIN--
-	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics
-
---NETWORKING--
-	1.) |50%|	Stevens - TCP/IP Illustrated
-
---CYBERSEC--
-	1.) |COMPLETE|	Mitnick - The Art of Deception
-	2.) |COMPLETE|	Andress - Foundations of Information Security
-	3.) |05%|	McDonald - Web Security for Developers
+	11.)|60%|	{Rust} Milanesi - Beginning Rust
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications
@@ -134,19 +124,30 @@ BOOKS
 	
 --MISC--
 	1.) |50%|	Chacon - Pro Git
-	2.) |COMPLETE|	Hunt - The Pragmatic Programmer
+	2.) |COMPLETE|	Hunt - The Pragmatic Programmer [!]
 	3.) |COMPLETE|	{C++} Spraul - Think Like a Programmer
 	4.) |COMPLETE|	Steinhart - The Secret Life of Programs
 	5.) |COMPLETE|	Martin - Clean Code
 	6.) |30%|	Gamma, et al. - Design Patterns
 	7.) |00%|	Martin - The Clean Coder (600)
+	8.) |10%|	Hall - Adaptive Code
+
+--NETWORKING--
+	1.) |60%|	Stevens - TCP/IP Illustrated
+
+--OS--
+	1.) |75%|	{C} Silberschatz - Operating System Concepts
+	2.) |COMPLETE|	{C} Downey - Think OS
+	3.) |90%|	{C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces
+
+[! = Amazing resource]
 _________________________________________________________
 _________________________________________________________
 PROGRAMMING CHALLENGES
 	1.) {C++} CodeForces Ladders
 		(total: 87)
-	2.) {Java/C++} Hackerrank
-		(total: 35)
+	2.) {Java/C++/Haskell} Hackerrank
+		(total: 36)
 	3.) {Python/C++/Haskell} Project Euler
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems
