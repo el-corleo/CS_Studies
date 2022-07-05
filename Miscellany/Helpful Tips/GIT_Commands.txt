@@ -1,3 +1,6 @@
+// initialize new repo
+git init
+
 // get status of current repo [including commits and whether or not it's up to date]
 git status
 

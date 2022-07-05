@@ -29,6 +29,9 @@ SHIFT+8		// takes you to next instance of word currently selected
 :tabn		// move to next tab
 :tabp		// move to previous tab
 
+// Pretty print JSON
+:%!python -m json.tool
+
 // Hex editor
 :%!xxd		// enter hex editor mode
 :%!xxd -r	// exit hex editor mode

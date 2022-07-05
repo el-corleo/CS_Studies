@@ -1,0 +1,26 @@
+Kanban
+
+- Mutually exclusive columns describe the state of features within the project
+
+		WAIT		|		ANALYZE							|	IMPLEMENT	|	VERIFY		|		DELIVER
+(No work done)			(Determine what needs to be done)		(Do it)			(Test it)		(Give to customer)
+
+
+- Columns can be further subdivided to demonstrate a pool of WIP and a pool of ready for the next phase
+
+		WAIT		|		ANALYZE				|	IMPLEMENT			|	VERIFY			|		DELIVER
+					|Specifying | Ready for Dev	|Coding | Ready for Test|Testing | Accepted	| Deploying	| Value Added
+					
+
+- Columns can also include numbers specifying max num of allow items
+
+		WAIT		|		ANALYZE				|	IMPLEMENT			|	VERIFY			|		DELIVER
+					|Specifying | Ready for Dev	|Coding | Ready for Test|Testing | Accepted	| Deploying	| Value Added
+					|	3		|				|	5	|				|	2	 |			|	1		|
+					
+
+- It's important to clearly define what constitutes "DONE" for each column
+	- It is often useful to have a checklist of conditions that must be met so that the person responsible for items in a given column can decide whether or not they have completed their work
+	
+- Estimates can be made with a 95% confidence interval by tracking how long tickets take to deliver and then selecting the lowest # of days @ or above the 95th percentile (e.g., with a 20-ticket history, you would choose the 19th largest number as the estimate).
+	- This would work well even with outliers, so long as the middle 90% (i.e., 5%-95%) have low variance

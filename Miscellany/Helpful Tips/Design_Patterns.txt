@@ -1,0 +1,10 @@
+Design Patterns
+
+Adapter Pattern
+	- Useful when interacting with 3rd party code that you cannot control
+	- If one module expects a particular attribute/method, you can create an interface to match said behaviors and then create a class that implements that interface, but has a private field for the class that needs adaptation
+		- Under the hood, you use the native class' methods to acheive the result of the expected behavior
+	
+Strategy Pattern
+	- Useful when many ways of accomplishing a goal are used
+	- One example could be enemy AI that uses different strategies for different difficulty settings
