@@ -23,6 +23,14 @@ $ pushd	dir			// save path to current dir and then go to specified dir
 $ pushd				// w/ no args allows you to switch between two directories
 $ popd				// go to previously pushed dir
 
+$ history			// shows a history of all commands
+$ !<command num>	// executes given command from history list
+$  <command>		// adding a space in front of a command keeps it from being listed in the command line history
+					// 	but only if HISTCONTROL=ignoreboth in the ~/.bashrc file
+					
+$ tail -f <filename>// prints the last 10 lines of a file to console, the -f flag makes it update in real time
+					//  useful for tracking logs in real time
+
 $ df 				// shows how much free disk space there is
 $ du 				// shows how much used disk space there is
 $ lshw				// shows hardware specs

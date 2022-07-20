@@ -104,8 +104,7 @@ BOOKS
 	1.) |COMPLETE|	Mitnick - The Art of Deception
 	2.) |COMPLETE|	Andress - Foundations of Information Security
 	3.) |COMPLETE|	McDonald - Web Security for Developers [!]
-	4.) |05%|	Conklin - Principles of Computer Security
-	5.) |05%|	Sinha - 
+	4.) |50%|	Sinha - Beginning Ethical Hacking with Kali Linux
 	
 --LANG--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course
@@ -135,11 +134,11 @@ BOOKS
 	5.) |COMPLETE|	Martin - Clean Code
 	6.) |30%|	Gamma, et al. - Design Patterns
 	7.) |00%|	Martin - The Clean Coder (600)
-	8.) |25%|	Hall - Adaptive Code [!]
+	8.) |30%|	Hall - Adaptive Code [!]
 
 --NETWORKING--
 	1.) |70%|	Stevens - TCP/IP Illustrated
-	2.) |10%|	Tanenbaum - Computer Networks
+	2.) |15%|	Tanenbaum - Computer Networks
 
 --OS--
 	1.) |95%|	{C} Silberschatz - Operating System Concepts
@@ -158,6 +157,8 @@ PROGRAMMING CHALLENGES
 		(total: 17)
 	4.) {Haskell} 99 Haskell Problems
 		(total: 41)
+	5.) {Various} Hack the Box
+		(total: 10)
 		
 _________________________________________________________
 _________________________________________________________
