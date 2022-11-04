@@ -10,6 +10,9 @@ git add <filename> || . || --all || *
 // commit files with the message
 git commit -m "Message"
 
+// amend most recent commit message
+git commit --amend
+
 // push to branch
 git push origin <branch>
 

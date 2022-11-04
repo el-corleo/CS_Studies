@@ -71,6 +71,17 @@ AUDITED COURSES
 	Khan Academy
 		1.) |38%|   AP Physics 1
 		2.) |0%|    AP Physics 2
+
+
+--CYBERSEC--
+	Hack the Box: Academy
+		1.) |COMPLETE|	Linux Fundamentals
+		2.) |COMPLETE|	Introduction to Networking
+		3.) |COMPLETE|	Web Requests
+		4.) |COMPLETE|	Windows Fundamentals
+		5.) |COMPLETE|	Introduction to Web Applications
+		5.) |75%| Getting Started
+		
 		
 
 [mit = https://ocw.mit.edu/courses/electrical-engineering-and-computer-science]
@@ -100,11 +111,14 @@ BOOKS
 	2.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
 	3.) |COMPLETE|	{Java} Walls - Spring in Action
 	
---INFOSEC--
+--CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
 	2.) |COMPLETE|	Andress - Foundations of Information Security
 	3.) |COMPLETE|	McDonald - Web Security for Developers [!]
-	4.) |50%|	Sinha - Beginning Ethical Hacking with Kali Linux
+	4.) |90%|	Sinha - Beginning Ethical Hacking with Kali Linux
+	5.) |40%|	Gibson - CompTIA Security+
+	6.) |40%|	Prowse - CompTIA Security+
+	7.) |60%|	Occupy the Web - Linux for Hackers
 	
 --LANG--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course
@@ -125,6 +139,7 @@ BOOKS
 	3.) |COMPLETE|	Downey - Think Bayes
 	4.) |COMPLETE|	Byers - How Mathematicians Think
 	5.) |COMPLETE|	Wheelan - Naked Statistics [!]
+	6.) |45%|	Morin - Probability for the Enthusiastic Beginner [!]
 	
 --MISC--
 	1.) |50%|	Chacon - Pro Git
@@ -137,8 +152,9 @@ BOOKS
 	8.) |30%|	Hall - Adaptive Code [!]
 
 --NETWORKING--
-	1.) |70%|	Stevens - TCP/IP Illustrated
-	2.) |15%|	Tanenbaum - Computer Networks
+	1.) |75%|	Stevens - TCP/IP Illustrated
+	2.) |35%|	Tanenbaum - Computer Networks
+	3.) |COMPLETE|	Dulaney - CompTIA Network+
 
 --OS--
 	1.) |95%|	{C} Silberschatz - Operating System Concepts
@@ -158,7 +174,9 @@ PROGRAMMING CHALLENGES
 	4.) {Haskell} 99 Haskell Problems
 		(total: 41)
 	5.) {Various} Hack the Box
-		(total: 10)
+		(Tier 0: 4)
+		(Tier 1: 4)
+		(Tier 2: 4)
 		
 _________________________________________________________
 _________________________________________________________

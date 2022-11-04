@@ -1,9 +1,29 @@
 Useful Command Line Commands
 
+$ <program> | <program> 	// pipe the output of one program to the input of another
+$ <program> > <file>		// save STDOUT to file (will overwrite contents if file already exists)
+$ <program> >> <file>		// save STDOUT to file (will append contents if file already exists)
+$ <program> < <file>		// accept file as STDIN for program
+$ <program> << EOF			// accept STDIN stream for program
+$ <program> &			// prog will run in background
+$ <program1> & <program2> &	// both run in the background
+$ <program1> && <program2>	// prog1 runs first and prog2 runs only if prog1 finishes successfully
+$ <program1> || <program2>	// prog2 executes only if prog1 fails
+$ rm -r !(*.java)	// delete all files in a folder that are not
+$ <program> 2 > /dev/null	// basically disables STDERR output
+
+$ <program> | sort <options>	// sorts STDOUT (depending on the option)
+
 $ ping www.google.com 		// check internet connection
 $ ip route | grep default	// find ip address for router
 
-$ systeminfo	// gets computer info
+$ systeminfo		// gets computer info
+$ env				// gives a list of all default environment variables
+$ set				// gives a list of all environment variables
+$ <var>=<val>		// set the environment variable to the value for the session (changes are lost upon closing the terminal)
+$ export <var>		// sets the environment variable persistently
+$ unset <var>		// unsets the environment variable persistently
+$ echo $<var>		// prints to console the value of the environment variable
 
 $ cd ~				// change to home directory
 $ cd ..				// change to parent directory
@@ -17,7 +37,9 @@ $ rm *.<extension>  // deletes all files of type extension
 $ cp file dir 		// copies file from current directory into destination directory
 $ cp * dir 			// copies all files from current dir into destination dir
 $ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
+$ dd if=<filepath> of=<filepath>	// copies bit for bit the file/directory/hard drive
 $ mv file dir 		// moves file into dir
+$ sed "s/<pattern1>/<pattern2>/g" 	// replace all instances of pattern1 with pattern2
 
 $ pushd	dir			// save path to current dir and then go to specified dir
 $ pushd				// w/ no args allows you to switch between two directories
@@ -27,7 +49,8 @@ $ history			// shows a history of all commands
 $ !<command num>	// executes given command from history list
 $  <command>		// adding a space in front of a command keeps it from being listed in the command line history
 					// 	but only if HISTCONTROL=ignoreboth in the ~/.bashrc file
-					
+			
+$ head <file/folder>// prints the first 10 lines			
 $ tail -f <filename>// prints the last 10 lines of a file to console, the -f flag makes it update in real time
 					//  useful for tracking logs in real time
 
@@ -38,16 +61,20 @@ $ du -sh <dir> 		// see disk usage of given directory (how much space it takes u
 $ du -a <dir> | sort -n -r | head -n <num>		// get <num> largest files
 $ ls <dir> | wc -l			// shows number of files in a given dir wc counts words; -l tells it to count lines (the output of ls) 
 $ mount -t drvfs D: /mnt/d 	// mounts drive from D: on linux subsystem on Windows 10
+$ fsck				// can check for and repair errors on unmounted drives
 
 $ nano file		// opens text editor and creates file
 $ touch file 	// creates new file
 
-$ tree 								// shows all subdirectories
-$ grep "keywords" file1 file2 file3	// searches for keywords in file (case sensitive)
-$ grep -i "keywords" file 			// searches for keywords in file (case insensitive)
-$ grep -R "keywords" dir 			// searches for keywords in all files of dir (case insensitive)
-$ grep -c "keywords" file 			// searches and displays # of times keywords in file
-$ ls -R <dir> | grep -R "keywords" `pwd`"\"*	// prints fully qualified path of files keyword is found in
+$ tree <dir>						// shows all subdirectories
+$ grep "keywords" <file1> <file2>	// searches for keywords in file (case sensitive)
+$ grep -i "keywords" <file>			// searches for keywords in file (case insensitive)
+$ grep -R "keywords" <dir>			// searches for keywords in all files of dir (case insensitive)
+$ grep -r "keywords" <dir>			// searches for keywords in all files in all folders of dir
+$ grep -c "keywords" <file>			// searches and displays # of times keywords in file
+$ grep -v "keywords" <file>			// searches for lines excluding keywords in file
+$ ls -R <dir> | grep -R "keywords" `pwd`"\"*				// prints fully qualified path of files keyword is found in
+$ grep <option> "keywords" <file> | grep -v "other words" 	// searches for keywords in files while excluding other words
 
 $ diff file1 file2			// shows difference between two files
 $ diff -q file1 file2		// shows that two files differ, but not the differences
@@ -56,16 +83,6 @@ $ diff -i file1 file2		// shows that two files at the differ, but ignores case
 $ diff -w file1 file2		// shows that two files at the differ, but ignores whitespace
 $ diff -B file1 file2		// shows that two files at the differ, but ignores blank lines
 $ diff -qr dir1 dir2		// shows that two directories differ, but not the differences
-
-$ prog < file		// prog will take file as input
-$ prog > file		// prog will save output to file [overwrites file contents if file already exists]
-$ prog >> file		// prog will append output to file
-$ prog1 | prog2		// prog2 will take prog1's output as input
-$ prog &			// prog will run in background
-$ prog1 & prog2 &	// both run in the background
-$ prog1 && prog2	// prog1 runs first and prog2 runs only if prog1 finishes successfully
-$ prog1 || prog2	// prog2 executes only if prog1 fails
-$ rm -r !(*.java)	// delete all files in a folder that are not
 
 $ sudo chmod 744 file 	// gives file permission to run
 						// Explanation of 744
@@ -76,19 +93,34 @@ $ sudo chmod 744 file 	// gives file permission to run
 						// 4 -> read; 2 -> write; 1 -> execute | combinations of these delineate permissions
 						// 1 is execute only, 2 is write only, 4 is read only
 						// 3 is execute+write, 5 is execute+read, ... , 7 is execute+write+read
+$ sudo chmod <u,g,o,a><+/-><r,w,x>	// adds or removes permission for specified group to 
+$ sudo chown <user>:<group> <file/folder>	// changes ownership
 			
 $ amixer set Master 100%	// sets volume to max
 $ amixer set Master 10%+	// increases volume by 10%
 $ amixer set Master toggle	// mute/unmute
 
-$ ps aux			// lists all processes
-$ pidof prog		// find process id of program
-$ kill -9 <pid>		// kill process
+$ ps aux					// lists all processes
+$ pidof prog				// find process id of program
+$ kill -1 <pid>				// stop the process and then restart with same pid
+$ kill -3 <pid>				// stop the process and dump core
+$ kill -9 <pid>				// force kill process
+$ kill <-15> <pid>			// terminate process (default, so the -15 flag is not strictly needed)
+$ killall <flag> <proc name>// kills all processes of the given name (uses same flags as kill)
+$ top						// shows a list of the most resource consuming processes
+							// can kill a process within top program by pressing k and entering the PID
+$ <prog> | at <time>		// schedule a process to run once at a given time
+							// time can be one of many formats:
+							//		7:20pm
+							//		7:20pm June 25
+							//		7:20pm 06/25/2019
+							//		now + 20 minutes (or hours, days, weeks)
 
 $ <start process>	// The following steps will detach a process from its original shell
 $ CTRL+Z			// Interrupt process
 $ bg				// put process in background
 $ jobs				// list jobs in background
+$ fg <job #>		// put process from jobs list in foreground
 $ disown %<job #>	// detach process from current shell
 
 $ sudo systemctl mask --now sleep.target suspend.target hibernate.target hybrid-sleep.target
@@ -102,14 +134,36 @@ $ CTRL+B d				// detach current session
 $ CTRL+B <%/">			// splits window vertically or horizontally; opens new cli
 $ CTRL+B <arrow key>	// toggle between windows; holding CTRL+B and pressing arrow key will resize window
 $ :resize-pane -D (10)	// resize window
+$ CTRL+B z				// zoom/unzoom current window
 $ CTRL+B [				// scroll, q to quit scrolling mode
 $ CTRL+B &				// kills current tmux window
 $ CTRL+B x				// kills current tmux pane
 
-$ locate <filename>
+$ sudo updatebd					// updates system file database
+$ locate <filename>				// locates a file anywhere on the system; uses a DB that is only updated once a day, so may not display recently created files
+$ find <location> <options> 	// options allow you to search for files & folders that satisfy specific criteria
+								// options include: -type, -name, -user, -size, etc.
+$ whereis <bin filename>		// locates a binary file and its man page
 
 $ sudo hwclock -s	// resyncs the date and time on WSL
 
 $ stat file			// prints to STDOUT file stats (including name, size, inode value, access permissions, last time accessed, last time modified, creation date)
 
 $ strace prog		// show all the system calls made by a program
+
+$ apt-cache search <keyword>	// search to see if the package exists in the APT repository
+
+-- SSH --
+$ ssh <user>@<IP>					// launch a secure shell into remote machine
+$ export DISPLAY=':0'				// set display for executing programs to the remote machine
+$ export DISPLAY='<local IP>:0'		// set display for executing programs to the local machine
+
+-- COMPRESSION --
+$ tar -cf <filename>.tar <file1 ... filen>	// c flag is for create can put in multiple files
+$ tar -tvf <filename>.tar					// display contents of tarball
+$ tar -xf <filename>.tar					// extract all tar files		
+$ gzip <filename>.*							// compresses contents of file 
+											// NOTE: bzip2 is slower, but more compressed; compress is faster, but less compressed
+$ gunzip <filename>.*						// decompresses file
+
+

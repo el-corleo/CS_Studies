@@ -1,3 +1,49 @@
+-----------------------------
+LINUX
+
+---- Spoofing IP address ----
+$ ifconfig <interface> xxx.xxx.xxx.xxx		// changes interface's IP address to xxx.xxx.xxx.xxx
+e.g., ifconfig eth0 192.168.8.192	
+options, ifconfig <int> xxx.xxx.xxx.xxx	netmask xxx.xxx.xxx.xxx broadcast xxx.xxx.xxx.xxx
+
+---- Spoofing MAC address ----
+$ ifconfig eth0 down						// takes down the interface
+$ ifconfig eth0 hw ether 00:11:22:33:44:55	// changes the address of the ethernet interface
+$ ifconfig eth0 up							// restarts the interface
+
+---- Getting new IP from DHCP server ----
+$ dhclient <interface>						// sends a DHCPDISCOVER request and changes IP upon receipt of DHCPOFFER
+
+---- Collect DNS info ----
+$ dig <website URL> <options>				// gets IP info for the website in question
+											// options include ns (nameserver), mx (mail exchange)
+
+---- Modify hosts file ----
+$ sudo vi /etc/hosts						// enter edit mode for hosts file
+
+127.0.0.1 localhost
+127.0.1.1 kali
+192.168.181.131 bankofamerica.com			// add IP address to URL mapping (tab separated)
+
+---- Hiding Tracks ----
+$ set HISTORY=0								// temporarily sets CLI history storage length to 0
+$ <command> > /dev/null						// this obfuscates the output from the command
+
+---- Bash Scripting ----
+#! /bin/bash								// tells the OS to use the bash interpreter to read the script (can use Python, etc.)
+<command>									// type in any command you could use in bash
+											// NOTE: that you might have to set execute permissions on the script after creation
+
+#! /bin/bash
+
+echo "What's your name?"
+
+read name
+
+echo "Hello, $name! Nice to meet you!"
+____________________________________________________
+NOTES:
+
 C.I.A. - Confidentiality - Integrity - Accessibility
 
   1.) Confidentiality refers to control of access to resources: only authorized individuals

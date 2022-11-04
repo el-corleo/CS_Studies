@@ -1,0 +1,8 @@
+# Nmap 7.80 scan initiated Tue Nov  1 18:36:30 2022 as: nmap -sT -p 3306 -oG scanResultsTmp 192.168.1.0-255
+Host: 192.168.1.1 (I-040GW.cht.com.tw)	Status: Up
+Host: 192.168.1.1 (I-040GW.cht.com.tw)	Ports: 3306/closed/tcp//mysql///
+Host: 192.168.1.101 ()	Status: Up
+Host: 192.168.1.101 ()	Ports: 3306/closed/tcp//mysql///
+Host: 192.168.1.109 ()	Status: Up
+Host: 192.168.1.109 ()	Ports: 3306/closed/tcp//mysql///
+# Nmap done at Tue Nov  1 18:36:37 2022 -- 256 IP addresses (3 hosts up) scanned in 6.70 seconds
