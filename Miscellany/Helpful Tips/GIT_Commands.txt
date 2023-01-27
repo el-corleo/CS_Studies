@@ -44,6 +44,12 @@ git log
 // download current repo
 git clone <URL>
 
+// shows all changes since last commit
+git diff HEAD
+
+// shows all changes between last two commits
+git diff HEAD^ HEAD
+
 // shows the changes made to file after different commits
 git diff (<commit hash> (<commit hash>)) <filename>
 

@@ -106,19 +106,20 @@ BOOKS
 --BLOCKCHAIN--
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics [!]
 
---FRAMEWORK--
-	1.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
-	2.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
-	3.) |COMPLETE|	{Java} Walls - Spring in Action
-	
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
 	2.) |COMPLETE|	Andress - Foundations of Information Security
 	3.) |COMPLETE|	McDonald - Web Security for Developers [!]
-	4.) |90%|	Sinha - Beginning Ethical Hacking with Kali Linux
-	5.) |40%|	Gibson - CompTIA Security+
-	6.) |40%|	Prowse - CompTIA Security+
-	7.) |60%|	Occupy the Web - Linux for Hackers
+	4.) |COMPLETE|	Sinha - Beginning Ethical Hacking with Kali Linux
+	5.) |45%|	Gibson - CompTIA Security+
+	6.) |45%|	Prowse - CompTIA Security+
+	7.) |COMPLETE|	Occupy the Web - Linux Basics for Hackers
+	8.) |COMPLETE|	Sparc Flow - How to Hack like a Pornstar
+	
+--FRAMEWORK--
+	1.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
+	2.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
+	3.) |COMPLETE|	{Java} Walls - Spring in Action
 	
 --LANG--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course
@@ -149,7 +150,8 @@ BOOKS
 	5.) |COMPLETE|	Martin - Clean Code
 	6.) |30%|	Gamma, et al. - Design Patterns
 	7.) |00%|	Martin - The Clean Coder (600)
-	8.) |30%|	Hall - Adaptive Code [!]
+	8.) |30%|	{C#} Hall - Adaptive Code [!]
+	9.) |10%|	{Python} Giordani - Clean Architectures in Python
 
 --NETWORKING--
 	1.) |75%|	Stevens - TCP/IP Illustrated

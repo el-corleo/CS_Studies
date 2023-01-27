@@ -1,4 +1,10 @@
 -----------------------------
+TODO:
+	- Investigate Dockers and containerization
+	- Investigate Kubernetes and container orchestration
+	- Investigate Cloud and AWS security issues
+
+-----------------------------
 LINUX
 
 ---- Spoofing IP address ----
@@ -26,8 +32,12 @@ $ sudo vi /etc/hosts						// enter edit mode for hosts file
 192.168.181.131 bankofamerica.com			// add IP address to URL mapping (tab separated)
 
 ---- Hiding Tracks ----
+$ unset HISTFILE							// clears the variable where the history file is stored, so nothing is stored
 $ set HISTORY=0								// temporarily sets CLI history storage length to 0
 $ <command> > /dev/null						// this obfuscates the output from the command
+$ shred <filename>							// deletes and overwrites the file several times to avoid forensic recovery
+											// NOTE: Does not work on all filesystems
+$ service <service name> stop				// stops named service, e.g., rsyslog to disable logging or ufw to disable the firewall
 
 ---- Bash Scripting ----
 #! /bin/bash								// tells the OS to use the bash interpreter to read the script (can use Python, etc.)
@@ -41,6 +51,20 @@ echo "What's your name?"
 read name
 
 echo "Hello, $name! Nice to meet you!"
+
+---- MYSQL ----
+$ mysql -u <username> -p <URL>		// connect to a remote MySQL server under a given username
+mysql> show databases;				// shows a list of all databases on server
+mysql> use <database name>;			// load db for querying
+mysql> show tables;					// shows a list of all tables in the currently loaded db
+mysql> describe <table name>;		// shows information about fields, types, nullability, etc. for a given table
+
+---- PROXY CHAINS ----
+$ proxychains <command> <args>		// performs commands by tunneling traffic through proxies specified in /etc/proxychains.conf
+									// e.g., $ proxychains nmap -sT -Pn <IP address>
+									// comment out strict_chain and dynamic_chain, then uncomment random_chain and chain_len
+									// don't use free proxies, as you're likely the product
+
 ____________________________________________________
 NOTES:
 
@@ -79,3 +103,13 @@ Security is a tradeoff
   1.) Cost
   2.) Convenience
   3.) Resources
+
+Defense in Depth / Offense in Depth
+
+  1.) When defending a system, it's important to have multiple obstacles for the would-be hacker to deal with
+	a.) Firewall -> ACLs/Whitelists -> Permissions
+  2.) Whend attacking a system, it's important to hide behind multiple layers (Sparc Flow)
+	a.) Use a volatile USB bootable OS, like Tails
+	b.) Use a public wifi spot in a location far removed from your residence to connect to a VPN
+	c.) Use the paid VPN service that keeps no logs and is located in a neutral country to connect to a VPS
+	d.) Use a (crypto) paid Virtual Private Server to conduct all attacks

@@ -109,12 +109,9 @@ $ kill <-15> <pid>			// terminate process (default, so the -15 flag is not stric
 $ killall <flag> <proc name>// kills all processes of the given name (uses same flags as kill)
 $ top						// shows a list of the most resource consuming processes
 							// can kill a process within top program by pressing k and entering the PID
-$ <prog> | at <time>		// schedule a process to run once at a given time
-							// time can be one of many formats:
-							//		7:20pm
-							//		7:20pm June 25
-							//		7:20pm 06/25/2019
-							//		now + 20 minutes (or hours, days, weeks)
+$ sudo service atd start	// might need to start at daemon (atd) with this command
+$ service atd status		// check to see if atd is running
+			
 
 $ <start process>	// The following steps will detach a process from its original shell
 $ CTRL+Z			// Interrupt process
@@ -126,7 +123,7 @@ $ disown %<job #>	// detach process from current shell
 $ sudo systemctl mask --now sleep.target suspend.target hibernate.target hybrid-sleep.target
 						// turns off sleep, suspend, and hibernate | unmask renables them
 						
-$ tmux					// multiple cli in same window
+$ tmux					// multiple cli panes in same window
 $ tmux new -s <name>	// start a new session and name it <name>
 $ tmux attach -t <name>	// restart session <name>
 $ CTRL+B s				// list all sessions available
@@ -136,6 +133,7 @@ $ CTRL+B <arrow key>	// toggle between windows; holding CTRL+B and pressing arro
 $ :resize-pane -D (10)	// resize window
 $ CTRL+B z				// zoom/unzoom current window
 $ CTRL+B [				// scroll, q to quit scrolling mode
+						// also when in this mode, can drag mouse to select text, then hit CTRL+B ] to paste
 $ CTRL+B &				// kills current tmux window
 $ CTRL+B x				// kills current tmux pane
 
@@ -166,4 +164,41 @@ $ gzip <filename>.*							// compresses contents of file
 											// NOTE: bzip2 is slower, but more compressed; compress is faster, but less compressed
 $ gunzip <filename>.*						// decompresses file
 
+-- WIFI --
+$ iwconfig							// like ifconfig, but only for wireless AP
+$ iwlist <interface> <action>		// list available APs your NIC can reach
+									// e.g., $ iwlist wlan0 scan
+$ nmcli dev wifi					// like iwlist, but with more info
+$ nmcli dev wifi connect <AP SSID> password <AP password>	// connect to a given wireless AP
 
+-- BLUETOOTH --
+// NOTE: All are part of the BlueZ program
+$ hciconfig							// like ifconfig but for bluetooth devices
+$ hciconfig <interface> up			// make sure the bluetooth interface is running
+$ hcitool scan						// scan for bluetooth devices within range (only devs in discovery mode will get picked up)
+$ hcitool inq						// gets info like clock offset and device type of detected devices
+$ sdptool browse <MAC address>		// gets all bluetooth services for a given bluetooth device
+$ l2ping <MAC address> 				// determines if a given bluetooth device is in range (regardless of discovery mode on/off)
+
+-- KERNEL --
+// NOTE: Tune the kernel with great care as you can potentially make the OS unbootable with some changes!!!
+$ uname -a 				// get kernel and version info for OS
+$ cat /proc/version		// get kernel and version info for OS
+$ sysctl <options>		// used for tuning kernel (NOTE: changes are volatile; for persistence, edit the /etc/sysctl.conf file)
+$ sysctl -a | less		// display all variables and their values for kernel tuning
+$ sysctl -w <var>=<val>	// set a kernel variable to a specified value
+$ sysctl -p				// loads variable values from /etc/sysctl.conf; necessary after editing file
+$ lsmod					// list all currently installed kernel modules
+$ modinfo <module>		// get more details about a particular kernel module
+$ modprobe -a <module>	// add a module to the kernel (safer than insmod because it automatically checks for dependencies)
+$ modprobe -r <module>	// remove a module to the kernel (safer than remmod because it automatically checks for dependencies)
+
+-- SCHEDULING PROCESSES --
+$ <prog> | at <time>			// schedule a process to run once at a given time
+								// time can be one of many formats:
+								//		7:20pm
+								//		7:20pm June 25
+								//		7:20pm 06/25/2019
+								//		now + 20 minutes (or hours, days, weeks)
+$ <text editor> /etc/crontab 	// edit the cron table so that it runs a particular script at given intervals
+$ update-rc.d <service|script> <remove|defaults|disable|enable>	// run service or script at startup
