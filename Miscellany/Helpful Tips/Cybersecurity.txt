@@ -65,6 +65,9 @@ $ proxychains <command> <args>		// performs commands by tunneling traffic throug
 									// comment out strict_chain and dynamic_chain, then uncomment random_chain and chain_len
 									// don't use free proxies, as you're likely the product
 
+---- MAPPING IP ADDRESSES ON LOCAL NETWORK ----
+$ sudo arp-scan --interface=eth0 --localnet		// find all IP addresses on the local network
+
 ____________________________________________________
 NOTES:
 

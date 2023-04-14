@@ -96,6 +96,7 @@ BOOKS
 
 --ALGORITHMS--
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms [!]
+	2.) |80%|	{Python} Bhargava - Grokking Algorithms
 	
 --BASICS--
 	1.) |COMPLETE|	{Java} Sedgewick - Computer Science: An Interdisciplinary Approach [!]
@@ -111,15 +112,16 @@ BOOKS
 	2.) |COMPLETE|	Andress - Foundations of Information Security
 	3.) |COMPLETE|	McDonald - Web Security for Developers [!]
 	4.) |COMPLETE|	Sinha - Beginning Ethical Hacking with Kali Linux
-	5.) |45%|	Gibson - CompTIA Security+
-	6.) |45%|	Prowse - CompTIA Security+
+	5.) |COMPLETE|	Gibson - CompTIA Security+
+	6.) |COMPLETE|	Prowse - CompTIA Security+
 	7.) |COMPLETE|	Occupy the Web - Linux Basics for Hackers
 	8.) |COMPLETE|	Sparc Flow - How to Hack like a Pornstar
+	9.) |50%|	Schneier - Secrets and Lies
+	10.) |50%|	Mueller - Security for Web Developers
 	
 --FRAMEWORK--
-	1.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
-	2.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
-	3.) |COMPLETE|	{Java} Walls - Spring in Action
+	1.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
+	2.) |COMPLETE|	{Java} Walls - Spring in Action
 	
 --LANG--
 	1.) |15%|	{C++} Lospinoso - C++ Crash Course
@@ -133,6 +135,7 @@ BOOKS
 	6.) |COMPLETE|	{Python} Sweigart - Automate the Boring Stuff with Python
 	7.) |25%|	{Haskell} Allen - Haskell Programming from First Principles
 	8.) |75%|	{Rust} Milanesi - Beginning Rust
+	9.) |COMPLETE|	{SQL} Beaulieu - Learning SQL
 
 --MATH--
 	1.) |25%|	Rosen - Discrete Mathematics and Its Applications
@@ -151,17 +154,20 @@ BOOKS
 	6.) |30%|	Gamma, et al. - Design Patterns
 	7.) |00%|	Martin - The Clean Coder (600)
 	8.) |30%|	{C#} Hall - Adaptive Code [!]
-	9.) |10%|	{Python} Giordani - Clean Architectures in Python
+	9.) |COMPLETE|	{Python} Giordani - Clean Architectures in Python [!]
 
 --NETWORKING--
-	1.) |75%|	Stevens - TCP/IP Illustrated
-	2.) |35%|	Tanenbaum - Computer Networks
+	1.) |95%|	Stevens - TCP/IP Illustrated
+	2.) |60%|	Tanenbaum - Computer Networks
 	3.) |COMPLETE|	Dulaney - CompTIA Network+
 
 --OS--
-	1.) |95%|	{C} Silberschatz - Operating System Concepts
+	1.) |COMPLETE|	{C} Silberschatz - Operating System Concepts
 	2.) |COMPLETE|	{C} Downey - Think OS
 	3.) |COMPLETE|	{C} Arpaci-Dusseau - Operating Systems: Three Easy Pieces
+	
+--WEB DEV--
+	1.) |COMPLETE|	Mendez - The Missing Link: An Introduction to Web Development and Programming [!]
 
 [! = Amazing resource]
 _________________________________________________________

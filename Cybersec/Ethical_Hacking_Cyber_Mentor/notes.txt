@@ -1,0 +1,100 @@
+- Understand the different types of pentesting and the most common things to be checked with each:
+  - External/Internal Network
+    - Active Directory
+  - Web Application
+    - OWASP
+  - Physical
+    - Social Engineering (Phishing, Vishing, Spear Phishing, etc.)
+  - Mobile
+  - IoT
+  - Car
+  - etc.
+
+[SIDENOTE: check out cherrytree on Kali linux]
+
+- Note taking:
+  - Make sure to keep detailed notes:
+    - Descriptive commentary
+    - Dates
+    - Screenshots of results (consider Greenshot on Windows, or Flameshot on Linux)
+
+
+- MAC Addresses are used as device identifier for switching (layer 2)
+- IP Addresses are used as host identifiers (layer 3)
+  - IPv4 makes heavy use of NAT so that a single IP Address can have subnets
+    - NAT makes use of ports to make multiple connections at the router level
+- TCP and UDP are protocols for the transfer of data (layer 4)
+  - TCP is connection-oriented, and offers reliable, slow data transfer
+    - Useful for file transfers, or data transfer where integrity is paramount
+    - Defined by SYN > SYN ACK > ACK process to establish a connection
+    - Common ports/protocols:
+      - 21  -> FTP
+      - 22  -> SSH
+      - 23  -> Telnet
+      - 25  -> SMTP (email) 
+      - 53  -> DNS
+      - 80  -> HTTP
+      - 110 -> POP3 (email)
+      - 139 -> SMB (file shares)
+      - 143 -> IMAP (email)
+      - 443 -> HTTPS
+      - 445 -> SMB (file shares)
+  - UDP is connectionless, and offers best effort, fast data transfer
+    - Useful for streaming, VoIP, etc.
+    - Common ports/protocols:
+      - 53  -> DNS
+      - 67  -> DHCP
+      - 68  -> DHCP
+      - 69  -> TFTP (like FTP, but using UDP)
+      - 161 -> SNMP
+
+
+- OSI Model
+  Pneumonic: Please Do Not Throw Sausage Pizza Away
+  Layer 1 - [P]hysical layer: cables, hardware
+  Layer 2 - [D]ata layer: switches, MAC addresses
+  Layer 3 - [N]etwork layer: IP Addresses, routing
+  Layer 4 - [T]ransport layer: TCP/UDP
+  Layer 5 - [S]ession layer: session management
+  Layer 6 - [P]resentation layer: media, wmv, jpg, mov
+  Layer 7 - [A]pplication layer: HTTP, SMTP
+
+
+- Subnetting
+  - /x is the CIDR notation
+    - Classless Inter-Domain Routing
+  - /24 is the most common for a home network
+    - subnet mask 255.255.255.0
+  - /16 can occur for larger organizations that will have moe devices connected to the network
+    - subnet mask 255.255.0.0
+  - Can technically have /1 ~ /32
+    - i.e, (2^32) - 2 devices ~ 1 device
+  - First address of the block (usually) is the network ID
+  - Last address (usually) is the broadcast ID
+
+- Useful commands
+  $ grep 'sudo' /etc/group
+    - find all users in the sudoers group
+  $ ip a
+    - list all networking devices and interfaces
+  $ ip n
+    - list all neighbors to this device
+  $ ip r
+    - list routes
+
+- Services
+  $ sudo service apache2 start
+    - starts a webserver on the localhost
+  $ sudo service apache2 stop
+    - stops a webserver on the localhost
+  $ python3 -m http.server 80
+    - starts a server on port given as parameter (80 in the above example)
+    - this exposes all files within the directory from which the command is run
+  $ sudo systemctl enable ssh
+    - enables ssh on the machine in perpetuity
+    - replace enable with disable to have the opposite effect
+
+[checkout pimpmykali on GitHub]
+
+- Sockets
+  - Sockets are used to make a connection between ports and IP addresses

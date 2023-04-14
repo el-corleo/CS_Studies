@@ -1,5 +1,7 @@
 Useful Command Line Commands
 
+$ passwd	// change the password for the current user
+
 $ <program> | <program> 	// pipe the output of one program to the input of another
 $ <program> > <file>		// save STDOUT to file (will overwrite contents if file already exists)
 $ <program> >> <file>		// save STDOUT to file (will append contents if file already exists)
@@ -29,19 +31,19 @@ $ cd ~				// change to home directory
 $ cd ..				// change to parent directory
 $ cd ../..			// change to grandparent directory
 $ ln -s <path> <name>	// creates a symbolic link (a shortcut) to the directory on <path> under the alias <name> from home
-$ mkdir dirName 	// makes a directory
-$ rmdir dirName 	// deletes a directory (must be empty before removing)
-$ rm -r dirName 	// deletes a directory and all sub directories (even if not empty)
-$ rm filename       // deletes a file
+$ mkdir <dirName> 	// makes a directory
+$ rmdir <dirName> 	// deletes a directory (must be empty before removing)
+$ rm -r <dirName> 	// deletes a directory and all sub directories (even if not empty)
+$ rm <filename>     // deletes a file
 $ rm *.<extension>  // deletes all files of type extension
-$ cp file dir 		// copies file from current directory into destination directory
-$ cp * dir 			// copies all files from current dir into destination dir
-$ cp *.txt dir 		// copies all files of given extension from curr dir into dest dir
+$ cp <file> <dir>	// copies file from current directory into destination directory
+$ cp * <dir>		// copies all files from current dir into destination dir
+$ cp *.txt <dir>	// copies all files of given extension from curr dir into dest dir
 $ dd if=<filepath> of=<filepath>	// copies bit for bit the file/directory/hard drive
-$ mv file dir 		// moves file into dir
+$ mv <file> <dir>	// moves file into dir
 $ sed "s/<pattern1>/<pattern2>/g" 	// replace all instances of pattern1 with pattern2
 
-$ pushd	dir			// save path to current dir and then go to specified dir
+$ pushd	<dir>		// save path to current dir and then go to specified dir
 $ pushd				// w/ no args allows you to switch between two directories
 $ popd				// go to previously pushed dir
 
@@ -67,7 +69,7 @@ $ nano file		// opens text editor and creates file
 $ touch file 	// creates new file
 
 $ tree <dir>						// shows all subdirectories
-$ grep "keywords" <file1> <file2>	// searches for keywords in file (case sensitive)
+$ grep "keywords" <file1> <file2>	// searches for keywords in file(s) (case sensitive)
 $ grep -i "keywords" <file>			// searches for keywords in file (case insensitive)
 $ grep -R "keywords" <dir>			// searches for keywords in all files of dir (case insensitive)
 $ grep -r "keywords" <dir>			// searches for keywords in all files in all folders of dir
@@ -78,10 +80,10 @@ $ grep <option> "keywords" <file> | grep -v "other words" 	// searches for keywo
 
 $ diff file1 file2			// shows difference between two files
 $ diff -q file1 file2		// shows that two files differ, but not the differences
-$ diff -s file1 file2		// shows that two files at the same
-$ diff -i file1 file2		// shows that two files at the differ, but ignores case
-$ diff -w file1 file2		// shows that two files at the differ, but ignores whitespace
-$ diff -B file1 file2		// shows that two files at the differ, but ignores blank lines
+$ diff -s file1 file2		// shows that two files are the same
+$ diff -i file1 file2		// shows that two files differ, but ignores case
+$ diff -w file1 file2		// shows that two files differ, but ignores whitespace
+$ diff -B file1 file2		// shows that two files differ, but ignores blank lines
 $ diff -qr dir1 dir2		// shows that two directories differ, but not the differences
 
 $ sudo chmod 744 file 	// gives file permission to run
@@ -98,6 +100,7 @@ $ sudo chown <user>:<group> <file/folder>	// changes ownership
 			
 $ amixer set Master 100%	// sets volume to max
 $ amixer set Master 10%+	// increases volume by 10%
+$ amixer set Master 10%-	// decreases volume by 10%
 $ amixer set Master toggle	// mute/unmute
 
 $ ps aux					// lists all processes
@@ -126,9 +129,10 @@ $ sudo systemctl mask --now sleep.target suspend.target hibernate.target hybrid-
 $ tmux					// multiple cli panes in same window
 $ tmux new -s <name>	// start a new session and name it <name>
 $ tmux attach -t <name>	// restart session <name>
+$ tmux ls				// list all sessions available
 $ CTRL+B s				// list all sessions available
 $ CTRL+B d				// detach current session
-$ CTRL+B <%/">			// splits window vertically or horizontally; opens new cli
+$ CTRL+B <%/">			// splits window vertically or horizontally; opens new pane
 $ CTRL+B <arrow key>	// toggle between windows; holding CTRL+B and pressing arrow key will resize window
 $ :resize-pane -D (10)	// resize window
 $ CTRL+B z				// zoom/unzoom current window
@@ -139,15 +143,15 @@ $ CTRL+B x				// kills current tmux pane
 
 $ sudo updatebd					// updates system file database
 $ locate <filename>				// locates a file anywhere on the system; uses a DB that is only updated once a day, so may not display recently created files
-$ find <location> <options> 	// options allow you to search for files & folders that satisfy specific criteria
+$ find <file/folder> <options> 	// options allow you to search for files & folders that satisfy specific criteria
 								// options include: -type, -name, -user, -size, etc.
 $ whereis <bin filename>		// locates a binary file and its man page
 
 $ sudo hwclock -s	// resyncs the date and time on WSL
 
-$ stat file			// prints to STDOUT file stats (including name, size, inode value, access permissions, last time accessed, last time modified, creation date)
+$ stat <file>		// prints to STDOUT file stats (including name, size, inode value, access permissions, last time accessed, last time modified, creation date)
 
-$ strace prog		// show all the system calls made by a program
+$ strace <prog>		// show all the system calls made by a program
 
 $ apt-cache search <keyword>	// search to see if the package exists in the APT repository
 
