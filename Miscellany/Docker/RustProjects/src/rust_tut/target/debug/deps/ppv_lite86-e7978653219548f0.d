@@ -1,0 +1,11 @@
+/mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/target/debug/deps/ppv_lite86-e7978653219548f0.rmeta: /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/mod.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/sse2.rs
+
+/mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/target/debug/deps/libppv_lite86-e7978653219548f0.rlib: /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/mod.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/sse2.rs
+
+/mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/target/debug/deps/ppv_lite86-e7978653219548f0.d: /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/mod.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/sse2.rs
+
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/lib.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/soft.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/types.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/mod.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.17/src/x86_64/sse2.rs:

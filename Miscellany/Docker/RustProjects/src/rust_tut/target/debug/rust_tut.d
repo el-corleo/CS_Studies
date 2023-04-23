@@ -1,0 +1,1 @@
+/mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/target/debug/rust_tut: /mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/src/main.rs

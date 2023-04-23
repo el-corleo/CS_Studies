@@ -1,0 +1,12 @@
+/mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/target/debug/deps/rand_core-f96d55f1aae3e4e6.rmeta: /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs
+
+/mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/target/debug/deps/librand_core-f96d55f1aae3e4e6.rlib: /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs
+
+/mnt/c/Users/caoni/Desktop/REPOS/CS_Studies/Miscellany/Docker/RustProjects/src/rust_tut/target/debug/deps/rand_core-f96d55f1aae3e4e6.d: /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs /home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs
+
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/lib.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/block.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/error.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/impls.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/le.rs:
+/home/e-c/.cargo/registry/src/github.com-1ecc6299db9ec823/rand_core-0.6.4/src/os.rs:

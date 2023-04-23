@@ -98,3 +98,54 @@
 
 - Sockets
   - Sockets are used to make a connection between ports and IP addresses
+
+
+- Five Stages of Ethical Hacking
+  NOTE: the first two stages are the foundation that supports the latter stages: thorough preparation makes the exploitation easier
+  1.  Reconnaissance
+    - Active:
+      - Directly searching for potential attack vectors on the target
+    - Passive:
+      - Looking for tools/information to aid in attacking target
+  2.  Scanning & Enumeration
+    - Determining specific points of entry for an attack
+      - e.g., looking for open ports and vulnerable services running on said ports
+  3.  Gaining Access [Exploitation]
+    - Using vulnerabilities and attack vectors found in previous steps to get a foothold inside the target's operations
+  4.  Maintaining Access
+    - Being able to keep the access point persistent for the duration of the pentest
+  5.  Covering Tracks
+    - Attempting to leave no trace that you were there or about what your true purpose there was (obfuscating tracks through red herrings if it's impossible to cover tracks)
+    - Cleaning up logs, malware, etc.
+
+
+
+RECONNAISSANCE
+  - Passive:
+    - Physical: 
+      - Satellite images of location
+      - Drone recon
+      - Building schematics/layout (doors, locks, badge readers, fences, etc.)
+    - Social:
+      - Employee data (names, titles, numbers, etc.)
+      - Pictures (badge photos, computer photos, etc.)
+    - Web/Host:
+      - Target validation
+        - WHOIS, nslookup, dnsrecon
+      - Finding subdomains
+        - Google Fu, dig, nmap, sublist3r, Bluto, crt.sh, etc.
+      - Fingerprinting
+        - Nmap, Wappalyzer, WhatWeb, BuiltWith, Netcat
+      - Data breaches
+        - HaveIBeenPwned, Breach-Parse, WeLeakInfo
+  - Discovering email addresses:
+    - Go through data breach databases to find username and passwords
+  - Hunting Subdomains:
+    - sublist3r can find subdomains
+    - OWASP amass
+      - more comprehensive, but more time consuming that sublist3r
+  - Website analyzers:
+    - WhatWeb, Wappalyzer, BuiltWith are all tools that can help discover what a website uses on its frontend, sometimes payment systems, and other services
+      - If the website uses vulnerable versions, this can be exploited
+  - BurpSuite:
+    - A web proxy that can intercept traffic from websites

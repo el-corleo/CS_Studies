@@ -1,0 +1,4 @@
+1.) Create a dockerfile
+2.) $ docker build -t <name> .            // NOTE: this is from the folder with the dockerfile
+3.) $ docker run -itd  <name>             // the "it" flag ensures that the container doesn't just automatically exit  
+4.) $ docker exec -itu 0 <name> /bin/bash // run a shell as root in your container  

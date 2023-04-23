@@ -1,0 +1,5 @@
+FROM python:3-alpine
+COPY src/ /opt/src/
+RUN apk update && apk upgrade && apk add bash
+RUN apk add bash-doc && apk add bash-completion
+CMD ["python3"]

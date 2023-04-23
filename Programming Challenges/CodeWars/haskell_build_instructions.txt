@@ -1,0 +1,11 @@
+# For projects requiring external dependencies:
+
+$ cabal init
+# select all defaults
+
+# in *.cabal file add
+build-depends: [lib-name] >=[version-number]
+
+
+# For projects that don't require external dependencies:
+$ ghc -o [binary-name] [source-file].hs

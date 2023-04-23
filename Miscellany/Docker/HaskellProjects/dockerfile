@@ -1,0 +1,14 @@
+FROM haskell:latest
+
+WORKDIR /opt/haskell_prog
+
+RUN cabal update
+
+COPY ./haskell_prog.cabal /opt/haskell_prog/haskell_prog.cabal
+
+RUN cabal build --only-dependencies -j4
+
+COPY . /opt/haskell_prog
+RUN cabal install
+
+CMD ["haskell_prog"]

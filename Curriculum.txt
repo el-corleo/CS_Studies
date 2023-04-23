@@ -96,7 +96,7 @@ BOOKS
 
 --ALGORITHMS--
 	1.) |COMPLETE|	{Java} Sedgewick - Algorithms [!]
-	2.) |80%|	{Python} Bhargava - Grokking Algorithms
+	2.) |COMPLETE|	{Python} Bhargava - Grokking Algorithms
 	
 --BASICS--
 	1.) |COMPLETE|	{Java} Sedgewick - Computer Science: An Interdisciplinary Approach [!]

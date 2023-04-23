@@ -1,0 +1,7 @@
+FROM rust:1.69-alpine3.17
+WORKDIR /usr/src/rust_tut
+COPY . .
+RUN cargo install --path .
+RUN apk update && apk upgrade && apk add bash
+RUN apk add bash-doc && apk add bash-completion
+CMD ["rust_tut"]
