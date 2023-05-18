@@ -81,6 +81,8 @@ AUDITED COURSES
 		4.) |COMPLETE|	Windows Fundamentals
 		5.) |COMPLETE|	Introduction to Web Applications
 		5.) |75%| Getting Started
+	The Cyber Mentor
+		1.) |50%|	Ethical Hacking
 		
 		
 
@@ -107,6 +109,9 @@ BOOKS
 --BLOCKCHAIN--
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics [!]
 
+--COMPILERS--
+	1.) |50%|	Brian Gough - An Introduction to GCC [!]
+
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
 	2.) |COMPLETE|	Andress - Foundations of Information Security
@@ -116,8 +121,8 @@ BOOKS
 	6.) |COMPLETE|	Prowse - CompTIA Security+
 	7.) |COMPLETE|	Occupy the Web - Linux Basics for Hackers
 	8.) |COMPLETE|	Sparc Flow - How to Hack like a Pornstar
-	9.) |50%|	Schneier - Secrets and Lies
-	10.) |50%|	Mueller - Security for Web Developers
+	9.) |60%|	Schneier - Secrets and Lies
+	10.) |60%|	Mueller - Security for Web Developers
 	
 --FRAMEWORK--
 	1.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
@@ -158,7 +163,7 @@ BOOKS
 
 --NETWORKING--
 	1.) |95%|	Stevens - TCP/IP Illustrated
-	2.) |60%|	Tanenbaum - Computer Networks
+	2.) |65%|	Tanenbaum - Computer Networks [!]
 	3.) |COMPLETE|	Dulaney - CompTIA Network+
 
 --OS--

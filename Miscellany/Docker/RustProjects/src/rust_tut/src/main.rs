@@ -5,6 +5,73 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 
+fn returning2(x: i32) -> i32 {
+    return x * 2;
+}
+
+
+fn returning(x: i32) -> i32 {
+    x * 2
+    // NOTE: that a semicolon would make the compiler throw and error
+}
+
+
+fn vectors() {
+    let vec1: Vec<i32> = Vec::new();
+    let mut vec2: Vec<i32> = vec![1,2,3,4];
+    vec2.push(5);
+
+    let second: &i32 = &vec2[1];
+    match vec2.get(1) {
+        Some(second) => println!("2nd: {}", second),
+        None => println!("Absent")
+    }
+
+    // double
+    for i in &mut vec2 {
+        *i *= 2;
+    }
+    for i in &vec2 {
+        println!("{}", i);
+    }
+}
+
+
+fn enums() {
+    enum Day {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday
+    }
+
+    impl Day {
+        fn is_weekend(&self) -> bool {
+            match self {
+                Day::Saturday | Day::Sunday => true,
+                _ => false
+            }
+        }
+    }
+
+    let today: Day = Day::Monday;
+
+    println!("Today is a weekend day! {}", today.is_weekend());
+}
+
+
+
+fn casting() {
+    let int_u8: u8 = 5;
+    let int2_u8: u8 = 4;
+    let int3_u32: u32 = (int_u8 as u32) + (int2_u8 as u32);
+    println!("{}", int3_u32);
+}
+
+
 fn strings() {
    let mut st1: String = String::new(); 
    st1.push('A');
@@ -83,7 +150,7 @@ fn matching() {
     match age.cmp(&voting_age) {
         Ordering::Less => println!("Can't vote"),
         Ordering::Greater => println!("Can vote"),
-        Ordering::Equal => println!("rust_analyzer sucks")
+        Ordering::Equal => println!("Can barely vote")
     };
 }
 
@@ -122,4 +189,9 @@ fn main() {
     arrays();
     looping();
     strings();
+    casting();
+    enums();
+    vectors();
+    println!("{}", returning(5));
+    println!("{}", returning2(10));
 }

