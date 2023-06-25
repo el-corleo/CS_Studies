@@ -2,7 +2,22 @@ use std::io;
 use std::io::{Write, BufReader, BufRead, ErrorKind};
 use std::fs::File;
 use std::cmp::Ordering;
+use std::collections::HashMap;
 use rand::Rng;
+
+
+fn it_over_hashmap(map: HashMap<K, V>) {
+    for (k,v) in map.iter() {
+        println!("key = {} | value = {}", k, v);
+    }
+}
+
+
+fn change_str(name: &mut String) -> String {
+    name.push_str(" Bonanza!");
+    println!("{}", name);
+    name
+}
 
 
 fn returning2(x: i32) -> i32 {
@@ -194,4 +209,19 @@ fn main() {
     vectors();
     println!("{}", returning(5));
     println!("{}", returning2(10));
+    // Ownership
+    let mut str1: String = "Eliot";
+    let str2: String = change_str(str1);
+    println!("{}", str2);
+
+    // HashMap
+    let mut food: HashMap<&str, &str> = HashMap::new();
+    food.insert("banana", "fruit");
+    food.insert("lettuce", "vegetable");
+    food.insert("chocolate", "ambrosia");
+    it_over_hashmap(food)
+    if food.contains_key(&"nono juice") {
+        println!("You shouldn't be seeing this");
+    }
+    
 }

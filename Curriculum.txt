@@ -80,9 +80,11 @@ AUDITED COURSES
 		3.) |COMPLETE|	Web Requests
 		4.) |COMPLETE|	Windows Fundamentals
 		5.) |COMPLETE|	Introduction to Web Applications
-		5.) |75%| Getting Started
+		5.) |COMPLETE| Getting Started
 	The Cyber Mentor
-		1.) |50%|	Ethical Hacking
+		1.) |COMPLETE|	Ethical Hacking
+		2.) |COMPLETE|	Privilege Escalation with Linux
+		3.) |25%|	Open-Source Intelligence 
 		
 		
 
@@ -110,7 +112,7 @@ BOOKS
 	1.) |COMPLETE|	Daniel Drescher - Blockchain Basics [!]
 
 --COMPILERS--
-	1.) |50%|	Brian Gough - An Introduction to GCC [!]
+	1.) |COMPLETE|	Brian Gough - An Introduction to GCC [!]
 
 --CYBERSEC--
 	1.) |COMPLETE|	Mitnick - The Art of Deception
@@ -119,10 +121,12 @@ BOOKS
 	4.) |COMPLETE|	Sinha - Beginning Ethical Hacking with Kali Linux
 	5.) |COMPLETE|	Gibson - CompTIA Security+
 	6.) |COMPLETE|	Prowse - CompTIA Security+
-	7.) |COMPLETE|	Occupy the Web - Linux Basics for Hackers
+	7.) |COMPLETE|	OccupyTheWeb - Linux Basics for Hackers
 	8.) |COMPLETE|	Sparc Flow - How to Hack like a Pornstar
-	9.) |60%|	Schneier - Secrets and Lies
-	10.) |60%|	Mueller - Security for Web Developers
+	9.) |80%|	Schneier - Secrets and Lies
+	10.) |80%|	Mueller - Security for Web Developers
+	11.) |COMPLETE|	Wylie - The Pentester Blueprint
+	13.) |10%|	OccupyTheWeb - Getting Started Becoming a Master Hacker
 	
 --FRAMEWORK--
 	1.) |COMPLETE|	{XAML} Hermes - Building Xamarin.Forms Mobile Apps
@@ -162,8 +166,8 @@ BOOKS
 	9.) |COMPLETE|	{Python} Giordani - Clean Architectures in Python [!]
 
 --NETWORKING--
-	1.) |95%|	Stevens - TCP/IP Illustrated
-	2.) |65%|	Tanenbaum - Computer Networks [!]
+	1.) |COMPLETE|	Stevens - TCP/IP Illustrated
+	2.) |70%|	Tanenbaum - Computer Networks [!]
 	3.) |COMPLETE|	Dulaney - CompTIA Network+
 
 --OS--
@@ -190,6 +194,8 @@ PROGRAMMING CHALLENGES
 		(Tier 0: 4)
 		(Tier 1: 4)
 		(Tier 2: 4)
+	6.) {Various} Try Hack Me
+		(Easy: 19)
 		
 _________________________________________________________
 _________________________________________________________
